@@ -1,0 +1,75 @@
+@import url(http://fonts.googleapis.com/css?family=Vollkorn);
+@import url(http://fonts.googleapis.com/css?family=Electrolize);
+@import url(http://fonts.googleapis.com/css?family=Crete+Round);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab);
+body {
+	margin: 0;
+	text-align: center;
+}
+#main {
+	font-family: 'Vollkorn',Georgia, serif;
+	font-size: 13pt;
+	width: 40em;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 1em;
+	text-align: justify;
+}
+.buttonlink {
+	border: 1px none #ccc;
+	margin: 3px;
+	background-color: #EED;
+	padding: 10px;
+	border-radius: 5px;
+}
+.buttonlink, .buttonlink:visited {
+	color: #059;
+	text-decoration: none;
+}
+
+.floatinglink {
+	float:left;
+	padding: 3pt;
+	background-color:#efd;
+	border: 1px solid #ded;
+	border-radius: 1pt;
+}
+a, a:visited {
+	color: #DB0;
+}
+p{
+	line-height: 1.3em;
+}
+h1 {
+	font-size: 56px;
+	font-family: Vollkorn;
+	text-align: center;	
+	margin: 0;
+	padding: 30px;	
+	/*text-shadow: 3px 3px 5px #AC0;*/
+	color: #995;
+	border: none;
+	border-bottom: 7px #cb2 solid;
+	width: 450px;
+	margin-left: auto;
+	margin-right: auto;
+}
+h2 {
+	font-size: 48px;
+}
+@media only screen and (max-device-width: 900px) {
+	#main {
+		font-family: 'Vollkorn',Georgia,serif;
+		font-size: 12pt;		
+		text-align: justify;
+		margin:0;
+		padding: 1em;
+		width: 90%;
+	}
+	h1 {
+		width: 90%;
+	}
+	#container {
+		width: 100%;
+	}
+}
