@@ -1,0 +1,229 @@
+@import url(http://fonts.googleapis.com/css?family=Vollkorn);
+@import url(http://fonts.googleapis.com/css?family=Bitter);
+@import url(http://fonts.googleapis.com/css?family=Nunito);
+@import url(http://fonts.googleapis.com/css?family=Monoton);
+
+body {
+ font-size: 16px;
+ font-family: 'Vollkorn', Georgia, serif;
+ text-align: center;
+}
+div {
+	margin: 0;
+	padding: 0;
+}
+#main {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+/*	width: 960px;
+*/}
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+	text-align: center;
+}
+hr {
+  color: #000;
+  margin-top: 40px;
+}
+.sidebar {
+	clear: both;
+}
+p {
+  text-align: justify;
+}
+a, a:visited {
+ text-decoration: none;
+ color: #059;
+}
+
+#menubar li a, #edit li a {
+ color: #ccc;
+}
+.news {
+}
+.section {
+	margin-bottom: 2em;
+	float: left;
+}
+.section h1 {
+	padding: 0;
+	margin: 0;
+	margin-bottom: 15px;
+	text-align: center;
+}
+
+.col {
+	float: left;
+	display: block;
+	margin: 0;
+	margin: 0.5% 1% 1% 0.6%;
+	width: 31.6%;
+}
+
+.col:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+
+/*  GRID OF TWO  */
+.span_2_of_2 {
+	width: 100%;
+}
+.span_1_of_2 {
+	width: 47.2%;
+}
+.span_1_of_4 {
+}
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.col { 
+		margin: 1% 0 1% 0%;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.span_2_of_2, .span_1_of_2 { width: 100%; }
+}
+
+.col h1 {
+	text-align: center;
+}
+.newsbody{
+}
+
+#writingstyle {
+	background-color: #b0a046; 
+	color:#FFF; 
+	text-align:center;
+	border-radius: 15px;
+}
+#aboutme{
+	border-radius: 15px;
+}
+#logo {
+	background-color: #fff;
+	border-radius: 15px;
+}
+.title {
+  margin-top: 10em;
+  text-transform: uppercase; 
+  font-family: "Vollkorn";  
+}
+
+a[class="title"], a:visited[class="title"] {
+  color: #000;
+  font-size: 55px;
+  text-shadow: 2px 2px 2px #ccc;*/
+}
+
+h1, h2, h3, h4 {
+  font-family: "Vollkorn";
+  text-shadow: 0 0 2px #ccc; 
+  margin: 0;
+}
+h1 {
+  font-size: 49px;
+  font-weight: 0;	
+}
+.product {
+  border-top: 0.4pt dashed #888;
+  margin-top: 0.7em;
+}
+.booktype {
+	font-weight: bold;
+	text-align: center;
+}
+h2 {
+  font-size: 44px;
+  font-weight: 0;
+  line-height; 1em;
+}
+h1 a, h1 a:visited {
+  color: #F90;
+  font-weight: 0;
+}
+
+
+ul li {
+ display: inline;
+}
+
+ul li a {
+  margin-right: 1em;
+}
+
+.inline {
+  /*float: left;*/
+  margin-right: 1em;
+}
+
+.buttonlink {
+	border: 1px solid #ccc;
+	text-align: center;		
+	margin: 3px;
+	padding: 10px;
+	background-color: #EED;
+	border-radius: 7px;
+	display: inline;
+	float: left;
+}
+.primary {
+	border: none;
+	text-align: center;
+	clear:both;
+	margin: 0px;
+	padding: 5px;
+	border-radius: 7px;
+}
+.primary, .primary:visited {
+	color: #970;
+	font-weight: bold;
+	padding:0;
+}
+
+.date {
+  color: #555;
+  font-size: 110%;
+  margin:0;
+}
+
+.extract {
+	border: 1px solid #ccc;
+	border-radius: 15px;
+	padding: 0em;
+}
+.extract h1 {
+	background-color: #B90;
+	font-family: "Nunito";
+	font-size: 36px;
+	text-align: center;	
+	border-radius: 10px 10px 0 0;
+	text-shadow: 1px 1px 15px #FB0;
+}
+.extract h2 {
+	font-size: 26px;
+	font-family: "Nunito";
+	padding-left: 10px;
+}
+.extract p {
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+.img-circular{
+ 	border-radius: 100px;
+ 	-webkit-border-radius: 100px;
+ 	-moz-border-radius: 100px;
+}
+div {
+	float: left;
+}
+

@@ -1,0 +1,19 @@
+body {
+	font-size: 11pt;
+}
+#main {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+div {
+	margin: 0;
+	padding: 0;
+  float: left;
+  clear: both;
+}
+.col {
+    clear: both;
+    float: left;
+    width: 100%;
+gt}
