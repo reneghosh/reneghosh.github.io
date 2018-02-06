@@ -1,19 +1,20 @@
 @import url(http://fonts.googleapis.com/css?family=Vollkorn);
 @import url(http://fonts.googleapis.com/css?family=Electrolize);
 @import url(http://fonts.googleapis.com/css?family=Crete+Round);
-@import url(http://fonts.googleapis.com/css?family=Roboto+Slab);
+@import url(http://fonts.googleapis.com/css?family=EB+Garammond);
 body {
 	margin: 0;
 	text-align: center;
 }
 #main {
-	font-family: 'Vollkorn',Georgia, serif;
-	font-size: 13pt;
-	width: 40em;
+	font-family: 'EB Garammond',Georgia, serif;
+	font-size: 16pt;
+	width: 27em;
 	margin-left: auto;
 	margin-right: auto;
 	padding: 1em;
-	text-align: justify;
+	text-align: left;
+	text-rendering: optimizeLegibility;
 }
 .buttonlink {
 	border: 1px none #ccc;
@@ -28,14 +29,16 @@ body {
 }
 
 .floatinglink {
-	float:left;
-	padding: 3pt;
-	background-color:#efd;
+	position: fixed;
+	margin-left: -20em;
+	padding: 5pt;
+	background-color:#ddd;
 	border: 1px solid #ded;
 	border-radius: 1pt;
+	font-size: 16pt;
 }
 a, a:visited {
-	color: #DB0;
+	color: #555;
 }
 p{
 	line-height: 1.3em;
