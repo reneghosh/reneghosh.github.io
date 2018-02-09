@@ -1,7 +1,6 @@
-@import url('http://fonts.googleapis.com/css?family=Vollkorn:700,900');
-@import url('http://fonts.googleapis.com/css?family=Vollkorn');
-@import url('http://fonts.googleapis.com/css?family=Electrolize');
-@import url('http://fonts.googleapis.com/css?family=Pragati+Narrow');
+@import url('fonts/Vollkorn-Bold.ttf');
+@import url('fonts/Vollkorn-Regular.ttf');
+
 body {
 	margin: 0;
 	text-align: center;

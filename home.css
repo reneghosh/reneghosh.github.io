@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Vollkorn:700,900');
-@import url('http://fonts.googleapis.com/css?family=Vollkorn');
-@import url('http://fonts.googleapis.com/css?family=Passion+One');
+@import url('fonts/Vollkorn-Bold.ttf');
+@import url('fonts/Vollkorn-Regular.ttf');
 
 body {
  font-size: 16px;
