@@ -1,7 +1,6 @@
-@import url(http://fonts.googleapis.com/css?family=Vollkorn);
-@import url(http://fonts.googleapis.com/css?family=Bitter);
-@import url(http://fonts.googleapis.com/css?family=Nunito);
-@import url(http://fonts.googleapis.com/css?family=Monoton);
+@import url('https://fonts.googleapis.com/css?family=Vollkorn:700,900');
+@import url('http://fonts.googleapis.com/css?family=Vollkorn');
+@import url('http://fonts.googleapis.com/css?family=Passion+One');
 
 body {
  font-size: 16px;
@@ -16,8 +15,7 @@ div {
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
-/*	width: 960px;
-*/}
+}
 .section {
 	clear: both;
 	padding: 0px;
@@ -126,8 +124,6 @@ a[class="title"], a:visited[class="title"] {
 }
 
 h1, h2, h3, h4 {
-  font-family: "Vollkorn";
-  text-shadow: 0 0 2px #ccc; 
   margin: 0;
 }
 h1 {
@@ -144,8 +140,9 @@ h1 {
 }
 h2 {
   font-size: 30px;
-  font-weight: 0;
-  line-height; 1em;
+  font-family: "Vollkorn";
+  font-weight: bold;
+  line-height: 1em;
 }
 h1 a, h1 a:visited {
   color: #F90;
