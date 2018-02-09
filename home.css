@@ -131,7 +131,6 @@ h1 {
   font-weight: bold;
 }
 .product {
-  border-top: 0.4pt dashed #888;
   margin-top: 0.7em;
 }
 .booktype {
@@ -139,7 +138,7 @@ h1 {
 	text-align: center;
 }
 h2 {
-  font-size: 30px;
+  font-size: 32px;
   font-family: "Vollkorn";
   font-weight: bold;
   line-height: 1em;
@@ -224,5 +223,3 @@ ul li a {
 div {
 	float: left;
 }
-
-	
