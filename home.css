@@ -31,6 +31,7 @@ hr {
 }
 p {
   text-align: left;
+  font-weight: normal;
 }
 a, a:visited {
  text-decoration: none;
