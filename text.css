@@ -1,15 +1,15 @@
-@import url(http://fonts.googleapis.com/css?family=Vollkorn);
-@import url(http://fonts.googleapis.com/css?family=Electrolize);
-@import url(http://fonts.googleapis.com/css?family=Crete+Round);
-@import url(http://fonts.googleapis.com/css?family=EB+Garammond);
+@import url('http://fonts.googleapis.com/css?family=Vollkorn:700,900');
+@import url('http://fonts.googleapis.com/css?family=Vollkorn');
+@import url('http://fonts.googleapis.com/css?family=Electrolize');
+@import url('http://fonts.googleapis.com/css?family=Pragati+Narrow');
 body {
 	margin: 0;
 	text-align: center;
 }
 #main {
-	font-family: 'EB Garammond',Georgia, serif;
-	font-size: 16pt;
-	width: 27em;
+	font-family: "Vollkorn", Georgia, serif;
+	font-size: 20px;
+	width: 33em;
 	margin-left: auto;
 	margin-right: auto;
 	padding: 1em;
@@ -30,7 +30,7 @@ body {
 
 .floatinglink {
 	position: fixed;
-	margin-left: -20em;
+	margin-left: -24em;
 	padding: 5pt;
 	background-color:#ddd;
 	border: 1px solid #ded;
@@ -44,16 +44,14 @@ p{
 	line-height: 1.3em;
 }
 h1 {
-	font-size: 56px;
-	font-family: Vollkorn;
+	font-size: 46px;
+	font-family: "Vollkorn";
+  font-weight: 0;
 	text-align: center;	
+  line-height: 0.95em;
 	margin: 0;
 	padding: 30px;	
-	/*text-shadow: 3px 3px 5px #AC0;*/
-	color: #995;
-	border: none;
-	border-bottom: 7px #cb2 solid;
-	width: 450px;
+  width: 18em;
 	margin-left: auto;
 	margin-right: auto;
 }
