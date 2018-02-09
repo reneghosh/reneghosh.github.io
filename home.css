@@ -30,7 +30,7 @@ hr {
 	clear: both;
 }
 p {
-  text-align: justify;
+  text-align: left;
 }
 a, a:visited {
  text-decoration: none;
@@ -225,3 +225,4 @@ div {
 	float: left;
 }
 
+	
