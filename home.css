@@ -181,7 +181,6 @@ ul li a {
 	border-radius: 7px;
 }
 .primary, .primary:visited {
-	color: #970;
 	font-weight: bold;
 	padding:0;
 }
@@ -223,3 +222,4 @@ ul li a {
 div {
 	float: left;
 }
+
