@@ -1,5 +1,5 @@
-@import url('fonts/Vollkorn-Bold.ttf');
-@import url('fonts/Vollkorn-Regular.ttf');
+@import url('../fonts/Vollkorn-Bold.ttf');
+@import url('../fonts/Vollkorn-Regular.ttf');
 
 body {
 	margin: 0;
