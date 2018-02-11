@@ -1,0 +1,81 @@
+@import url('fonts/Vollkorn-Bold.ttf');
+@import url('fonts/Vollkorn-Regular.ttf');
+
+body {
+	margin: 0;
+	text-align: center;
+}
+#main {
+	font-family: "Vollkorn", Georgia, serif;
+	font-size: 20px;
+	width: 33em;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 1em;
+	text-align: left;
+	text-rendering: optimizeLegibility;
+}
+.buttonlink {
+	border: 1px none #ccc;
+	margin: 3px;
+	background-color: #EED;
+	padding: 10px;
+	border-radius: 5px;
+}
+.buttonlink, .buttonlink:visited {
+	color: #059;
+	text-decoration: none;
+}
+
+.floatinglink {
+	position: fixed;
+	margin-left: -24em;
+	padding: 5pt;
+	background-color:#ddd;
+	border: 1px solid #ded;
+	border-radius: 1pt;
+	font-size: 16pt;
+}
+a, a:visited {
+	color: #555;
+}
+p{
+	line-height: 1.3em;
+}
+h1 {
+	font-size: 46px;
+	font-family: "Vollkorn";
+  	font-weight: 0;
+	line-height: 0.95em;
+	margin: 0;
+  	width: 18em;
+	margin-left: auto;
+	margin-right: auto;
+}
+h2 {
+	font-size: 30px;
+}
+.copyright p {
+	line-height: 1.1em;
+	margin: 0;
+	font-style: italic;
+}
+.copyright {
+	margin-bottom: 1em;
+}
+@media only screen and (max-device-width: 900px) {
+	#main {
+		font-family: 'Vollkorn',Georgia,serif;
+		font-size: 12pt;		
+		text-align: justify;
+		margin:0;
+		padding: 1em;
+		width: 90%;
+	}
+	h1 {
+		width: 90%;
+	}
+	#container {
+		width: 100%;
+	}
+}
