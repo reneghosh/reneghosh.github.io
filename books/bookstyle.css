@@ -22,6 +22,14 @@ body {
 }
 
 
+.author, .booktype {
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 1.0em;
+	margin: 0;
+
+}
+
 .floatinglink {
 	position: fixed;
 	margin-left: -24em;
@@ -49,6 +57,9 @@ h2 {
 	margin: 0;
 	font-size: 30px;
 }
+h2 a {
+	color: #000;
+}
 .copyright p {
 	line-height: 1.1em;
 	margin: 0;
@@ -59,7 +70,17 @@ h2 {
 }
 @media only screen and (max-device-width: 900px) {
 	#main {
-		font-size: 12pt;		
+		font-size: 14pt;
 		width: 90%;
+	}
+	h1 {
+		font-family: "Vollkorn-bold";
+		font-size: 40pt;
+	  	font-weight: 0;
+	}
+	h2 {
+		margin: 0;
+		font-size: 20pt;
+		font-family: "Vollkorn-bold";
 	}
 }
