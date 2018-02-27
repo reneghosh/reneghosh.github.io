@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" 
+  xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+	<url> 
+		<loc>https://reneghosh.github.io/index.html</loc> 
+		<image:image>
+			<image:loc>https://reneghosh.github.io/images/rg-2017.jpg</image:loc>
+			<image:caption>René Ghosh</image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://reneghosh.github.io/images/memorymonkey-medium.jpg</image:loc>
+			<image:caption>The Memory Monkey</image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://reneghosh.github.io/images/liver-medium.png</image:loc>
+			<image:caption>Liver!</image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://reneghosh.github.io/images/frontcover20151215-medium.png</image:loc>
+			<image:caption>The Click Shortcuts</image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://reneghosh.github.io/images/live-medium.jpg</image:loc>
+			<image:caption>Live!</image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://reneghosh.github.io/images/puppetdancers-medium.jpeg</image:loc>
+			<image:caption>Puppet Dancers</image:caption>
+		</image:image>
+	</url>
+</urlset>
