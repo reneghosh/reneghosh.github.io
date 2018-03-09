@@ -1,115 +1,63 @@
 @import url('fonts/Vollkorn-Bold.ttf');
 @import url('fonts/Vollkorn-Regular.ttf');
+@import url('https://fonts.googleapis.com/css?family=Poller+One');
 
 body {
- font-size: 16px;
- font-family: 'Vollkorn', Georgia, serif;
- text-align: center;
+  font-size: 20px;
+  font-family: 'Vollkorn', Georgia, serif;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  margin-left: 20px; 
+  margin-right: 20px; 
 }
-div {
-	margin: 0;
-	padding: 0;
+#nav {
+  margin-top: 30px;
+  margin-bottom: 60px;
 }
-#main {
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
+#nav li {
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #EFEFEF;
 }
-.section {
-	clear: both;
-	padding: 0px;
-	margin: 0px;
-	text-align: center;
+#nav li span {
+  text-align: center;
 }
-hr {
-  color: #000;
-  margin-top: 40px;
+#nav li span a {
+  font-family: "Poller One";
+  color: #445;
+  font-size: 30px 
 }
-.sidebar {
-	clear: both;
+.page {
+  height: 1000px;
+}
+.main {
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
 }
 p {
   text-align: left;
   font-weight: normal;
+  max-width: 40em;
 }
 a, a:visited {
  text-decoration: none;
  color: #059;
 }
 
-#menubar li a, #edit li a {
- color: #ccc;
-}
-.news {
-}
-.section {
-	margin-bottom: 2em;
-	float: left;
-}
-.section h1 {
-	padding: 0;
-	margin: 0;
-	margin-bottom: 15px;
-	text-align: center;
-}
-
-.col {
-	float: left;
-	display: block;
-	margin: 0;
-	margin: 0.5% 1% 1% 0.6%;
-	padding: 2%;
-	width: 44.0%;
-}
-
-.col:first-child { margin-left: 0; }
-
-/*  GROUPING  */
-.group:before,
-.group:after { content:""; display:table; }
-.group:after { clear:both;}
-.group { zoom:1; /* For IE 6/7 */ }
-
-/*  GRID OF TWO  */
-.span_2_of_2 {
-	width: 100%;
-}
-.span_1_of_2 {
-	width: 47.2%;
-}
-.span_1_of_4 {
-}
-
-/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
-
-@media only screen and (max-width: 480px) {
-	.col { 
-		margin: 1% 0 1% 0%;
-	}
-}
-
-@media only screen and (max-width: 480px) {
-	.span_2_of_2, .span_1_of_2 { width: 100%; }
-}
-
-.col h1 {
-	text-align: center;
-}
-.newsbody{
-}
-
 #writingstyle {
-	background-color: #b0a046; 
-	color:#FFF; 
-	text-align:center;
-	border-radius: 15px;
+  background-color: #b0a046; 
+  color:#FFF; 
+  text-align:center;
+  border-radius: 15px;
 }
 #aboutme{
-	border-radius: 15px;
+  border-radius: 15px;
 }
 #logo {
-	background-color: #fff;
-	border-radius: 15px;
+  background-color: #fff;
+  border-radius: 15px;
 }
 .title {
   margin-top: 10em;
@@ -128,20 +76,22 @@ h1, h2, h3, h4 {
   margin: 0;
 }
 h1 {
-  font-size: 40px;
-  font-weight: bold;
+  font-size: 56px;
+  font-family: "Poller One";
+  text-align: center;
 }
 .product {
   margin-top: 0.7em;
 }
 .booktype {
-	font-weight: normal;
-	font-style: italic;
-	border: 1px solid #ccc;
-	background-color: #eee;
-	padding: 4px;
-	margin: 2px;
-	text-align: center;
+  display: inline;
+  font-weight: normal;
+  font-style: italic;
+  border: 1px solid #ccc;
+  background-color: #eee;
+  padding: 4px;
+  margin: 2px;
+  text-align: center;
 }
 h2 {
   font-size: 32px;
@@ -149,11 +99,6 @@ h2 {
   font-weight: bold;
   line-height: 1em;
 }
-h1 a, h1 a:visited {
-  color: #F90;
-  font-weight: 0;
-}
-
 
 ul li {
  display: inline;
@@ -163,32 +108,27 @@ ul li a {
   margin-right: 1em;
 }
 
-.inline {
-  /*float: left;*/
-  margin-right: 1em;
-}
 
 .buttonlink {
-	border: 1px solid #ccc;
-	text-align: center;		
-	margin: 3px;
-	padding: 10px;
-	background-color: #EED;
-	border-radius: 7px;
-	display: inline;
-	float: left;
+  border: 1px solid #ccc;
+  text-align: center;   
+  margin: 3px;
+  padding: 10px;
+  background-color: #EED;
+  border-radius: 7px;
+  display: inline;
 }
 .primary {
-	border: none;
-	text-align: center;
-	clear:both;
-	margin: 0px;
-	padding: 5px;
-	border-radius: 7px;
+  border: none;
+  text-align: center;
+  clear:both;
+  margin: 0px;
+  padding: 5px;
+  border-radius: 7px;
 }
 .primary, .primary:visited {
-	font-weight: bold;
-	padding:0;
+  font-weight: bold;
+  padding:0;
 }
 
 .date {
@@ -198,34 +138,16 @@ ul li a {
 }
 
 .extract {
-	border: 1px solid #ccc;
-	border-radius: 15px;
-	padding: 0em;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  padding: 0em;
 }
-.extract h1 {
-	background-color: #B90;
-	font-family: "Nunito";
-	font-size: 36px;
-	text-align: center;	
-	border-radius: 10px 10px 0 0;
-	text-shadow: 1px 1px 15px #FB0;
-}
-.extract h2 {
-	font-size: 26px;
-	font-family: "Nunito";
-	padding-left: 10px;
-}
-.extract p {
-	padding-left: 1em;
-	padding-right: 1em;
-}
-
 .img-circular{
- 	border-radius: 100px;
- 	-webkit-border-radius: 100px;
- 	-moz-border-radius: 100px;
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
 }
 div {
-	float: left;
+  clear: both;
 }
 
