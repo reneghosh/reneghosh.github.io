@@ -36,7 +36,7 @@ span {
 }
 .navigation li span a {
   font-size: 20px;
-  color: #BBD;
+  color: #BDF;
 
 }
 .navigation {
@@ -78,11 +78,13 @@ a, a:visited {
 }
 .title {
   text-transform: uppercase; 
-  border: #000 solid;
   border-width: 0px 1px 1px 1px;
   border-radius: 0 0 20px 20px;
   width: 10em;
   text-align: center;
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+  background-color: #DDE;
 }
 
 a[class="title"], a:visited[class="title"] {
@@ -125,7 +127,6 @@ ul li {
 }
 
 
-
 .buttonlink {
   border: 1px solid #ccc;
   text-align: center;   
@@ -164,15 +165,7 @@ ul li {
   -webkit-border-radius: 100px;
   -moz-border-radius: 100px;
 }
-.floatinglink {
-  position: fixed;
-  margin-left: 0em;
-  padding: 5pt;
-  background-color:#ddd;
-  border: 1px solid #ded;
-  border-radius: 1pt;
-  font-size: 16pt;
-}
+
 .bookcover {
   float: left;
   margin-right: 1em; 
