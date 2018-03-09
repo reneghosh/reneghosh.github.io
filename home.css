@@ -1,5 +1,4 @@
-@import url('fonts/Vollkorn-Bold.ttf');
-@import url('fonts/Vollkorn-Regular.ttf');
+@import url('https://fonts.googleapis.com/css?family=Vollkorn');
 @import url('https://fonts.googleapis.com/css?family=Poller+One');
 
 body {
@@ -8,8 +7,6 @@ body {
   text-align: center;
   padding: 0;
   margin: 0;
-  margin-left: 20px; 
-  margin-right: 20px; 
 }
 #nav {
   margin-top: 30px;
@@ -20,13 +17,32 @@ body {
   padding: 20px;
   background-color: #EFEFEF;
 }
+.navigation li {
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #555;
+}
+span {
+  padding: 0;
+  margin: 0;
+}
 #nav li span {
   text-align: center;
 }
-#nav li span a {
+#nav li span a{
   font-family: "Poller One";
   color: #445;
-  font-size: 30px 
+  font-size: 30px;
+}
+.navigation li span a {
+  font-size: 20px;
+  color: #BBD;
+
+}
+.navigation {
+  clear: both;
+  margin-top: 80px;
+  text-align: left
 }
 .page {
   height: 1000px;
@@ -35,6 +51,7 @@ body {
   text-align: left;
   margin-left: auto;
   margin-right: auto;
+  width: 50em;
 }
 p {
   text-align: left;
@@ -60,9 +77,12 @@ a, a:visited {
   border-radius: 15px;
 }
 .title {
-  margin-top: 10em;
   text-transform: uppercase; 
-  font-family: "Vollkorn";  
+  border: #000 solid;
+  border-width: 0px 1px 1px 1px;
+  border-radius: 0 0 20px 20px;
+  width: 10em;
+  text-align: center;
 }
 
 a[class="title"], a:visited[class="title"] {
@@ -104,9 +124,6 @@ ul li {
  display: inline;
 }
 
-ul li a {
-  margin-right: 1em;
-}
 
 
 .buttonlink {
@@ -147,7 +164,17 @@ ul li a {
   -webkit-border-radius: 100px;
   -moz-border-radius: 100px;
 }
-div {
-  clear: both;
+.floatinglink {
+  position: fixed;
+  margin-left: 0em;
+  padding: 5pt;
+  background-color:#ddd;
+  border: 1px solid #ded;
+  border-radius: 1pt;
+  font-size: 16pt;
 }
-
+.bookcover {
+  float: left;
+  margin-right: 1em; 
+  margin-bottom: 20px
+}
