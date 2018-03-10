@@ -10,13 +10,13 @@
     <link rel="alternate" href="http://reneghosh.github.io" hreflang="en-us" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
-$(document).on('click', 'a[href^="#"]', function (event) {
-    event.preventDefault();
+    $(document).on('click', 'a[href^="#"]', function (event) {
+        event.preventDefault();
 
-    $('html, body').animate({
-        scrollTop: $($.attr(this, 'href')).offset().top
-    }, 500);
-});
+        $('html, body').animate({
+            scrollTop: $($.attr(this, 'href')).offset().top
+        }, 500);
+    });
     </script>
     <script type="application/ld+json">
     {
@@ -34,29 +34,30 @@ $(document).on('click', 'a[href^="#"]', function (event) {
   </head>
   <body>
     <div class="main">
-      <div id="about" class="page">
-          <h1 class="title">René Ghosh</h1>
-	      <div id="nav" class="navigation">
+      <div id="about">
+        <h1 class="title">René Ghosh</h1>
+	      <div id="nav">
 	           <ul>
+                 <li><span><a href="#aboutme">About</a></span></li>
 	               <li><span><a href="#books">Books</a></span></li>
 	               <li><span><a href="#music">Music</a></span></li>
 	           </ul>
 	      </div>
-        <div id="aboutme">
+      </div>
+      <div class="page" id="aboutme">
+        <div>
           <img src="images/rg-2017.jpg" class="img-circular" alt="René Ghosh" style="float: left;margin-right: 1em;" height="200">
           <p>I am René Ghosh, a writer and musician from Rigaud, Québec, now living in Paris, France.</p>
           <p>I write magical punk. My stories blend elements of sci-fi and the occasional supernatural element, 
             but never occult the human stories that are my main focus. I try to maintain an authentic 
             and genuine voice.  
           </p>
-          <p> I am on:
-            <ul>
-              <li><a href="https://www.facebook.com/rene.ghosh">Facebook</a></li>
-              <li><a href="https://twitter.com/reghosh">Twitter</a></li>
-              <li><a href="https://soundcloud.com/satelliteray/">Soundcloud</a></li>
-              <li style="text-align: center">email: rene.ghosh@gmail.com</li>
-            </ul>
-          </p>
+          <ul id="linksbar">
+            <li><a href="https://www.facebook.com/rene.ghosh">Facebook</a></li>
+            <li><a href="https://twitter.com/reghosh">Twitter</a></li>
+            <li><a href="https://soundcloud.com/satelliteray/">Soundcloud</a></li>
+            <li style="text-align: center">email: rene.ghosh@gmail.com</li>
+          </ul>
         </div>
       </div>
       <div class="page" id="books">
@@ -69,13 +70,8 @@ $(document).on('click', 'a[href^="#"]', function (event) {
 	          <li><a href="#clickshortcuts"><img height="250px" src="images/frontcover20151215-medium.png" alt="The Click Shortcuts" class="bookcover"></a></li>
 	          <li><a href="#puppetdancers"><img height="250px" alt="Puppet Dancers" src="images/puppetdancers-medium.jpeg" class="bookcover"></a></li>
 	        </ul>
-    	</div>
-        <div style="margin-top: 350px">
-        	<ul class="navigation">
-        		<li><span><a href="#about">Back to Top</a></span></li>
-        	</ul>
         </div>
-      </div>
+    	</div>
       <div class="page" id="liver">
         <h1 class="product">Liver!</h1>
         <div class="newsbody">
@@ -89,12 +85,6 @@ $(document).on('click', 'a[href^="#"]', function (event) {
           <span class="buttonlink"><a href="https://www.amazon.com/Liver-collected-open-writings-vol/dp/2953100466">Print version (North America)</a></span> 
           <span class="buttonlink"><a href="https://www.amazon.fr/Liver-collected-open-writings-vol/dp/2953100466">Print version (Europe)</a></span>
         </div>
-        <div>
-        	<ul class="navigation">
-        		<li><span><a href="#books">Other books</a></span></li>
-        		<li><span><a href="#about">Back to Top</a></span></li>
-        	</ul>
-        </div>        
       </div>        
       <div class="page" id="live">
       	<div>
@@ -112,13 +102,6 @@ $(document).on('click', 'a[href^="#"]', function (event) {
             <span class="buttonlink"><a href="https://www.amazon.fr/Live-collected-open-mic-readings/dp/1530924413/">Print version (Europe)</a></span>
         </div>
     	</div>
-        <div>
-        	<ul class="navigation">
-        		<li><span><a href="#books">Other books</a></span></li>
-        		<li><span><a href="#about">Back to Top</a></span></li>
-        	</ul>
-        </div>
-      </div>        
       <div class="page" id="memorymonkey">
         <h1 class="product">The Memory Monkey</h1>
         <div class="newsbody">
@@ -132,13 +115,6 @@ $(document).on('click', 'a[href^="#"]', function (event) {
 			<p><a class="primary" href="memorymonkey.html">extract</a>.</p>
 			<span class="buttonlink"><a href="https://www.amazon.com/Memory-Monkey-M-Rene-Ghosh/dp/295310044X/">Print version (North America)</a></span> 
 			<span class="buttonlink"><a href="https://www.amazon.fr/Memory-Monkey-M-Rene-Ghosh/dp/295310044X">Print version (Europe)</a></span>
-         </div>
-         <div>
-        	<ul class="navigation">
-        		<li><span><a href="#books">Other books</a></span></li>
-        		<li><span><a href="#about">Back to Top</a></span></li>
-        	</ul>
-        </div>
       </div>
       <div class="page" id="clickshortcuts">
         <h1 class="product">The Click Shortcuts</h1>
@@ -161,12 +137,6 @@ $(document).on('click', 'a[href^="#"]', function (event) {
             <span class="buttonlink"><a href="http://www.amazon.com/Click-Shortcuts-M-Ren%C3%A9-Ghosh/dp/2953100423">Print&nbsp;version (North America)</a></span>
             <span class="buttonlink"><a href="http://www.amazon.fr/Click-Shortcuts-M-Ren%C3%A9-Ghosh/dp/2953100423">Print&nbsp;(Europe)</a></span>  
           </div>
-        </div>
-        <div>
-        	<ul class="navigation">
-        		<li><span><a href="#books">Other books</a></span></li>
-        		<li><span><a href="#about">Back to Top</a></span></li>
-        	</ul>
         </div>
       </div>
       <div class="page" id="puppetdancers">
@@ -194,12 +164,6 @@ $(document).on('click', 'a[href^="#"]', function (event) {
             <a class="buttonlink" href="https://www.amazon.fr/Puppet-Dancers-M-Ren%C3%A9-Ghosh/dp/2953100415">Print version (Europe)</a>
            </div>
         </div>
-        <div>
-        	<ul class="navigation">
-        		<li><span><a href="#books">Other books</a></span></li>
-        		<li><span><a href="#about">Back to Top</a></span></li>
-        	</ul>
-        </div>
       </div>
       <div class="page" id="music">
         <h1 class="product">Music</h1>
@@ -209,11 +173,6 @@ $(document).on('click', 'a[href^="#"]', function (event) {
           </p>
           <iframe width="400" height="166" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/347978086&amp;color=%23ff9900&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true"></iframe>
         </div>
-		<div>
-			<ul class="navigation">
-				<li><span><a href="#about">Back to Top</a></span></li>
-			</ul>
-		</div>      
       </div>
     </div>
   </body>

@@ -8,19 +8,25 @@ body {
   padding: 0;
   margin: 0;
 }
+.main {
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  width: 960px;
+}
+#about {
+  position: fixed;
+  background-color: #cde;
+  height: 60px;
+  float: left;
+  width: 960px;
+}
 #nav {
-  margin-top: 30px;
-  margin-bottom: 60px;
+  margin: 0;
+  float: left;
 }
 #nav li {
-  border-radius: 10px;
   padding: 20px;
-  background-color: #EFEFEF;
-}
-.navigation li {
-  border-radius: 10px;
-  padding: 10px;
-  background-color: #555;
 }
 span {
   padding: 0;
@@ -32,26 +38,29 @@ span {
 #nav li span a{
   font-family: "Poller One";
   color: #445;
-  font-size: 30px;
+  font-size: 20px;
 }
 .navigation li span a {
   font-size: 20px;
   color: #BDF;
-
 }
 .navigation {
-  clear: both;
-  margin-top: 80px;
-  text-align: left
+  text-align: left;
+  margin-top: 90px;
+}
+
+#linksbar li {
+  padding: 5px;
+  background-color: #ccc;
+}
+.navigation li {
+  padding: 5px;
+  background-color: #555;
+  display: inline;
 }
 .page {
   height: 1000px;
-}
-.main {
-  text-align: left;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50em;
+  padding-top: 100px;
 }
 p {
   text-align: left;
@@ -84,21 +93,15 @@ a, a:visited {
   text-align: center;
   padding-top: 0.3em;
   padding-bottom: 0.3em;
-  background-color: #DDE;
+  float: left;
 }
 
-a[class="title"], a:visited[class="title"] {
-  color: #000;
-  font-weight: bold;
-  font-size: 45px;
-  text-shadow: 2px 2px 2px #ccc;*/
-}
 
 h1, h2, h3, h4 {
   margin: 0;
 }
 h1 {
-  font-size: 56px;
+  font-size: 36px;
   font-family: "Poller One";
   text-align: center;
 }
@@ -171,3 +174,4 @@ ul li {
   margin-right: 1em; 
   margin-bottom: 20px
 }
+
