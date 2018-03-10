@@ -59,8 +59,9 @@ span {
   display: inline;
 }
 .page {
-  height: 1000px;
+  height: 800px;
   padding-top: 100px;
+  border-bottom: 1px dashed #000;
 }
 p {
   text-align: left;
@@ -101,7 +102,7 @@ h1, h2, h3, h4 {
   margin: 0;
 }
 h1 {
-  font-size: 36px;
+  font-size: 28px;
   font-family: "Poller One";
   text-align: center;
 }
