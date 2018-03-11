@@ -9,7 +9,44 @@ body {
 }
 #about {
   width: 100%;
+  margin: 0;
+  float: none;
+  position: relative;
 }
 #nav li span a {
     font-size: 13pt;
+    font-family: Georgia, serif;
+    font-weight: bold;
+    padding: 0;
+}
+#nav {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    clear: both;
+    float: none;
+}
+#nav ul {
+    padding: 0;
+}
+#nav li {
+    padding: 1px;
+    margin: 0;
+}
+.page {
+    padding-top: 10pt;
+    clear: both;
+}
+
+.buttonlink {
+  display: block;
+  clear: both;
+}
+.bookcover {
+  margin-right: 5pt; 
+  margin-bottom: 5pt;
+  float: none;
+}
+.booktype {
+    clear: both;
 }
