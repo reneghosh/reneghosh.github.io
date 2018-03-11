@@ -2,20 +2,8 @@
 <html>
 <head>
 	<title>The Paris Marathon Predictor</title>	
-	<meta http-equiv="content-type" content="text/html;charset=utf-8"> 
+	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<style>
-	  body {
-		font-family: Verdana, sans;
-		font-size: 11pt;		
-		text-align: center;
-	  }
-	  #main {
-		width: 50em;
-		margin-left: auto;
-		margin-right: auto;
-		text-align: left;
-	  }
-
 	  .prompt {
 		float: left;
 		text-align: right;
@@ -29,25 +17,16 @@
 	  .input *{
 		float: left;
 	  }
-	  .line {
-		clear:both;
-		margin: 4pt 0 4pt 0;
-	  }
-	  p, li {
-		font-family: Georgia;
-	  }
 	  #answer {
 		float: left;		
 		/*border: 1pt solid #ccc;*/
 		margin: 1em 0 0 0;
 		width: 80%;
 		padding: 0.5em 2em 0.5em 2em;
-		border-left: 4pt #FD0 solid;
-		border-right: 4pt #FD0 solid;
-		border-bottom: 1pt #FD0 solid;
-		border-top: 1pt #FD0 solid;
+		border: 1px #667 dashed;
 	  }
 	</style>
+	<link rel="stylesheet" type="text/css" href="home.css">
 	<script>
 	function foc(){
 	  document.getElementById("distance").focus();
@@ -123,141 +102,20 @@
 	}
 	</script>
   </head>
-  <body onload="javascript:foc()"><!-- BEGIN WAYBACK TOOLBAR INSERT -->
-<script type="text/javascript" src="/static/js/timestamp.js?v=1520188417.0" charset="utf-8"></script>
-<script type="text/javascript" src="/static/js/graph-calc.js?v=1520188417.0" charset="utf-8"></script>
-<script type="text/javascript" src="/static/js/auto-complete.js?v=1520188417.0" charset="utf-8"></script>
-<script type="text/javascript" src="/static/js/toolbar.js?v=1520188417.0" charset="utf-8"></script>
-
-<style type="text/css">
-body {
-  margin-top:0 !important;
-  padding-top:0 !important;
-  /*min-width:800px !important;*/
-}
-.wb-autocomplete-suggestions {
-    text-align: left; cursor: default; border: 1px solid #ccc; border-top: 0; background: #fff; box-shadow: -1px 1px 3px rgba(0,0,0,.1);
-    position: absolute; display: none; z-index: 2147483647; max-height: 254px; overflow: hidden; overflow-y: auto; box-sizing: border-box;
-}
-.wb-autocomplete-suggestion { position: relative; padding: 0 .6em; line-height: 23px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 1.02em; color: #333; }
-.wb-autocomplete-suggestion b { font-weight: bold; }
-.wb-autocomplete-suggestion.selected { background: #f0f0f0; }
-</style>
-<div id="wm-ipp" lang="en" style="display:none;direction:ltr;">
-<div style="position:fixed;left:0;top:0;right:0;">
-<div id="wm-ipp-inside">
-  <div style="position:relative;">
-    <div id="wm-logo" style="float:left;width:130px;padding-top:10px;">
-      <a href="/web/" title="Wayback Machine home page"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0" /></a>
-    </div>
-    <div class="r" style="float:right;">
-      <div id="wm-btns" style="text-align:right;height:25px;">
-                  <div id="wm-save-snapshot-success">success</div>
-          <div id="wm-save-snapshot-fail">fail</div>
-          <a href="#"
-             onclick="__wm.saveSnapshot('http://rghosh.free.fr:80/running/parispredictor.html', '20150625024618')"
-             title="Share via My Web Archive"
-             id="wm-save-snapshot-open"
-          >
-            <span class="iconochive-web"></span>
-          </a>
-          <a href="https://archive.org/account/login.php"
-             title="Sign In"
-             id="wm-sign-in"
-          >
-            <span class="iconochive-person"></span>
-          </a>
-          <span id="wm-save-snapshot-in-progress" class="iconochive-web"></span>
-        	<a href="http://faq.web.archive.org/" title="Get some help using the Wayback Machine" style="top:-6px;"><span class="iconochive-question" style="color:rgb(87,186,244);font-size:160%;"></span></a>
-	<a id="wm-tb-close" href="#close" onclick="__wm.h(event);return false;" style="top:-2px;" title="Close the toolbar"><span class="iconochive-remove-circle" style="color:#888888;font-size:240%;"></span></a>
+  <body onload="javascript:foc()">
+	<div class="main">
+	  <div id="about">
+        <h1 class="title"><a href="http://reneghosh.github.io">René Ghosh</a></h1>
+	      <div id="nav">
+	           <ul>
+					<li><span><a href="index.html#aboutme">About</a></span></li>
+					<li><span><a href="index.html#books">Books</a></span></li>
+					<li><span><a href="index.html#music">Music</a></span></li>
+					<li><span><a href="index.html#misc">Miscellaneous</a></span></li>
+	           </ul>
+	      </div>
       </div>
-      <div id="wm-share" style="text-align:right;">
-	<a href="#" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=https://web.archive.org/web/20150625024618/http://rghosh.free.fr:80/running/parispredictor.html', '', 'height=400,width=600'); return false;" title="Share on Facebook" style="margin-right:5px;" target="_blank"><span class="iconochive-facebook" style="color:#3b5998;font-size:160%;"></span></a>
-	<a href="#" onclick="window.open('https://twitter.com/intent/tweet?text=https://web.archive.org/web/20150625024618/http://rghosh.free.fr:80/running/parispredictor.html&amp;via=internetarchive', '', 'height=400,width=600'); return false;" title="Share on Twitter" style="margin-right:5px;" target="_blank"><span class="iconochive-twitter" style="color:#1dcaff;font-size:160%;"></span></a>
-      </div>
-    </div>
-    <table class="c" style="">
-      <tbody>
-	<tr>
-	  <td class="u" colspan="2">
-	    <form target="_top" method="get" action="/web/submit" name="wmtb" id="wmtb"><input type="text" name="url" id="wmtbURL" value="http://rghosh.free.fr:80/running/parispredictor.html" onfocus="this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20150625024618" /><input type="submit" value="Go" /></form>
-	  </td>
-	  <td class="n" rowspan="2" style="width:110px;">
-	    <table>
-	      <tbody>
-		<!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
-		<tr class="m">
-		  <td class="b" nowrap="nowrap"><a href="https://web.archive.org/web/20150524202224/http://rghosh.free.fr:80/running/parispredictor.html" title="24 May 2015"><strong>May</strong></a></td>
-		  <td class="c" id="displayMonthEl" title="You are here: 02:46:18 Jun 25, 2015">JUN</td>
-		  <td class="f" nowrap="nowrap">Jul</td>
-		</tr>
-		<!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
-		<tr class="d">
-		  <td class="b" nowrap="nowrap"><a href="https://web.archive.org/web/20150524202224/http://rghosh.free.fr:80/running/parispredictor.html" title="20:22:24 May 24, 2015"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a></td>
-		  <td class="c" id="displayDayEl" style="width:34px;font-size:24px;white-space:nowrap;" title="You are here: 02:46:18 Jun 25, 2015">25</td>
-		  <td class="f" nowrap="nowrap"><img src="/static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0" /></td>
-		</tr>
-		<!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
-		<tr class="y">
-		  <td class="b" nowrap="nowrap">2014</td>
-		  <td class="c" id="displayYearEl" title="You are here: 02:46:18 Jun 25, 2015">2015</td>
-		  <td class="f" nowrap="nowrap">2016</td>
-		</tr>
-	      </tbody>
-	    </table>
-	  </td>
-	</tr>
-	<tr>
-	  <td class="s">
-	    	    <div id="wm-nav-captures">
-	      	      <a class="t" href="/web/20150625024618*/http://rghosh.free.fr:80/running/parispredictor.html" title="See a list of every capture for this URL">4 captures</a>
-	      <div class="r" title="Timespan for captures of this URL">23 Mar 2015 - 25 Jun 2015</div>
-	      </div>
-	  </td>
-	  <td class="k">
-	    <a href="" id="wm-graph-anchor">
-	      <div id="wm-ipp-sparkline" title="Explore captures for this URL" style="position: relative">
-		<canvas id="wm-sparkline-canvas" width="575" height="27" border="0"></canvas>
-	      </div>
-	    </a>
-	  </td>
-	</tr>
-      </tbody>
-    </table>
-    <div style="position:absolute;bottom:0;right:2px;text-align:right;">
-      <a id="wm-expand" class="wm-btn wm-closed" href="#expand" onclick="__wm.ex(event);return false;"><span id="wm-expand-icon" class="iconochive-down-solid"></span> <span style="font-size:80%">About this capture</span></a>
-    </div>
-  </div>
-    <div id="wm-capinfo" style="border-top:1px solid #777;display:none; overflow: hidden">
-            <div style="background-color:#666;color:#fff;font-weight:bold;text-align:center">COLLECTED BY</div>
-    <div style="padding:3px;position:relative" id="wm-collected-by-content">
-            <div style="display:inline-block;vertical-align:top;width:50%;">
-			<span class="c-logo" style="background-image:url(https://archive.org/services/img/alexacrawls);"></span>
-		Organization: <a style="color:#33f;" href="https://archive.org/details/alexacrawls" target="_new"><span class="wm-title">Alexa Crawls</span></a>
-		<div style="max-height:75px;overflow:hidden;position:relative;">
-	  <div style="position:absolute;top:0;left:0;width:100%;height:75px;background:linear-gradient(to bottom,rgba(255,255,255,0) 0%,rgba(255,255,255,0) 90%,rgba(255,255,255,255) 100%);"></div>
-	  Starting in 1996, <a href="http://www.alexa.com/">Alexa Internet</a> has been donating their crawl data to the Internet Archive.  Flowing in every day, these data are added to the <a href="http://web.archive.org/">Wayback Machine</a> after an embargo period.
-	</div>
-	      </div>
-      <div style="display:inline-block;vertical-align:top;width:49%;">
-			<span class="c-logo" style="background-image:url(https://archive.org/services/img/alexacrawls)"></span>
-		<div>Collection: <a style="color:#33f;" href="https://archive.org/details/alexacrawls" target="_new"><span class="wm-title">Alexa Crawls</span></a></div>
-		<div style="max-height:75px;overflow:hidden;position:relative;">
-	  <div style="position:absolute;top:0;left:0;width:100%;height:75px;background:linear-gradient(to bottom,rgba(255,255,255,0) 0%,rgba(255,255,255,0) 90%,rgba(255,255,255,255) 100%);"></div>
-	  Starting in 1996, <a href="http://www.alexa.com/">Alexa Internet</a> has been donating their crawl data to the Internet Archive.  Flowing in every day, these data are added to the <a href="http://web.archive.org/">Wayback Machine</a> after an embargo period.
-	</div>
-	      </div>
-    </div>
-    <div style="background-color:#666;color:#fff;font-weight:bold;text-align:center" title="Timestamps for the elements of this page">TIMESTAMPS</div>
-    <div>
-      <div id="wm-capresources" style="margin:0 5px 5px 5px;max-height:250px;overflow-y:scroll !important"></div>
-      <div id="wm-capresources-loading" style="text-align:left;margin:0 20px 5px 5px;display:none"><img src="/static/images/loading.gif" alt="loading" /></div>
-    </div>
-  </div></div></div></div><script type="text/javascript">
-__wm.bt(575,27,25,2,"web","http://rghosh.free.fr:80/running/parispredictor.html","2015-06-25",1996);
-</script>
-<!-- END WAYBACK TOOLBAR INSERT -->
-	<div id="main">
+      <div class="page">
 	  <h1>The Paris Marathon Predictor</h1>
 	  <p>Enter your time on a distance between 17 and 25km. The calculator will predict your marathon time and pace for you.</p>
 	  <form onsubmit="javascript:calculate();return false">
@@ -299,7 +157,7 @@ __wm.bt(575,27,25,2,"web","http://rghosh.free.fr:80/running/parispredictor.html"
 		<p>From their (numerous) answers, you could apply some statistics and get an average marathon time as a function of one's best half-marathon effort. That's how this calculator was designed. Use it to predict your marathon time from a time on a distance close to that of a half-marathon, run a few weeks before your marathon, at best effort. 
 		</p>
 		<p>
-		I must thank Joseph Hanan whose work in comparing half-marathon and marathon results (see <a href="https://web.archive.org/web/20150625024618/http://www.hillrunner.com/jim2/id209.html">article</a>) inspired this work.
+		I must thank Joseph Hanan whose work in comparing half-marathon and marathon results (see <a href="https://www.hillrunner.com/jim2/id209.html">article</a>) inspired this work.
 		</p>
 		<h2>How does it work?</h2>
 		<p>
@@ -330,9 +188,9 @@ __wm.bt(575,27,25,2,"web","http://rghosh.free.fr:80/running/parispredictor.html"
 		</p>
 		<h2>Can I see the data?</h2>
 		<p>Yes. But not the names of the runners, as I feel it wouldn't be ethical to make their identies available without their consent (even if the names and times of all runners are available on the marathon and half-marathon websites) : <a href="data.csv">The data</a>.</p>
-		<p>RenĂ© Ghosh, 2010-12-05</p>
+		<p>René Ghosh, December 2010</p>
 		<hr>
-		<p>Contact: <a href="https://web.archive.org/web/20150625024618/mailto:rene.ghosh@gmail.com">RenĂ© Ghosh</a></p>
+	</div>
 	</div>
   </body>
 </html>
