@@ -61,7 +61,6 @@ span {
 .page {
   height: 800px;
   padding-top: 100px;
-  border-bottom: 1px dashed #000;
 }
 p {
   text-align: left;
