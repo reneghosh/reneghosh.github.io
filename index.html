@@ -11,13 +11,12 @@
     <link rel="alternate" href="http://reneghosh.github.io" hreflang="en-us" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
-    $(document).on('click', 'a[href^="#"]', function (event) {
-        event.preventDefault();
-
-        $('html, body').animate({
-            scrollTop: $($.attr(this, 'href')).offset().top
-        }, 500);
-    });
+$(document).on('click', 'a[href^="#"]', function (event) {
+    event.preventDefault();
+    $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+    }, 500);
+});
     </script>
     <script type="application/ld+json">
     {
@@ -39,10 +38,10 @@
         <h1 class="title"><a href="http://reneghosh.github.io">René Ghosh</a></h1>
 	      <div id="nav">
 	           <ul>
-                 <li><span><a href="index.html#aboutme">About</a></span></li>
-	               <li><span><a href="index.html#books">Books</a></span></li>
-                 <li><span><a href="index.html#music">Music</a></span></li>
-	               <li><span><a href="index.html#misc">Miscellaneous</a></span></li>
+                 <li><span><a href="#aboutme">About</a></span></li>
+	               <li><span><a href="#books">Books</a></span></li>
+                 <li><span><a href="#music">Music</a></span></li>
+	               <li><span><a href="#misc">Miscellaneous</a></span></li>
 	           </ul>
 	      </div>
       </div>

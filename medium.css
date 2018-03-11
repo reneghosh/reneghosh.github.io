@@ -1,9 +1,15 @@
 body {
 	font-size: 11pt;
 }
-#main {
+.main {
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
     width: 100%;
+}
+#about {
+  width: 100%;
+}
+#nav li span a {
+    font-size: 13pt;
 }
