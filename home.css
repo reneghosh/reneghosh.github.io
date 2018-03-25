@@ -25,6 +25,9 @@ body {
   margin: 0;
   float: left;
 }
+.icon {
+  visibility: hidden;
+}
 #nav li {
   padding: 20px;
 }
@@ -85,6 +88,9 @@ a, a:visited {
   background-color: #fff;
   border-radius: 15px;
 }
+.menuBar {
+    visibility: hidden;
+}
 .title {
   text-transform: uppercase; 
   border-width: 0px 1px 1px 1px;
@@ -132,7 +138,6 @@ h2 {
 ul li {
  display: inline;
 }
-
 
 .buttonlink {
   border: 1px solid #ccc;

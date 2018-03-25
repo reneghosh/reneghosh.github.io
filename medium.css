@@ -13,25 +13,51 @@ body {
   float: none;
   position: relative;
 }
-#nav li span a {
+#nav {
+    visibility: hidden;
+}
+#mobilenav li span a {
     font-size: 13pt;
     font-family: Georgia, serif;
     font-weight: bold;
     padding: 0;
+    color: #FFF;
 }
-#nav {
+.icon {
+  visibility: visible;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 1em;
+}
+.menuOut {
+    visibility: visible;
+}
+.menuIn {
+    visibility: hidden;
+}
+.title {
     width: 100%;
-    margin: 0;
-    padding: 0;
-    clear: both;
-    float: none;
 }
-#nav ul {
-    padding: 0;
+.title a {
+    text-align: center;
+
 }
-#nav li {
+#mobilenav {
+    margin-top: 1em;
+    padding: 0;
+    background-color: #000;
+    position: fixed;
+
+}
+#mobilenav ul {
+    padding: 1em;
+
+}
+#mobilenav li {
     padding: 1px;
     margin: 0;
+    display: block;
 }
 .page {
     padding-top: 10pt;

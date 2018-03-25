@@ -17,6 +17,14 @@ $(document).on('click', 'a[href^="#"]', function (event) {
         scrollTop: $($.attr(this, 'href')).offset().top
     }, 500);
 });
+function toggleMenu() {
+    var x = document.getElementById("mobilenav");
+    if (x.className === "menuOut") {
+        x.className += " menuIn";
+    } else {
+        x.className = "menuOut";
+    }
+}
     </script>
     <script type="application/ld+json">
     {
@@ -36,13 +44,22 @@ $(document).on('click', 'a[href^="#"]', function (event) {
     <div class="main">
       <div id="about">
         <h1 class="title"><a href="http://reneghosh.github.io">René Ghosh</a></h1>
-	      <div id="nav">
-	           <ul>
-                 <li><span><a href="#aboutme">About</a></span></li>
-	               <li><span><a href="#books">Books</a></span></li>
-                 <li><span><a href="#music">Music</a></span></li>
-	               <li><span><a href="#misc">Miscellaneous</a></span></li>
-	           </ul>
+        <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">&#9776;</a></li>
+        <div id="nav">
+               <ul>
+                   <li><span><a href="#aboutme">About</a></span></li>
+                   <li><span><a href="#books">Books</a></span></li>
+                   <li><span><a href="#music">Music</a></span></li>
+                   <li><span><a href="#misc">Miscellaneous</a></span></li>
+               </ul>
+        </div>
+        <div id="mobilenav" class="menuIn">
+             <ul id="menuItems">
+                 <li><span><a href="#aboutme" onclick="toggleMenu()">About</a></span></li>
+                 <li><span><a href="#books" onclick="toggleMenu()">Books</a></span></li>
+                 <li><span><a href="#music" onclick="toggleMenu()">Music</a></span></li>
+                 <li><span><a href="#misc" onclick="toggleMenu()">Miscellaneous</a></span></li>
+             </ul>
 	      </div>
       </div>
       <div class="page" id="aboutme">
