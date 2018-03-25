@@ -23,18 +23,13 @@ body {
     padding: 0;
     color: #FFF;
 }
+
 .icon {
   visibility: visible;
   position: fixed;
   left: 0;
   top: 0;
   padding: 1em;
-}
-.menuOut {
-    visibility: visible;
-}
-.menuIn {
-    visibility: hidden;
 }
 .title {
     width: 100%;
@@ -48,11 +43,10 @@ body {
     padding: 0;
     background-color: #000;
     position: fixed;
-
 }
+
 #mobilenav ul {
     padding: 1em;
-
 }
 #mobilenav li {
     padding: 1px;
