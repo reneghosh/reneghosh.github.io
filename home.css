@@ -25,6 +25,9 @@ body {
   margin: 0;
   float: left;
 }
+#mobilenav {
+  visibility: hidden;
+}
 .icon {
   visibility: hidden;
 }
