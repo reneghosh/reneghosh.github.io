@@ -109,6 +109,9 @@ a, a:visited {
   padding-top: 0.3em;
   padding-bottom: 0.3em;
   float: left;
+  font-size: 28px;
+  font-family: "Poller One";
+  text-align: left;
 }
 .title a, .title a[visited] {
   color: #000;
@@ -118,11 +121,6 @@ a, a:visited {
 h1, h2, h3, h4 {
   margin: 0;
   margin-top: 0.5em;
-}
-h1 {
-  font-size: 28px;
-  font-family: "Poller One";
-  text-align: left;
 }
 .product {
   margin-top: 0.7em;
