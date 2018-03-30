@@ -103,17 +103,27 @@
   </head>
   <body onload="javascript:foc()">
 	<div class="main">
-	  <div id="about">
+    <div id="about" style="position: relative">
         <h1 class="title"><a href="http://reneghosh.github.io">René Ghosh</a></h1>
-	      <div id="nav">
-	           <ul>
-					<li><span><a href="index.html#aboutme">About</a></span></li>
-					<li><span><a href="index.html#books">Books</a></span></li>
-					<li><span><a href="index.html#music">Music</a></span></li>
-					<li><span><a href="index.html#misc">Miscellaneous</a></span></li>
-	           </ul>
-	      </div>
+        <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">&#9776;</a>
+        <div id="nav">
+               <ul>
+                   <li><span><a href="#aboutme">About</a></span></li>
+                   <li><span><a href="#books">Books</a></span></li>
+                   <li><span><a href="#music">Music</a></span></li>
+                   <li><span><a href="#published">Published work</a></span></li>
+               </ul>
+        </div>
+        <div id="mobilenav" class="menuIn">
+             <ul>
+                 <li><span><a onclick="toggleMenu()" href="#aboutme">About</a></span></li>
+                 <li><span><a onclick="toggleMenu()" href="#books">Books</a></span></li>
+                 <li><span><a onclick="toggleMenu()" href="#music">Music</a></span></li>
+                 <li><span><a onclick="toggleMenu()" href="#published">Published work</a></span></li>
+             </ul>
+          </div>
       </div>
+
       <div class="page">
 	  <h1>The Paris Marathon Predictor</h1>
 	  <p>Enter your time on a distance between 17 and 25km. The calculator will predict your marathon time and pace for you.</p>

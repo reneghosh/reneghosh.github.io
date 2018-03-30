@@ -44,15 +44,24 @@ function toggleMenu() {
     <div class="main">
     <div id="about" style="position: relative">
         <h1 class="title"><a href="http://reneghosh.github.io">René Ghosh</a></h1>
-          <div id="nav">
+        <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">&#9776;</a>
+        <div id="nav">
                <ul>
-                    <li><span><a href="index.html#aboutme">About</a></span></li>
-                    <li><span><a href="index.html#books">Books</a></span></li>
-                    <li><span><a href="index.html#music">Music</a></span></li>
-                    <li><span><a href="index.html#misc">Miscellaneous</a></span></li>
+                   <li><span><a href="#aboutme">About</a></span></li>
+                   <li><span><a href="#books">Books</a></span></li>
+                   <li><span><a href="#music">Music</a></span></li>
+                   <li><span><a href="#published">Published work</a></span></li>
                </ul>
+        </div>
+        <div id="mobilenav" class="menuIn">
+             <ul>
+                 <li><span><a onclick="toggleMenu()" href="#aboutme">About</a></span></li>
+                 <li><span><a onclick="toggleMenu()" href="#books">Books</a></span></li>
+                 <li><span><a onclick="toggleMenu()" href="#music">Music</a></span></li>
+                 <li><span><a onclick="toggleMenu()" href="#published">Published work</a></span></li>
+             </ul>
           </div>
-    </div>
+      </div>
     <div class="page">
             <h1>The Strange, Alternate Reality of Paris’ English-language Open Mic Events</h1>
             <p>Paris has drawn artsy folk for a long time now. The image of the Hemingway-esque American expat reinventing him/herself in a world of artistic abandon and sensuality still grips with potency. It’s not my thing, but I can thank the bohemian meme for fostering environments the like of which I’ve found at various open mic events in Paris where all artistic forms are welcome and performances span the whole gamut.</p>

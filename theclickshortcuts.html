@@ -42,17 +42,26 @@ function toggleMenu() {
   </head>
   <body>
     <div class="main">
-    <div id="about">
+    <div id="about" style="position: relative">
         <h1 class="title"><a href="http://reneghosh.github.io">René Ghosh</a></h1>
-          <div id="nav">
+        <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">&#9776;</a>
+        <div id="nav">
                <ul>
-                    <li><span><a href="index.html#aboutme">About</a></span></li>
-                    <li><span><a href="index.html#books">Books</a></span></li>
-                    <li><span><a href="index.html#music">Music</a></span></li>
-                    <li><span><a href="index.html#misc">Miscellaneous</a></span></li>
+                   <li><span><a href="#aboutme">About</a></span></li>
+                   <li><span><a href="#books">Books</a></span></li>
+                   <li><span><a href="#music">Music</a></span></li>
+                   <li><span><a href="#published">Published work</a></span></li>
                </ul>
+        </div>
+        <div id="mobilenav" class="menuIn">
+             <ul>
+                 <li><span><a onclick="toggleMenu()" href="#aboutme">About</a></span></li>
+                 <li><span><a onclick="toggleMenu()" href="#books">Books</a></span></li>
+                 <li><span><a onclick="toggleMenu()" href="#music">Music</a></span></li>
+                 <li><span><a onclick="toggleMenu()" href="#published">Published work</a></span></li>
+             </ul>
           </div>
-    </div>
+      </div>
     <div class="page">
 			<h1>The Click Shortcuts - Extract</h1>
 			<p><i>This is an extract of the first three chapters of the novel The Click Shortcuts.</i></p>
