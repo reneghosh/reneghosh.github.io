@@ -1,22 +1,57 @@
-<!doctype html>
-<head>
-	<link rel="stylesheet" href="home.css"/>
-	<meta name="viewport" content="width=device-width"/>
-	<meta charset="UTF-8"/>
-	<title>The Click Shortcuts - Extract</title>			
-</head>
-<body>
-	<div class="main">
-	<div id="about">
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>René Ghosh homepage</title>
+    <meta name="description" content="René Ghosh homepage">
+    <meta name="author" content="René Ghosh">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="home.css" type="text/css">
+    <link rel="stylesheet" media="screen and (min-width: 200px) and (max-width: 900px)" href="medium.css">
+    <link rel="alternate" href="http://reneghosh.github.io" hreflang="en-us" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+$(document).on('click', 'a[href^="#"]', function (event) {
+    event.preventDefault();
+    $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+    }, 500);
+});
+function toggleMenu() {
+    var x = document.getElementById("mobilenav");
+    if (x.className === "menuOut") {
+        x.className += " menuIn";
+    } else {
+        x.className = "menuOut";
+    }
+}
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "René Ghosh",
+      "url": "http://reneghosh.github.io",
+      "sameAs": [
+        "https://www.facebook.com/rene.ghosh",
+        "https://www.facebook.com/rene.ghosh",
+        "https://soundcloud.com/satelliteray"
+      ]
+    }
+  </script>
+  </head>
+  <body>
+    <div class="main">
+    <div id="about">
         <h1 class="title"><a href="http://reneghosh.github.io">René Ghosh</a></h1>
-	      <div id="nav">
-	           <ul>
-					<li><span><a href="index.html#aboutme">About</a></span></li>
-					<li><span><a href="index.html#books">Books</a></span></li>
-					<li><span><a href="index.html#music">Music</a></span></li>
-					<li><span><a href="index.html#misc">Miscellaneous</a></span></li>
-	           </ul>
-	      </div>
+          <div id="nav">
+               <ul>
+                    <li><span><a href="index.html#aboutme">About</a></span></li>
+                    <li><span><a href="index.html#books">Books</a></span></li>
+                    <li><span><a href="index.html#music">Music</a></span></li>
+                    <li><span><a href="index.html#misc">Miscellaneous</a></span></li>
+               </ul>
+          </div>
     </div>
     <div class="page">
 			<h1>The Click Shortcuts - Extract</h1>

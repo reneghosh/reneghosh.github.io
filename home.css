@@ -2,8 +2,9 @@
 @import url('https://fonts.googleapis.com/css?family=Poller+One');
 
 body {
-  font-size: 20px;
-  font-family: 'Vollkorn', Georgia, serif;
+  font-size: 17px;
+  font-family: Georgia, serif;
+  line-height: 1.8em;
   text-align: center;
   padding: 0;
   margin: 0;
@@ -14,6 +15,7 @@ body {
   margin-right: auto;
   width: 960px;
 }
+
 #about {
   position: fixed;
   background-color: #cde;
@@ -69,7 +71,8 @@ span {
 }
 .page {
   height: 800px;
-  padding-top: 100px;
+  padding: 30px;
+  padding-top: 5em;
 }
 p {
   text-align: left;
@@ -138,6 +141,8 @@ h2 {
   font-size: 32px;
   font-family: "Vollkorn";
   font-weight: bold;
+  margin-top: 2em;
+  margin-bottom: 1em;
   line-height: 1em;
 }
 
