@@ -70,9 +70,10 @@ span {
   display: inline;
 }
 .page {
-  height: 800px;
+  min-height: 300px;
   padding: 30px;
   padding-top: 5em;
+  clear: both;
 }
 p {
   text-align: left;
