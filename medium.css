@@ -30,9 +30,12 @@ body {
   left: 0;
   top: 0;
   padding: 1em;
+  background-color: #445;
+  color: #fff;
 }
 .title {
     width: 100%;
+    text-align: center;
 }
 .title a {
     text-align: center;
@@ -40,8 +43,8 @@ body {
 }
 #mobilenav {
     margin-top: 1em;
-    padding: 0;
-    background-color: #000;
+    padding: 1em;
+    background-color: #556;
     position: fixed;
 }
 
