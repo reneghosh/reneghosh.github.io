@@ -1,218 +1,198 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>René Ghosh homepage</title>
-    <meta name="description" content="René Ghosh homepage">
-    <meta name="author" content="René Ghosh">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="home.css" type="text/css">
-    <link rel="stylesheet" media="screen and (min-width: 200px) and (max-width: 900px)" href="medium.css">
-    <link rel="alternate" href="http://reneghosh.github.io" hreflang="en-us" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script>
-$(document).on('click', 'a[href^="#"]', function (event) {
-    event.preventDefault();
-    $('html, body').animate({
-        scrollTop: $($.attr(this, 'href')).offset().top
-    }, 500);
-});
-function toggleMenu() {
-    var x = document.getElementById("mobilenav");
-    if (x.className === "menuOut") {
-        x.className += " menuIn";
-    } else {
-        x.className = "menuOut";
-    }
-}
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "http://schema.org",
-      "@type": "Person",
-      "name": "René Ghosh",
-      "url": "http://reneghosh.github.io",
-      "sameAs": [
-        "https://www.facebook.com/rene.ghosh",
-        "https://www.facebook.com/rene.ghosh",
-        "https://soundcloud.com/satelliteray"
-      ]
-    }
-  </script>
-  </head>
-  <body>
-    <div class="main">
-      <div id="about">
-        <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">&#9776;</a>
-        <div class="title"><a href="http://reneghosh.github.io">René Ghosh</a></div>
-        <div id="nav">
-               <ul>
-                   <li><span><a href="#aboutme">About</a></span></li>
-                   <li><span><a href="#books">Books</a></span></li>
-                   <li><span><a href="#music">Music</a></span></li>
-                   <li><span><a href="#published">Published work</a></span></li>
-               </ul>
-        </div>
-        <div id="mobilenav" class="menuIn">
-             <ul>
-                 <li><span><a onclick="toggleMenu()" href="#aboutme">About</a></span></li>
-                 <li><span><a onclick="toggleMenu()" href="#books">Books</a></span></li>
-                 <li><span><a onclick="toggleMenu()" href="#music">Music</a></span></li>
-                 <li><span><a onclick="toggleMenu()" href="#published">Published work</a></span></li>
-             </ul>
-	      </div>
-      </div>
-      <div class="page" id="aboutme">
-        <div>
-          <img src="images/rg-2017.jpg" class="img-circular" alt="René Ghosh" style="float: left;margin-right: 1em;" height="200">
-          <p>I am René Ghosh, a writer and musician from Rigaud, Québec, now living in Paris, France.</p>
-          <p>I write magical punk. My stories blend elements of sci-fi and the occasional supernatural element, 
-            but never occult the human stories that are my main focus. I try to maintain an authentic 
-            and genuine voice.  
-          </p>
-          <ul id="linksbar">
-            <li><a href="https://www.facebook.com/rene.ghosh">Facebook</a></li>
-            <li><a href="https://twitter.com/reghosh">Twitter</a></li>
-            <li><a href="https://soundcloud.com/satelliteray/">Soundcloud</a></li>
-            <li style="text-align: center">email: rene.ghosh@gmail.com</li>
-          </ul>
-        </div>
-      </div>
-      <div class="page" id="books">
-        <h1>Books</h1>
-        <div>
-	        <ul style="text-align: center">
-	          <li><a href="#liver"><img height="250" width="166" src="images/liver-medium.png" alt="Liver!" class="bookcover"></a></li>
-            <li><a href="#memorymonkey"><img height="250" width="156" src="images/memorymonkey-medium.jpg" alt="The Memory Monkey" class="bookcover"></a></li>
-	          <li><a href="#live"><img height="250" width="165" src="images/live-medium.jpg" alt="Live!" class="bookcover"></a></li>
-	          <li><a href="#clickshortcuts"><img height="250" width="159" src="images/frontcover20151215-medium.png" alt="The Click Shortcuts" class="bookcover"></a></li>
-	          <li><a href="#puppetdancers"><img height="250" width="156" src="images/puppetdancers-medium.jpeg" alt="Puppet Dancers" class="bookcover"></a></li>
-	        </ul>
-        </div>
-    	</div>
-      <div class="page" id="liver">
-        <h1 class="product">LIVER!</h1>
-        <div class="newsbody">
-          <p class="date">Released: 2017</p>
-          <img src="images/liver-medium.png" alt="Liver!" class="bookcover">
-          <div class="booktype">Short story collection</div>
-          <p><strong>Liver!</strong> is the second collection of open-mic stories, all of which
-            were performed at open mic venues over the course of 2016-2017.</p>
-          <p>There's fiction in there, confessional pieces, fantasy, lists.</p>
-          <p>And more coarse language.</p>
-          <span class="buttonlink"><a href="https://www.amazon.com/Liver-collected-open-writings-vol/dp/2953100466">Print version (North America)</a></span> 
-          <span class="buttonlink"><a href="https://www.amazon.fr/Liver-collected-open-writings-vol/dp/2953100466">Print version (Europe)</a></span>
-        </div>
-      </div>        
-      <div class="page" id="memorymonkey">
-        <h1 class="product">THE MEMORY MONKEY</h1>
-        <div class="newsbody">
-          <p class="date">Released: 2017</p>
-          <img src="images/memorymonkey-medium.jpg" alt="The Memory Monkey" class="bookcover">
-          <div class="booktype">Novel</div>
-            <a class="primary" href="memorymonkey.html">[read an extract]</a>
-            <p>Max and Tascha were supposed to be unbreakable as a couple after being conditioned in the Institute for Behavioral Research that took them in as war refugees. Bound to one another, their pre-institute memories wiped clean, they unexpectedly unravel when Tascha finds she wants to see other people.</p>
-            <p>Their search for answers and new belonging takes them away from their mountain town, away from their outdoor equipment shop, away from the Extrapolist church, a pseudo-scientific faith in which life is viewed as a meeting place for souls. They go back to the architect of the memory wipe and beyond, to a strange, telepathic monkey who’s been with them the whole time.</p>
-            <p>Rialdy comes to work as a consultant in a mining plant on the Aranacian island of Wizniu and looks for traces of his deceased Aranacian mother, meeting a monkey of his own on the way.</p>
-            <p>The Memory Monkey is an exploration the nature of human bonds and the untrustworthy nature of memory.</p>
-            <span class="buttonlink"><a href="https://www.amazon.com/Memory-Monkey-M-Rene-Ghosh/dp/295310044X/">Print version (North America)</a></span> 
-            <span class="buttonlink"><a href="https://www.amazon.fr/Memory-Monkey-M-Rene-Ghosh/dp/295310044X">Print version (Europe)</a></span>
-        </div>
-      </div>
-      <div class="page" id="live">
-        <h1 class="product">LIVE!</h1>
-        <div class="newsbody">
-          <p class="date">Released: 2016</p>
-          <img src="images/live-medium.jpg" alt="Live!" class="bookcover">
-          <div class="booktype">Short story collection</div>
-            <p><strong>Live!</strong> is a collection of stories written for live reading, that I
-            performed at open mic venues over the course of 2015.</p>
-            <p>It's a mix of a few styles, some of the pieces are experimental, and the 
-            subjects range from fantasy to auto-fiction.</p>
-            <p>There are a few swear words.</p>
-            <span class="buttonlink"><a href="https://www.amazon.com/Live-collected-open-mic-readings/dp/1530924413/">Print version (North America)</a></span> 
-            <span class="buttonlink"><a href="https://www.amazon.fr/Live-collected-open-mic-readings/dp/1530924413/">Print version (Europe)</a></span>
-        </div>
-    	</div>
-      <div class="page" id="clickshortcuts">
-        <h1 class="product">THE CLICK SHORTCUTS</h1>
-        <div class="newsbody">
-          <p class="date">Released: 2016</p>
-          <img src="images/frontcover20151215-medium.png" alt="The Click Shortcuts" class="bookcover">
-          <div class="booktype">Novel</div>
-            <a class="primary" href="theclickshortcuts.html">[read an extract]</a>.
-            <p>
-            <strong>The Click Shortcuts</strong> is about the emergence of a writing system in Geremoth, 
-            where they use the same writing system as all the other countries on the continent. 
-            When mobile phones appear though, Geremoth’s youth start communicating with an alternative system, 
-            that imitates sounds. Behind its rise are its fragile-brained inventor Bejia, Anossia who needs it 
-            to remain relevant as a student-tutor, Berbi the memorization champion who’ll use it to remember, 
-            and Geluko the scientist who needs a source of revenue to promote Besa, the genetically designed crop 
-            plant that assaults other crop plants.</p>
-          <p>
-          </p>
-          <div>
-            <span class="buttonlink"><a href="http://www.amazon.com/Click-Shortcuts-M-Ren%C3%A9-Ghosh/dp/2953100423">Print&nbsp;version (North America)</a></span>
-            <span class="buttonlink"><a href="http://www.amazon.fr/Click-Shortcuts-M-Ren%C3%A9-Ghosh/dp/2953100423">Print&nbsp;(Europe)</a></span>  
+    	<title>René Ghosh Homepage</title>
+    	<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<!--       <base href="http://reneghosh.github.io" target="_blank">
+ -->      
+      <link rel="stylesheet" href="home.css" type="text/css">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light static-top">
+            <a class="navbar-brand mb-0 h1" href="#">René Ghosh</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item"><span><a class="nav-link" href="#aboutme">About</a></span></li>
+                  <li class="nav-item"><span><a class="nav-link" href="#books">Books</a></span></li>
+                  <li class="nav-item"><span><a class="nav-link" href="#music">Music</a></span></li>
+                  <li class="nav-item"><span><a class="nav-link" href="#published">Published work</a></span></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container" style="margin-top: 3em">
+            <div class="row" id="aboutme">
+                <div class="col-sm-2"><img src="https://reneghosh.github.io/images/rg-2017.jpg" class="img-fluid" style="border-radius:75px" width="150"></div>
+                <div class="col-md-7">
+                    <p>I am René Ghosh, a writer and musician from Rigaud, Québec, now living in Paris, France.</p>
+                    <p>I write magical punk. My stories blend elements of sci-fi and the occasional supernatural element, but never occult the human stories that are my main focus. I try to maintain an authentic and genuine voice.</p>
+                </div>
+                <div class="col-md-3">
+                    <ul class="list-group" role="group">
+                        <li class="list-group-item"><a href="https://www.facebook.com/rene.ghosh">Facebook</a></li>
+                        <li class="list-group-item"><a href="https://twitter.com/reghosh">Twitter</a></li>
+                        <li class="list-group-item"><a href="https://soundcloud.com/satelliteray/">Soundcloud</a></li>
+                        <li  class="list-group-item" style="text-align: center">email: rene.ghosh@gmail.com</li>
+                    </ul>
+                </div> 
+            </div>
+            <div class="row">
+              <div class="container-fluid">
+              <h1>Books</h1>            
+                  <ul class="nav">
+                    <li class="nav-item"><a href="#liver"><img height="250" width="166" src="images/liver-medium.png" alt="Liver!" class="bookcover"></a></li>
+                  <li><a href="#memorymonkey"><img height="250" width="156" src="images/memorymonkey-medium.jpg" alt="The Memory Monkey" class="bookcover"></a></li>
+                    <li class="nav-item"><a href="#live"><img height="250" width="165" src="images/live-medium.jpg" alt="Live!" class="bookcover"></a></li>
+                    <li class="nav-item"><a href="#clickshortcuts"><img height="250" width="159" src="images/frontcover20151215-medium.png" alt="The Click Shortcuts" class="bookcover"></a></li>
+                    <li class="nav-item"><a href="#puppetdancers"><img height="250" width="156" src="images/puppetdancers-medium.jpeg" alt="Puppet Dancers" class="bookcover"></a></li>
+                  </ul>
+              </div>
+            </div>
+            <div class="row" id="liver">
+              <div class="container-fluid">
+              <h2 class="product">LIVER!</h2>
+                <div class="newsbody">
+                  <p class="date">Released: 2017</p>
+                  <img src="images/liver-medium.png" alt="Liver!" class="bookcover">
+                  <div class="booktype">Short story collection</div>
+                  <p><strong>Liver!</strong> is the second collection of open-mic stories, all of which
+                    were performed at open mic venues over the course of 2016-2017.</p>
+                  <p>There's fiction in there, confessional pieces, fantasy, lists.</p>
+                  <p>And more coarse language.</p>
+                  <span class="buttonlink"><a href="https://www.amazon.com/Liver-collected-open-writings-vol/dp/2953100466">Print version (North America)</a></span> 
+                  <span class="buttonlink"><a href="https://www.amazon.fr/Liver-collected-open-writings-vol/dp/2953100466">Print version (Europe)</a></span>
+                </div>
+              </div>
+            </div>        
+            <div class="row" id="memorymonkey">
+              <div class="container-fluid">
+                <h1 class="product">THE MEMORY MONKEY</h1>
+                <div class="newsbody">
+                  <p class="date">Released: 2017</p>
+                  <img src="images/memorymonkey-medium.jpg" alt="The Memory Monkey" class="bookcover">
+                  <div class="booktype">Novel</div>
+                    <a class="primary" href="memorymonkey.html">[read an extract]</a>
+                    <p>Max and Tascha were supposed to be unbreakable as a couple after being conditioned in the Institute for Behavioral Research that took them in as war refugees. Bound to one another, their pre-institute memories wiped clean, they unexpectedly unravel when Tascha finds she wants to see other people.</p>
+                    <p>Their search for answers and new belonging takes them away from their mountain town, away from their outdoor equipment shop, away from the Extrapolist church, a pseudo-scientific faith in which life is viewed as a meeting place for souls. They go back to the architect of the memory wipe and beyond, to a strange, telepathic monkey who’s been with them the whole time.</p>
+                    <p>Rialdy comes to work as a consultant in a mining plant on the Aranacian island of Wizniu and looks for traces of his deceased Aranacian mother, meeting a monkey of his own on the way.</p>
+                    <p>The Memory Monkey is an exploration the nature of human bonds and the untrustworthy nature of memory.</p>
+                    <span class="buttonlink"><a href="https://www.amazon.com/Memory-Monkey-M-Rene-Ghosh/dp/295310044X/">Print version (North America)</a></span> 
+                    <span class="buttonlink"><a href="https://www.amazon.fr/Memory-Monkey-M-Rene-Ghosh/dp/295310044X">Print version (Europe)</a></span>
+                </div>
+              </div>
+            </div>
+            <div class="row" id="live">
+              <div class="container-fluid">
+                <h2 class="product">LIVE!</h2>
+                <div class="newsbody">
+                  <p class="date">Released: 2016</p>
+                  <img src="images/live-medium.jpg" alt="Live!" class="bookcover">
+                  <div class="booktype">Short story collection</div>
+                    <p><strong>Live!</strong> is a collection of stories written for live reading, that I
+                    performed at open mic venues over the course of 2015.</p>
+                    <p>It's a mix of a few styles, some of the pieces are experimental, and the 
+                    subjects range from fantasy to auto-fiction.</p>
+                    <p>There are a few swear words.</p>
+                    <span class="buttonlink"><a href="https://www.amazon.com/Live-collected-open-mic-readings/dp/1530924413/">Print version (North America)</a></span> 
+                    <span class="buttonlink"><a href="https://www.amazon.fr/Live-collected-open-mic-readings/dp/1530924413/">Print version (Europe)</a></span>
+                </div>
+              </div>
+            </div>
+            <div class="row" id="clickshortcuts">
+              <div class="container-fluid">
+                <h2 class="product">THE CLICK SHORTCUTS</h2>
+                <div class="newsbody">
+                  <p class="date">Released: 2016</p>
+                  <img src="images/frontcover20151215-medium.png" alt="The Click Shortcuts" class="bookcover">
+                  <div class="booktype">Novel</div>
+                    <a class="primary" href="theclickshortcuts.html">[read an extract]</a>.
+                    <p>
+                    <strong>The Click Shortcuts</strong> is about the emergence of a writing system in Geremoth, 
+                    where they use the same writing system as all the other countries on the continent. 
+                    When mobile phones appear though, Geremoth’s youth start communicating with an alternative system, 
+                    that imitates sounds. Behind its rise are its fragile-brained inventor Bejia, Anossia who needs it 
+                    to remain relevant as a student-tutor, Berbi the memorization champion who’ll use it to remember, 
+                    and Geluko the scientist who needs a source of revenue to promote Besa, the genetically designed crop 
+                    plant that assaults other crop plants.</p>
+                  <p>
+                  </p>
+                  <div>
+                    <span class="buttonlink"><a href="http://www.amazon.com/Click-Shortcuts-M-Ren%C3%A9-Ghosh/dp/2953100423">Print&nbsp;version (North America)</a></span>
+                    <span class="buttonlink"><a href="http://www.amazon.fr/Click-Shortcuts-M-Ren%C3%A9-Ghosh/dp/2953100423">Print&nbsp;(Europe)</a></span>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          <div class="row" id="puppetdancers">
+              <div class="container-fluid">
+              <h2 class="product">PUPPET DANCERS</h2>
+              <div class="newsbody">
+                <p class="date">Released: 2014</p>
+                <img alt="Puppet Dancers" src="images/puppetdancers-medium.jpeg" class="bookcover">
+                <div class="booktype">Novel</div>
+                <a class="primary" href="puppetdancers.html">[read an extract]</a>
+                <p>
+                  <strong>Puppet Dancers</strong> is my first novel. It is available 
+                  in both print and electronic form. If you don't feel like paying
+                  for it, just email me and I'll send it to you for free.
+                </p>
+                <p>
+                  <a class="primary" href="books/puppetdancers.html">Read the full text online</a>.
+                </p>
+                <p>The novel is about a dance style. Known to Baguetelians as
+                  the robotic swerve and to Margolians as the puppet dance, its
+                  history is veiled in legend, but strange events uncovered by data
+                  analysts will reveal its true function, beyond Baguetelians' ironic
+                  imitation of laboratory robots or Margolians' nostalgia of lost
+                  empires.</p>        
+                <div>
+                  <a class="buttonlink" href="http://www.amazon.com/dp/2953100415">Print version (North America)</a>
+                  <a class="buttonlink" href="https://www.amazon.fr/Puppet-Dancers-M-Ren%C3%A9-Ghosh/dp/2953100415">Print version (Europe)</a>
+                 </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="page" id="puppetdancers">
-        <h1 class="product">PUPPET DANCERS</h1>
-        <div class="newsbody">
-          <p class="date">Released: 2014</p>
-          <img alt="Puppet Dancers" src="images/puppetdancers-medium.jpeg" class="bookcover">
-          <div class="booktype">Novel</div>
-          <a class="primary" href="puppetdancers.html">[read an extract]</a>
-          <p>
-            <strong>Puppet Dancers</strong> is my first novel. It is available 
-            in both print and electronic form. If you don't feel like paying
-            for it, just email me and I'll send it to you for free.
-          </p>
-          <p>
-            <a class="primary" href="books/puppetdancers.html">Read the full text online</a>.
-          </p>
-          <p>The novel is about a dance style. Known to Baguetelians as
-            the robotic swerve and to Margolians as the puppet dance, its
-            history is veiled in legend, but strange events uncovered by data
-            analysts will reveal its true function, beyond Baguetelians' ironic
-            imitation of laboratory robots or Margolians' nostalgia of lost
-            empires.</p>        
-          <div>
-            <a class="buttonlink" href="http://www.amazon.com/dp/2953100415">Print version (North America)</a>
-            <a class="buttonlink" href="https://www.amazon.fr/Puppet-Dancers-M-Ren%C3%A9-Ghosh/dp/2953100415">Print version (Europe)</a>
-           </div>
-        </div>
-      </div>
-      <div class="page" id="music">
-        <h1 class="product">Music</h1>
-        <div>
-          <p>I'm currently working on an album of all-electronic music. I'm making all the music from a phone app and 
-            recording vocals separately. Here is my first track, "Sentient":
-          </p>
-          <iframe width="400" height="166" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/347978086&amp;color=%23ff9900&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true"></iframe>
-        </div>
-      </div>
-      <div class="page" id="published">
-        <h1>Published work</h1>
-        <div>
-          <h2>Don't let the sun do down on the sun</h2>
-          <p>Humorous piece describing efforts to allay the end of the sun. <a href="https://theopiatemagazine.com/2018/02/24/dont-let-the-sun-set-on-the-sun-by-rene-ghosh/">[link]</a>.
-        </div>        
-        <div>
-          <h2>The Strange, Alternate Reality of Paris’ English-language Open Mic Events</h2>
-          <p>About my experience attending open mic events. <a href="parisopenmic.html">[link]</a>.</p>
-        </div>
-	      <div>
-		      <h2>That One Time it was OK to Slap a Woman</h2>
-		      <p>A look back on a strange moment in a UFC even when Josh Barnett slapped his own fighter, a woman half his size. <a href="thatonetimeitwasoktoslapawoman.html">[link]</a>.</p>
-	      </div>
-	      <div>
-		      <h2>Marathon time predictor</h2>		      
-		      <p>A <a href="predictor.html">calculator for predicting your marathon time</a>. Based on projections I made
-		      from data taken off the Paris marathon and half-marathon websites triangulating runners who'd finished bith races.</p>
-	      </div>
-      </div>
-    </div>
-  </body>
+          <div class="row" id="music">
+              <div class="container-fluid">
+                <h1 class="product">Music</h1>
+                <div>
+                  <p>I'm currently working on an album of all-electronic music. I'm making all the music from a phone app and 
+                    recording vocals separately. Here is my first track, "Sentient":
+                  </p>
+                  <iframe width="400" height="166" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/347978086&amp;color=%23ff9900&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true"></iframe>
+                </div>
+            </div>
+          </div>
+          <div class="row" id="published">
+              <div class="container-fluid">
+                <h1>Published work</h1>
+                <div>
+                  <h2>Don't let the sun do down on the sun</h2>
+                  <p>Humorous piece describing efforts to allay the end of the sun. <a href="https://theopiatemagazine.com/2018/02/24/dont-let-the-sun-set-on-the-sun-by-rene-ghosh/">[link]</a>.</p>
+                </div>        
+                <div>
+                  <h2>The Strange, Alternate Reality of Paris’ English-language Open Mic Events</h2>
+                  <p>About my experience attending open mic events. <a href="parisopenmic.html">[link]</a>.</p>
+                </div>
+                  <div>
+                      <h2>That One Time it was OK to Slap a Woman</h2>
+                      <p>A look back on a strange moment in a UFC even when Josh Barnett slapped his own fighter, a woman half his size. <a href="thatonetimeitwasoktoslapawoman.html">[link]</a>.</p>
+                  </div>
+                  <div>
+                      <h2>Marathon time predictor</h2>            
+                      <p>A <a href="predictor.html">calculator for predicting your marathon time</a>. Based on projections I made
+                      from data taken off the Paris marathon and half-marathon websites triangulating runners who'd finished bith races.</p>
+                  </div>            
+                </div>
+              </div>
+          </div>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    </body>
 </html>
