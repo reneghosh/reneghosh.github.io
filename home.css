@@ -20,9 +20,6 @@ body {
   width: 960px;
 }
 
-p{
-  margin-top: 0.9em;
-}
 #about {
   position: fixed;
   background-color: #cde;
@@ -46,9 +43,9 @@ p{
   font-size: 27px;
 }
 p {
+  margin-top: 0.9em;
   text-align: left;
   font-weight: normal;
-  max-width: 40em;
 }
 a, a:visited {
  text-decoration: none;
