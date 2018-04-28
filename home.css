@@ -1,13 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Vollkorn');
-@import url('https://fonts.googleapis.com/css?family=Poller+One');
 
 body {
   font-size: 18px;
   font-family: "Vollkorn", Georgia, serif;
   line-height: 1.8em;
-  text-align: center;
   padding: 0;
   margin: 0;
+  text-align: left;
 }
 .main {
   text-align: left;
@@ -23,57 +22,19 @@ body {
   float: left;
   width: 960px;
 }
-#nav {
-  margin: 0;
-  float: left;
-}
-.menuOut {
-    visibility: visible;
-}
-.menuIn {
-    visibility: hidden;
-}
-.icon {
-  visibility: hidden;
-}
-#nav li {
-  padding: 20px;
-}
-span {
-  padding: 0;
-  margin: 0;
-}
-#nav li span {
-  text-align: center;
-}
-#nav li span a {
-  font-family: "Poller One";
-  color: #445;
-  font-size: 20px;
-}
-.navigation li span a {
-  font-size: 20px;
-  color: #BDF;
-}
-.navigation {
-  text-align: left;
-  margin-top: 90px;
-}
-
-#linksbar li {
-  padding: 5px;
-  background-color: #ccc;
-}
-.navigation li {
-  padding: 5px;
-  background-color: #555;
-  display: inline;
-}
 .page {
-  min-height: 300px;
-  padding: 30px;
   padding-top: 5em;
-  clear: both;
+}
+.news {
+  float: left;
+  width: 18rem;
+  padding: 0;
+  border: none;
+}
+.news h2 {
+  background-color: #efefef;
+  text-align: left;
+  padding: 0.2em;
 }
 p {
   text-align: left;
@@ -84,113 +45,28 @@ a, a:visited {
  text-decoration: none;
  color: #059;
 }
-
-#writingstyle {
-  background-color: #b0a046; 
-  color:#FFF; 
-  text-align:center;
-  border-radius: 15px;
-}
-#aboutme{
-  border-radius: 15px;
-}
-#logo {
-  background-color: #fff;
-  border-radius: 15px;
-}
-.menuBar {
-    visibility: hidden;
-}
-.title {
-  text-transform: uppercase; 
-  border-width: 0px 1px 1px 1px;
-  border-radius: 0 0 20px 20px;
-  width: 10em;
-  text-align: center;
-  padding-top: 0.3em;
-  padding-bottom: 0.3em;
-  float: left;
-  font-size: 28px;
-  font-family: "Poller One";
-  text-align: left;
-}
-.title a, .title a[visited] {
-  color: #000;
-}
-
-
 h1, h2, h3, h4 {
-  margin: 0;
-  margin-top: 0.5em;
+  font-family: "Georgia";
 }
-.product {
-  margin-top: 0.7em;
-}
-.booktype {
-  display: inline;
-  font-weight: normal;
-  font-style: italic;
-  border: 1px solid #ccc;
-  background-color: #eee;
-  padding: 4px;
-  margin: 2px;
-  text-align: center;
+h1 {
+  font-size: 36px;
 }
 h2 {
   font-size: 32px;
-  font-family: "Vollkorn";
   font-weight: bold;
-  margin-top: 2em;
-  margin-bottom: 1em;
+  margin-bottom: 0em;
   line-height: 1em;
+  text-align: left;
 }
 
 ul li {
  display: inline;
 }
 
-.buttonlink {
-  border: 1px solid #ccc;
-  text-align: center;   
-  margin: 3px;
-  padding: 10px;
-  background-color: #EED;
-  border-radius: 7px;
-}
-
-.primary {
-  border: none;
-  text-align: center;
-  clear:both;
-  margin: 0px;
-  padding: 5px;
-  border-radius: 7px;
-}
-.primary, .primary:visited {
-  font-weight: bold;
-  padding:0;
-}
-
-.date {
-  color: #555;
-  font-size: 110%;
-  margin:0;
-}
-
-.extract {
-  border: 1px solid #ccc;
-  border-radius: 15px;
-  padding: 0em;
-}
 .img-circular{
   border-radius: 100px;
   -webkit-border-radius: 100px;
   -moz-border-radius: 100px;
 }
 
-.bookcover {
-  float: left;
-  margin-right: 1em; 
-  margin-bottom: 20px
-}
 
