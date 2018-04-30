@@ -30,6 +30,7 @@ body {
 }
 .news {
   float: left;
+  max-width: 25em;
   padding: 0;
   border: none;
 }
