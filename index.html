@@ -19,7 +19,48 @@
           "https://soundcloud.com/satelliteray"
         ]
       }
-      </script>              
+      </script>
+<script type="application/ld+json">
+      {
+        "@context":"http://schema.org",
+        "@type":"Book",
+        "name" : "The Memory Monkey",
+        "author": {
+          "@type":"Person",
+          "name":"René Ghosh"
+        },
+        "url" : "https://www.amazon.com/Memory-Monkey-M-Rene-Ghosh/dp/295310044X/",
+        "workExample" : [{
+          "@type": "Book",
+          "isbn": "978-2953100440",
+          "bookEdition": "1st Edition",
+          "bookFormat": "http://schema.org/Paperback",
+          "potentialAction":{
+          "@type":"ReadAction",
+          "target":
+            {
+              "@type":"EntryPoint",
+              "urlTemplate": "https://www.amazon.com/Memory-Monkey-M-Rene-Ghosh/dp/295310044X",
+              "actionPlatform":[
+                "http://schema.org/DesktopWebPlatform",
+                "http://schema.org/IOSPlatform",
+                "http://schema.org/AndroidPlatform"
+              ]
+            },
+            "expectsAcceptanceOf":{
+              "@type":"Offer",
+              "Price":8.65,
+              "priceCurrency":"USD",
+              "eligibleRegion" : {
+                "@type":"Country",
+                "name":"US"
+              },
+              "availability": "http://schema.org/InStock"
+            }
+          }
+        }]
+      }
+      </script>        
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-light bg-light static-top">
