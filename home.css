@@ -54,8 +54,10 @@ h1, h2, h3, h4, .title, .navlink {
   font-family: "Comfortaa", Georgia;
   font-weight: normal;
 }
-.navlink {
-  color: 000;
+
+.active {
+  color: #005 !important;
+  /*background-color: #456;*/
 }
 .title {
   font-size: 36px;
