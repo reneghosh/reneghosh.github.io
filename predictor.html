@@ -1,13 +1,20 @@
 <html>
 <head>
 	<title>The Paris Marathon Predictor</title>	
-	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="text.css">
 	<style>
 	  .prompt {
 		float: left;
 		text-align: right;
 		margin: 0 1em 0 0;
 		width: 30%;
+		clear:both;
+	  }
+	  .calcresult {
+	  	width: 100%;
+	  	clear: both;
 	  }
 	  .input {
 		float: left;
@@ -25,7 +32,6 @@
 		border: 1px #667 dashed;
 	  }
 	</style>
-	<link rel="stylesheet" type="text/css" href="home.css">
 	<script>
 	function foc(){
 	  document.getElementById("distance").focus();
@@ -91,9 +97,9 @@
 			var pace_unit = in_miles? "min/mile":"min/km";
 			var pace = predicted_time/42.195;
 			if (in_miles) pace *= miles2km;
-			answer = "<div class=\"prompt\"><b>Half marathon time</b>: </div>" + timeToS(riegel_time) + "<br><div class=\"prompt\"><b>Marathon time</b>: </div>"+ timeToS(predicted_time)+
-			  "<br><div class=\"prompt\"><b>Marathon speed</b>: </div>"+predicted_speed+" "+speed_unit+
-			  "<br><div class=\"prompt\"><b>Marathon pace</b>: </div>"+timeToS(pace)+" "+pace_unit;
+			answer = "<div class=\"calcresult\"><b>Half marathon time</b>: " + timeToS(riegel_time) + "</div><div class=\"calcresult\"><b>Marathon time</b>: "+ timeToS(predicted_time)+
+			  "</div><div class=\"calcresult\"><b>Marathon speed</b>: "+predicted_speed+" "+speed_unit+
+			  "</div><div class=\"calcresult\"><b>Marathon pace</b>: "+timeToS(pace)+" "+pace_unit+"</div>";
 		  }
 	  }
 	  document.getElementById("answer").innerHTML=answer;
@@ -102,28 +108,9 @@
 	</script>
   </head>
   <body onload="javascript:foc()">
-	<div class="main">
-    <div id="about" style="position: relative">
-        <h1 class="title"><a href="http://reneghosh.github.io">René Ghosh</a></h1>
-        <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">&#9776;</a>
-        <div id="nav">
-               <ul>
-                   <li><span><a href="#aboutme">About</a></span></li>
-                   <li><span><a href="#books">Books</a></span></li>
-                   <li><span><a href="#music">Music</a></span></li>
-                   <li><span><a href="#published">Published work</a></span></li>
-               </ul>
-        </div>
-        <div id="mobilenav" class="menuIn">
-             <ul>
-                 <li><span><a onclick="toggleMenu()" href="#aboutme">About</a></span></li>
-                 <li><span><a onclick="toggleMenu()" href="#books">Books</a></span></li>
-                 <li><span><a onclick="toggleMenu()" href="#music">Music</a></span></li>
-                 <li><span><a onclick="toggleMenu()" href="#published">Published work</a></span></li>
-             </ul>
-          </div>
-      </div>
+    <a class="floatinglink" href="index.html">main</a>
 
+	<div id="main" class="container">
       <div class="page">
 	  <h1>The Paris Marathon Predictor</h1>
 	  <p>Enter your time on a distance between 17 and 25km. The calculator will predict your marathon time and pace for you.</p>
