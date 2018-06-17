@@ -1,0 +1,331 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Infographic</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Shrikhand" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="d3.min.js"></script>
+  </head>
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" id="graphic">
+    <style>
+    .title {
+      font-family: Shrikhand;
+      font-size: 36px;
+      fill: white;
+    }
+    .title-smaller {
+      font-family: Shrikhand;
+      font-size: 27px;
+      fill: white;
+    }
+    .axis, .axis path, .axis line {
+      stroke: #AA5;
+      font-size: 16px;
+      font-family: serif;
+    }
+    .axis text {
+      fill: #AA5;
+      font-size: 13px;
+      font-family: serif;
+    }
+    .axis-label {
+      fill: #AA5;
+      font-size: 20px;
+      font-family: serif;
+      
+    }
+    .bubble {
+      fill:  #833;
+    }
+    .bubble-plus {
+      fill-opacity: 0.2;
+      fill:  #FAA;
+    }
+    .bubble-text, .bubble-year, .bubble-value {
+      font-family: Roboto;
+      fill: #FB9;
+    }
+    </style>
+      
+    </svg>
+  </body>
+  <script>
+    /*var csvContent = get_data_content().trim();*/
+    var height = 550;
+    var width = 1000;
+    var chart_width = 800;
+    var chart_height = 450;
+    var margin_bottom = (height-chart_height)/2;
+    var margin_top = (height-chart_height)/2;
+    var margin_left = ((width-chart_width)/2);
+    var data = get_data();
+    var x = d3.scaleLinear()
+      .domain([1300,2100])
+      .range([0, chart_width]);
+    var y = d3.scaleLinear()
+      .domain([0, d3.max(data, function(d){return d[2]})])
+      .range([chart_height,0]);
+    var max_r = 20;
+    var r = d3.scaleLinear()
+      .domain([0, d3.max(data, function(d){return d[2]})])
+      .range([0, max_r]);
+    var parcel_data = [];
+    var counter = 0;
+
+
+    function title_flash(text, dy, initial_delay, show_time, fade_time){
+        d3.select("#graphic")  
+        .append("text")
+          .text(text)
+          .transition().delay(initial_delay)
+          .attr("class", "title")
+          .attr("text-anchor", "middle")
+          .attr("x", width/2)
+          .attr("y", (height/2)+dy)
+          .attr("fill-opacity","1.0")
+          .transition().delay(show_time).duration(fade_time)
+          .attr("fill-opacity", "0.0")
+          .remove();
+    }
+
+    var do_intro = true;
+
+    var graphic = d3.select("#graphic")
+        .attr("width", width)
+        .attr("height", height)
+        .append("rect")
+          .attr("id", "back")
+          .attr("width", "100%")
+          .attr("height", "100%")
+          .attr("fill", "black");
+    if (do_intro) {
+      title_flash("DEATH", 0, 0, 9000, 2000);
+      title_flash("VIOLENT", -30, 2000, 7000, 2000);
+      title_flash("BY WAR", +30, 4000, 5000, 2000);
+      title_flash("TOP 10 LIST:", -60, 6000, 3000, 2000);
+      setTimeout(go_to_graph, 11000);
+    } else {
+      go_to_graph();
+    }
+
+    function show_timeline(){
+      d3.select("#graphic")
+        .append("g")
+        .attr("transform", "translate("+margin_left+","+(height-margin_bottom)+")")
+        .call(d3.axisBottom(x).tickFormat(d3.format("d")))
+        .attr("class", "axis");
+      d3.select("#graphic")
+        .append("g")
+        .attr("transform", "translate("+margin_left+","+margin_top+")")
+        .call(d3.axisLeft(y).tickFormat(d3.format("~s")).ticks(5))
+        .attr("class", "axis");
+      d3.select("#graphic")
+        .append("text")
+        .text("Year")
+        .attr("class", "axis-label")
+        .attr("text-anchor", "middle")
+        .attr("x", width/2)
+        .attr("y", height - 10);
+      d3.select("#graphic")
+        .append("text")
+        .text("Deaths in millions")
+        .attr("class", "axis-label")
+        .attr("text-anchor", "middle")
+        .attr("x", 80)
+        .attr("y", 30)
+
+    }
+
+    function add_labels(){
+      d3.select("#graphic")
+        .selectAll(".bubble-text")
+          .data(get_data())
+          .enter()
+        .append("text")
+          .attr("class", "bubble-text")
+          .text(function(d){return d[0]})
+          .attr("x", function(d){return margin_left+x(d[1])})
+          .attr("y", "-10")
+          .attr("text-anchor", "middle") 
+          .transition().delay(2000).duration(1000)
+          .attr("y", function(d){return margin_bottom+y(d[2])})
+      d3.select("#graphic")
+        .selectAll(".bubble-year")
+          .data(data)
+          .enter()
+          .append("text")
+          .attr("class", "bubble-year")
+          .attr("text-anchor", "middle") 
+          .transition().duration(1000)
+          .attr("x", function(d){return margin_left+x(d[1])})
+          .attr("y", function(d){return margin_bottom-15+y(d[2])})
+          .text(function(d){return d[1]})
+      d3.select("#graphic")
+        .selectAll(".bubble-value")
+          .data(data)
+          .enter()
+          .append("text")
+          .attr("class", "bubble-value")
+          .attr("text-anchor", "middle") 
+          .transition().duration(1000)
+          .attr("x", function(d){return margin_left+x(d[1])})
+          .attr("y", function(d){return margin_bottom+15+y(d[2])})
+          .text(function(d){return "death count: "+d[2]+(d[3]==d[2]?"":"-"+d[3])})
+    }
+
+    function add_datum(data) {
+        d3.select("#graphic")
+        .selectAll(".bubble-plus")
+          .data(data)
+          .enter()
+        .append("circle")
+          .attr("cx", width/2)
+          .attr("cy", height/2)
+          .attr("r", 0)
+          .attr("class", "bubble-plus")
+          .transition().delay(2000).duration(1000)
+          .attr("cx", function(d){return margin_left+x(d[1])})
+          .attr("cy", function(d){return margin_bottom+y(d[2])})
+          .attr("r", function(d,i){return r(d[3])});
+      d3.select("#graphic")
+        .selectAll(".bubble")
+          .data(data)
+          .enter()
+        .append("circle")
+          .attr("cx", width/2)
+          .attr("cy", height/2)
+          .attr("r", 100)
+          .attr("class", "bubble")
+          .transition().delay(2000).duration(1000)
+          .attr("cx", function(d){return margin_left+x(d[1])})
+          .attr("cy", function(d){return margin_bottom+y(d[2])})
+          .attr("r", function(d,i){return r(d[2])});
+    }
+    function get_data(){
+      return [
+      ["Qing conquest of the Ming", 1616, 25000000, 25000000],
+      ["Spanish conquest of the Aztec Empire", 1519, 24300000, 24300000],
+      ["Taiping Rebellion", 1850, 20000000, 100000000],
+      ["Second Sino-Japanese War", 1937, 20000000, 25000000],
+      ["World War II", 1939, 15843000, 85000000],
+      ["World War I", 1937, 8545800, 21000000],
+      ["Spanish conquest of the Inca Empire", 1533, 8400000, 8400000],
+      ["Dungan Revolt", 1862, 8000000, 12000000],
+      ["Chinese Civil War", 1927, 8000000, 11692000],
+      ["Ottoman wars in Europe", 1821, 5500000, 5500000],
+      ]
+    }
+    function remove_bubbles(){
+      d3.select("#graphic")
+        .selectAll(".bubble")
+        .remove();
+      d3.select("#graphic")
+        .selectAll(".bubble-plus")
+        .remove();
+      data.sort(function(d1,d2){
+        return d3.descending(d1[2], d2[2]);
+      });
+      var formatter = d3.format("~s");
+      for (var i=0;i<data.length;i++){
+        data[i][2]=(formatter(data[i][2]));
+        data[i][3]=(formatter(data[i][3]));
+      }
+      d3.select("#graphic")
+        .selectAll(".bubble-year")
+        .remove();
+      d3.select("#graphic")
+        .selectAll(".bubble-value")
+        .remove();
+      d3.select("#graphic")
+        .selectAll(".bubble-text")
+          .data(data)
+          .transition().duration(1000)
+          .attr("x", 20)
+          .attr("text-anchor", "left")
+          .attr("class", "title-smaller")
+          .attr("y", function(d,i){return margin_top+(i*chart_height/data.length)})  
+          .text(function(d,i){return (i+1)+". "+d[1]+": "+d[0]+ " ("+d[2]+(d[3]==d[2]?"":"-"+d[3])+")"})  
+    }
+
+    var align_counter = 0;
+    function align_data(){
+      d3.select("#graphic")
+        .selectAll(".bubble-text")
+          .data(data)
+          .transition().duration(1000)
+          .attr("x", function(d,i){return margin_left+30+(i*chart_width/data.length)})
+          .attr("y", function(d,i){return margin_top+(i*chart_height/data.length)})
+          .text(function(d){return d[0]})
+      d3.select("#graphic")
+        .selectAll(".bubble")
+          .data(data)
+          .transition().duration(1000)
+          .attr("cx", function(d,i){return margin_left+30+(i*chart_width/data.length)})
+          .attr("cy", function(d,i){return margin_top+(i*chart_height/data.length)})
+          .attr("r", function(d,i){return r(d[2])});
+      d3.select("#graphic")
+        .selectAll(".bubble-plus")
+          .data(data)
+          .transition().duration(1000)
+          .attr("cx", function(d,i){return margin_left+30+(i*chart_width/data.length)})
+          .attr("cy", function(d,i){return margin_top+(i*chart_height/data.length)})
+          .attr("r", function(d,i){return r(d[3])});
+      d3.select("#graphic")
+        .selectAll(".bubble-year")
+          .data(data)
+          .attr("class", "bubble-year")
+          .transition().duration(1000)
+          .attr("x", function(d,i){return margin_left+30+(i*chart_width/data.length)})
+          .attr("y", function(d,i){return margin_top-15+(i*chart_height/data.length)})
+          .text(function(d){return d[1]})
+      d3.select("#graphic")
+        .selectAll(".bubble-value")
+          .data(data)
+          .attr("class", "bubble-value")
+          .transition().duration(1000)
+          .attr("x", function(d,i){return margin_left+30+(i*chart_width/data.length)})
+          .attr("y", function(d,i){return margin_top+15+(i*chart_height/data.length)})
+          .text(function(d){return "death count: "+d[2]+(d[3]==d[2]?"":"-"+d[3])})
+       if (align_counter==0){
+         data.sort(function(d1, d2){
+            return d3.ascending(d1[1], d2[1])
+         });
+        align_counter +=1;
+        setTimeout(align_data, 2000);
+       } else {
+        setTimeout(remove_bubbles, 3000);
+       }
+    }
+    function remove_axes(){
+      d3.select("#graphic")
+      .selectAll(".axis-label")
+      .attr("fill-opacity", "1.0")
+      .transition().duration(3000)
+      .attr("fill-opacity", "0.0")
+      .remove();
+      d3.select("#graphic")
+      .selectAll(".axis")
+      .attr("fill-opacity", "1.0")
+      .transition().duration(3000)
+      .attr("fill-opacity", "0.0")
+      .remove();
+      setTimeout(align_data,3000);
+    }
+    function update_data(){
+      if (counter < data.length) {
+        parcel_data.push(data[counter]);
+        counter += 1;
+        add_datum(parcel_data);
+        setTimeout(update_data, 1000);
+      }
+    }
+    function go_to_graph(){
+      show_timeline();
+      update_data();
+      setTimeout(add_labels, 100+(1000*data.length));
+      setTimeout(remove_axes, 1000+(1000*data.length));
+    }
+
+  </script>
+</html>
