@@ -1,4 +1,5 @@
 
+
 <!doctype html>
 <html>
   <head>
@@ -6,9 +7,9 @@
     <style>
       .line {
         stroke-linecap: round;
-        stroke-width: 0.7;
-        stroke: #359;
-        fill: #579;
+        stroke-width: 0.5;
+        stroke: #000;
+        fill: #555;
       }
       .line_guide_x, .line_guide_y {
         stroke-linecap: round;
@@ -391,6 +392,23 @@
                             L 15 5
                             "></path>
     </svg>
+    <!-- X -->
+    <svg height="81" width="46" id="X">
+      <path class="line" d="M 1 5
+                            L 17 34
+                            L 1 70
+                            L 15 70
+                            L 22 45
+                            L 30 70
+                            L 45 70
+                            L 27 34
+                            L 45 5
+                            L 30 5
+                            L 22 25
+                            L 15 5
+                            L 1 5
+                            "></path>
+    </svg>
 
 
   </body>
@@ -399,7 +417,7 @@
     for (var i=0;i<=100; i+=5){
       data_x.push([i]);
     }
-    for (var i=0;i<=60; i+=5){
+    for (var i=0;i<=70; i+=5){
       data_y.push([i]);
     }
 
