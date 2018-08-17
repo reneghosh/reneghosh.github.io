@@ -4,9 +4,6 @@
   xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 	<url> 
 		<loc>https://reneghosh.github.io/index.html</loc> 
-		<loc>https://reneghosh.github.io/parisopenmic.html</loc> 
-		<loc>https://reneghosh.github.io/predictor.html</loc> 
-		<loc>https://reneghosh.github.io/keyboards/lindontechrollable.html</loc> 
 		<image:image>
 			<image:loc>https://reneghosh.github.io/images/rg-2017.jpg</image:loc>
 			<image:caption>René Ghosh</image:caption>
@@ -31,5 +28,14 @@
 			<image:loc>https://reneghosh.github.io/images/puppetdancers-medium.jpeg</image:loc>
 			<image:caption>Puppet Dancers</image:caption>
 		</image:image>
+	</url>
+	<url>
+		<loc>https://reneghosh.github.io/parisopenmic.html</loc> 
+	</url>
+	<url>
+		<loc>https://reneghosh.github.io/predictor.html</loc> 
+	</url>
+	<url>
+		<loc>https://reneghosh.github.io/keyboards/lindontechrollable.htm<l/loc> 
 	</url>
 </urlset>
