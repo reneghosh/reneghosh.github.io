@@ -4,6 +4,7 @@
   xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 	<url> 
 		<loc>https://reneghosh.github.io/index.html</loc> 
+		<lastmod>2018-08-26</lastmod>
 		<image:image>
 			<image:loc>https://reneghosh.github.io/images/rg-2017.jpg</image:loc>
 			<image:caption>René Ghosh</image:caption>
@@ -30,12 +31,15 @@
 		</image:image>
 	</url>
 	<url>
-		<loc>https://reneghosh.github.io/parisopenmic.html</loc> 
+		<loc>https://reneghosh.github.io/parisopenmic.html</loc>
+		<lastmod>2018-03-30</lastmod>
 	</url>
 	<url>
 		<loc>https://reneghosh.github.io/predictor.html</loc> 
+		<lastmod>2010-12-30</lastmod>
 	</url>
 	<url>
-		<loc>https://reneghosh.github.io/keyboards/lindontechrollable.html</loc> 
+		<loc>https://reneghosh.github.io/keyboards/lindontechrollable.html</loc>
+		<lastmod>2018-07-10</lastmod>
 	</url>
 </urlset>
