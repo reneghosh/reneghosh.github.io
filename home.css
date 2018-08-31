@@ -2,10 +2,11 @@
 @import url('https://fonts.googleapis.com/css?family=Skranji');
 @import url('https://fonts.googleapis.com/css?family=Comfortaa');
 @import url('https://fonts.googleapis.com/css?family=Radley');
+@import url('https://fonts.googleapis.com/css?family=Space+Mono');
 
 body {
   font-size: 20px;
-  font-family: "Radley", "Vollkorn", Georgia, serif;
+  font-family: "Space Mono", "Radley", "Vollkorn", Georgia, serif;
   line-height: 1.3em;
   padding: 0;
   margin: 0;
