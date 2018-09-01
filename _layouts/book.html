@@ -1,0 +1,16 @@
+<div class="row page">
+<div class="col-md-4">
+	<img src="{{ page.image }}" alt="{{ title }}">
+</div> 
+<div class="col-md-7">
+	<h2>{{ page.title }}</h2>
+	<span class="badge badge-secondary">{{page.genre}}</span>
+    <span class="badge badge-secondary">{{page.release}}</span>
+	{{ content }}
+	{% if page.extract %}
+	<a href="{{page.extract}}"><button class="btn btn-dark fa fa-link"> extract</button></a>
+	{%endif%}
+    <a href="{{page.us_link}}"><button class="btn btn-dark fa fa-shopping-cart"> Print version (North America)</button></a>
+    <a href="{{page.eu_link}}"><button class="btn btn-dark fa fa-shopping-cart"> Print version (Europe)</button></a>
+</div>
+</div>
