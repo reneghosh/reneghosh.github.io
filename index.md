@@ -25,9 +25,9 @@ recording vocals separately.
 {{track}}
 {% endfor %}
 
-<div class="row page" id="published">
+<div class="row page" id="other">
 <div class="container-fluid">
-<h1><span class="fa fa-bookmark"> Published work</span></h1>
+<h1><span class="fa fa-bookmark"> Other work</span></h1>
 
 {% for link in site.published | sort: 'date' %}
 {{link}}
