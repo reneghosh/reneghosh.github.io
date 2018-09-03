@@ -40,7 +40,7 @@ recording vocals separately.
 { 
 "@context": "http://schema.org", 
 "@type": "WebSite", 
-"url": "http://reneghosh.github.io/", 
+"url": "https://reneghosh.github.io/", 
 "name": "René Ghosh, writer, musician",
  "author": {
     "@type": "Person",
