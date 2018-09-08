@@ -16,6 +16,7 @@ keywords: novel, fiction, music, magical punk, René Ghosh, open mic, music, Sat
 markdown: kramdown
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
 collections:
   - books
   - music
