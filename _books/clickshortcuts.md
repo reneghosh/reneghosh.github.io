@@ -5,7 +5,7 @@ release: 2016
 date:   2018-08-31 22:50:46 +0200
 us_link: http://www.amazon.com/Click-Shortcuts-M-Ren%C3%A9-Ghosh/dp/2953100423
 eu_link: http://www.amazon.fr/Click-Shortcuts-M-Ren%C3%A9-Ghosh/dp/2953100423
-extract: https://reneghosh.github.io/theclickshortcuts.html
+extract: extracts/clickshortcuts.html
 genre: novel
 image: images/frontcover20151215-medium.png
 categories: book

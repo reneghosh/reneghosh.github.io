@@ -7,7 +7,7 @@ us_link: https://www.amazon.com/Liver-collected-open-writings-vol/dp/2953100466
 eu_link: https://www.amazon.fr/Liver-collected-open-writings-vol/dp/2953100466
 image: images/memorymonkey-medium.jpg
 genre: novel
-extract: https://reneghosh.github.io/memorymonkey.html
+extract: extracts/memorymonkey.html
 categories: book
 ---
 Max and Tascha were supposed to be unbreakable as a couple after being conditioned in the Institute for Behavioral Research that took them in as war refugees. Bound to one another, their pre-institute memories wiped clean, they unexpectedly unravel when Tascha finds she wants to see other people.

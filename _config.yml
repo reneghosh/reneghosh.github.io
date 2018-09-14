@@ -18,6 +18,11 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
 collections:
-  - books
-  - music
-  - published
+  books:
+    output: false
+  music:
+    output: false
+  published:
+    output: false
+  extracts:
+    output: true
