@@ -37,7 +37,7 @@ recording vocals separately.
 </div>
 
 <div class="row page" id="other">
-<h1><span class="fa fa-spinner">Current work</span></h1>
+<h1><span class="fa fa-spinner"> Current work</span></h1>
 
 I'm currently working on a collection of short stories with all the open mic stuff from 2018, and also
 on a novel, a short one, about collecting sperm samples from a fictitious badger species in a fictitious country. The tentative title on the latter is "Sperm Hunters".
