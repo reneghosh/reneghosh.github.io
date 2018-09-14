@@ -26,3 +26,5 @@ collections:
     output: false
   extracts:
     output: true
+  articles:
+    output: true
