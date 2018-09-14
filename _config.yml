@@ -15,8 +15,7 @@ keywords: novel, fiction, music, magical punk, René Ghosh, open mic, music, Sat
 # Build settings
 markdown: kramdown
 defaults:
-  -
-    scope:
+  - scope:
       path:            "wip/**/*.*"
     values:
       sitemap:         false
