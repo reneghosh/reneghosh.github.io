@@ -12,7 +12,10 @@ _This is an extract of the first three chapters of the novel The Click Shortcuts
 
 _René Ghosh, published 07/2015. Read the full text:_
 
-<p><a class="buttonlink" href="http://www.amazon.com/gp/product/B0119N2J3C">Kindle version</a></p>
+<p>
+	<a class="buttonlink" href="http://www.amazon.com/Click-Shortcuts-M-Ren%C3%A9-Ghosh/dp/2953100423">Print version (North America)</a>
+	<a class="buttonlink" href="http://www.amazon.fr/Click-Shortcuts-M-Ren%C3%A9-Ghosh/dp/2953100423">Print version (Europe)</a>
+</p>
 
 ## 1.
 Half an hour ahead of the slotted rendez-vous with the journalist, Berbi was seated in a dark leather booth of the café. It was a trendy café, sporting a lot of curved and gleaming metallic surfaces. When Fii walked in, Berbi’s face swiveled from the empty coffee mug on the table to her swaying form, dressed all in screaming colors, turning heads at interspersed booth-level points all through the café. She strode to his table with command. It looked to Berbi like she was preparing to interview herself, as though she were to be the focus of her own piece. She plopped down in the booth in front of him, silently, fluidly, like a rehearsed move practiced from an early age in some exotic specialty school. She was playing up the representational aspect with no perceptible shyness. Her hair was brown with a streak of yellowish silver that tapered off over her right ear. She made prolonged and awkward eye contact for a long moment before speaking.
