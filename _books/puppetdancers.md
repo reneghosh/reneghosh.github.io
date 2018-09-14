@@ -7,7 +7,7 @@ us_link: http://www.amazon.com/dp/2953100415
 eu_link: https://www.amazon.fr/Puppet-Dancers-M-Ren%C3%A9-Ghosh/dp/2953100415
 genre: novel
 image: images/puppetdancers-medium.jpeg
-extract: https://reneghosh.github.io/books/puppetdancers.html
+extract: extracts/puppetdancers.html
 categories: book
 ---
 
