@@ -14,6 +14,12 @@ email: rene.ghosh@gmail.com
 keywords: novel, fiction, music, magical punk, René Ghosh, open mic, music, Satellite Ray
 # Build settings
 markdown: kramdown
+defaults:
+  -
+    scope:
+      path:            "wip/**/*.*"
+    values:
+      sitemap:         false
 plugins:
   - jekyll-feed
   - jekyll-sitemap
