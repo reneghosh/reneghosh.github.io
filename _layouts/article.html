@@ -2,16 +2,28 @@
 <html lang="en">
     <head>
 	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	    <title>The Strange, Alternate Reality of Paris’ English-language Open Mic Events</title>
+	    <title>{{page.title}}</title>
 	    <meta name="author" content="René Ghosh">
-	    <meta name="keywords" content="Paris, writing, open mic, René Ghos">
+	    <meta name="keywords" content="{{page.keywords}}">
 	    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	     <link rel="stylesheet" href="../text.css" type="text/css">
 	</head>
     <body>
     	<div id="main" class="container">
-    		{{content | markdownify }}
+    		<div class="row">
+	    		<div class="col-2">
+	    			<ul class="panel-nav">
+	    				<li><a href="../index.html">Home</a></li>
+	    				<li><a href="../index.html#books">Books</a></li>
+	    				<li><a href="../index.html#music">Music</a></li>
+	    				<li><a href="../index.html#other">Other</a></li>
+	    			</ul>
+	    		</div>
+	    		<div class="col-8">
+	    			{{content }}
+	    		</div>
+    		</div>
     	</div>
     </body>
  </html>

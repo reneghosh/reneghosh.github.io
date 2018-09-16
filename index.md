@@ -4,26 +4,34 @@ layout: home
 
 {% include about.html %}
 
-<h1><span class="fa fa-book">Books</span></h1>
 <div class="row" id="books">
-<div class="container-fluid">
-<p>I've written three novels and two short story collections. The short stories were written for stage performance, all falling neatly into the readable-aloud-in-five-minutes format, whereas the novels are sprawls. Reading either depends on where you are and how much mindspace you want to spare.</p>
 </div>
+<h1><span class="fa fa-book"> Books</span></h1>
+<div class="container-fluid">
+
+I've written three novels and two short story collections. The short stories were written for stage performance, all falling neatly into the readable-aloud-in-five-minutes format, whereas the novels are sprawls. Reading either depends on where you are and how much mindspace you want to spare.
+
 </div>
 {% for book in site.books | sort: 'book.release', last %}
 {{book}}
 {% endfor %}
 
-<h1><span class="fa fa-headphones">Music</span></h1>
+<div class="row" id="music">
+<h1><span class="fa fa-headphones"> Music</span></h1>
+<div class="container-fluid">
 
 My music is released under the name of my one-man-band, Satellite Ray.
 
 I'm currently working on an album of all-electronic music. I'm making all the music from a phone app and 
 recording vocals separately.
 
+
 {% for track in site.music %}
 {{track}}
 {% endfor %}
+
+</div>
+</div>
 
 <div class="row page" id="other">
 <div class="container-fluid">
@@ -36,7 +44,7 @@ recording vocals separately.
 </div>
 </div>
 
-<div class="row page" id="other">
+<div class="row page" id="current">
 <h1><span class="fa fa-spinner"> Current work</span></h1>
 
 I'm currently working on a collection of short stories with all the open mic stuff from 2018, and also
