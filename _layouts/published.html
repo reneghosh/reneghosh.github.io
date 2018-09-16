@@ -1,7 +1,7 @@
 <div class="card news">
   <div class="card-body">
   <h2 class="card-title">{{page.title}}</h2>
-    <p class="date">{{page.date | date_to_long_string }}</p>
+    <p class="date">{{page.date_published | date_to_long_string }}</p>
     <p class="card-text">{{page.description}}</p>
     <p>
     	<a href="{{page.link}}"><button class="btn btn-dark fa fa-link"> read</button></a>
