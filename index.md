@@ -8,7 +8,7 @@ layout: home
 
 <h1 style="margin-top: 2em"><span class="fa fa-book"> Books</span></h1>
 <div class="container">
-<div style="float:left;margin-right: 40px"><img src="images/selfie.jpg" class="img-fluid" style="border-radius:75px" width="150"></div>
+<div style="float:left;margin-right: 40px"><img alt="me thinking about other books" src="images/selfie.jpg" class="img-fluid" style="border-radius:75px" width="150"></div>
 
 I've written three novels and two short story collections. The short stories were written for stage performance, all falling neatly into the readable-aloud-in-five-minutes format, whereas the novels are sprawls. Reading either depends on where you are and how much mindspace you want to spare.
 
@@ -24,7 +24,7 @@ I've written three novels and two short story collections. The short stories wer
 <div class="container">
 
 
-<div style="float:left;margin-right: 40px"><img src="images/selfie2.jpg" class="img-fluid" style="border-radius:75px" width="150"></div>
+<div style="float:left;margin-right: 40px"><img alt="me thinking about other music" src="images/selfie2.jpg" class="img-fluid" style="border-radius:75px" width="150"></div>
 
 My music is released under the name of my one-man-band, Satellite Ray.
 
@@ -42,7 +42,7 @@ recording vocals separately.
 <div class="row page" id="other">
 <div class="container-fluid">
 <h1><span class="fa fa-bookmark"> Other work</span></h1>
-<div style="float:left;margin-right: 40px"><img src="images/selfie3.jpg" class="img-fluid" style="border-radius:75px" width="150"></div>
+<div style="float:left;margin-right: 40px"><img alt="me thinking about other stuff" src="images/selfie3.jpg" class="img-fluid" style="border-radius:75px" width="150"></div>
 
 {% for link in site.published | sort: 'date' %}
 {{link}}
