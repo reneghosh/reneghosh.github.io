@@ -6,7 +6,7 @@ title: My normalized 10k running times
 ---
 # Normalized 10k times
 
-_{{page.date | date: "%a, %b %d, %y" }}_
+_René Ghosh, {{page.date | date: "%a, %b %d, %y" }}_
 
 I've taken all my runs and plotted the normalized 10k time using the Riegel correction.
 
