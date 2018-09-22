@@ -34,3 +34,5 @@ collections:
     output: true
   articles:
     output: true
+  running:
+    output: true
