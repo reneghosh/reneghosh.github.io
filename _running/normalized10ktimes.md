@@ -1,6 +1,6 @@
 ---
 keywords: running, René Ghosh
-date: 2018-09-21 21:00:00 +0200
+date: 2018-09-25 21:00:00 +0200
 layout: article
 title: My normalized 10k running times
 ---
