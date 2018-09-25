@@ -79,8 +79,8 @@ var chart = new Chart(ctx, {
         datasets: [{
         	fill: false,
         	showLine: true,
-        	lineTension: 0.4,
-        	cubicInterpolationMode: "monotone",
+        	lineTension: 0.3,
+        	cubicInterpolationMode: "linear",
             backgroundColor: 'rgb(190, 190, 190)',
             borderColor: 'rgb(50, 50, 50)',
             borderWidth: 2,
@@ -97,7 +97,7 @@ var chart = new Chart(ctx, {
     	legend: {
     		display: false,
     	},
-    	elements: { point: { radius: 5 } },
+    	elements: { point: { radius: 4 } },
     	scales: {
             xAxes: [{
                 type: 'time',
