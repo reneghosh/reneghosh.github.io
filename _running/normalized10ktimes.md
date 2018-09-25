@@ -44,9 +44,13 @@ for (var i=0;i<runs.length;i++){
 	var time_seconds = ((hours*3600.0)+(minutes*60.0)+seconds)/3600.0;
 	var speed = distance/time_seconds;
 	var base = 10.0 // 10k
+    var runDate = new Date(years, months-1, days-1);
+    var lastYear = new Date(new Date().getTime()-365*24*3600*1000);
 	normalized_time = time_seconds*Math.pow(base/distance, 1.06);
 	normalized_speed = base/normalized_time;
-	runs_speed.push({x:new Date(years, months-1, days-1),y:normalized_time});
+    if (runDate.getTime() > lastYear.getTime()) {
+	   runs_speed.push({x:runDate,y:normalized_time}); 
+    }
 }
 
 function formatSecsAsMins(v){
@@ -88,7 +92,7 @@ var chart = new Chart(ctx, {
     options: {
     	title: {
     		display: true,
-    		text: "Normalized 10k time for all runs"
+    		text: "Normalized 10k time for all runs over the last 365 days"
     	},
     	legend: {
     		display: false,
