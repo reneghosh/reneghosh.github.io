@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Vollkorn');
+
 #main {
-	font-family: Georgia, serif;
-	font-size: 20px;
+	font-family: "Vollkorn", Georgia, serif;
+	font-size: 18px;
 	padding: 1em;
 	text-align: left;
 	text-rendering: optimizeLegibility;
@@ -49,9 +51,9 @@ p{
 }
 h1 {
 	font-size: 52px;
-	text-align: center;	
+	text-align: center;
   	line-height: 0.95em;
-	padding: 30px;	
+	padding: 30px;
   	width: 18em;
 }
 h2 {
