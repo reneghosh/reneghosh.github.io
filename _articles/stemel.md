@@ -82,9 +82,8 @@ up at the SteMeL page: [https://github.com/reneghosh/stemel](https://github.com/
 Here's what the canonical "Mary had a Little Lamb" looks like in SteMeL:
 
 ```
-l2 4__,-12_2,-12_2,2,l1 0,2,4/-12_4,4,4_,,2/-19_2,2,2_/-19_4,,
-4/-12_2,7,7_/-10_4,,l2 4__,-12_4,,2,l1 0,2,4/-12_4,4,4,4,2/-19_4,
-2,4,2,0_4/-12_4,*3
+4__,-12_2,-12_2,2,l1 0,2,4 -12_4,4,4_,,2 -19_2,2,2_ -19_4,,4 -12_2,7,7_
+-10_4,,l2 4__,-12_4,,2,l1 0,2,4 -12_4,4,4,4,2 -19_4,2,4,2,0_4 -12_4,*3
 ```
 
 And this is what it sounds like:
