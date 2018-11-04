@@ -87,6 +87,6 @@ l2 4__,-12_2,-12_2,2,l1 0,2,4/-12_4,4,4_,,2/-19_2,2,2_/-19_4,,
 2,4,2,0_4/-12_4,*3
 ```
 
-And this is what is sounds like:
+And this is what it sounds like:
 
 <audio controls><source src="../recordings/SC_181104_134542.mp3" type="audio/mpeg"><source src="../recordings/SC_181104_134542.ogg" type="audio/ogg"></audio>
