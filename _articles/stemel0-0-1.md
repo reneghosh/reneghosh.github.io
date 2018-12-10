@@ -51,7 +51,7 @@ unfamiliar with programming so boxes itself away from  complexity).
 
 I wrote the following composition to spotlight what you can do with stemel:
 
-<iframe width="420" height="315" src="https://www.youtube.com/embed/K8xmn9BYRTI"></iframe>
+<iframe width="840" height="630" src="https://www.youtube.com/embed/K8xmn9BYRTI"></iframe>
 
 
 So, what's next?
