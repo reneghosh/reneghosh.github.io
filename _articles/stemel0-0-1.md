@@ -25,7 +25,7 @@ The first version is very much simplified from the spec I initially had in mind.
 No more representation of note amplitudes or slide parameters: leave that to the 
 user/programmer. This version supports a much honed, minimal list of operators:
 
-| operator | description |
+|  |  |
 | ----| ----|
 | `(number)` | add note of midi pitch (number) |
 | `-` | carry previous note's duration one step |
@@ -54,7 +54,9 @@ I wrote the following composition to spotlight what you can do with stemel:
 <iframe width="420" height="315" src="https://www.youtube.com/embed/K8xmn9BYRTI"></iframe>
 
 
-Next up on the roadmap:
+So, what's next?
+
+On my roadmap:
 
 - Add filter functions to work with an input buffer: 
 randomization, shuffling, duplicating
