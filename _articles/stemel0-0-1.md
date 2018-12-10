@@ -34,7 +34,7 @@ user/programmer. This version supports a much honed, minimal list of operators:
 | `<` | shift next notes down an octave |
 | `/` | start a new voice |
 
-A score inbvolving two voices can be described very simply. For example, note `0` 
+A score involving two voices can be described very simply. For example, note `0` 
 on two-step/one-step rythm, with note 7 playing on the first step then resting for two steps:
 
 ```
