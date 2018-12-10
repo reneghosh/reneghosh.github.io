@@ -6,7 +6,11 @@ categories: articles
 keywords: Music, Paris, René Ghosh, live coding
 ---
 
-# on way to releasing alpha version of stemel
+# Stemel 0-0-1
+
+_René Ghosh, Dec. 10 2018_
+
+I'm on my way to releasing an alpha version of stemel: 0-0-1.
 
 When I first started coding the stemel parser (note: it's very much cobbled together with regular expressions, but aren't we all?), I was beset by doubts. Beset I tell you! But once I got the first version working and started playing around with it in FoxDot, I realized how much easier it made it to work with polyphonies. Most existing livecoding environments represent note pitch, duration and sustain as separate arrays, which makes it hard not only to think about a polyphony, but also time-consuming to code it.
 
