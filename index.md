@@ -65,7 +65,7 @@ on a novel, a short one, about collecting sperm samples from a fictitious badger
 { 
 "@context": "http://schema.org", 
 "@type": "WebSite", 
-"url": "https://reneghosh.github.io/", 
+"url": "https://satelliteray.github.io/", 
 "name": "René Ghosh, writer, musician",
  "author": {
     "@type": "Person",
