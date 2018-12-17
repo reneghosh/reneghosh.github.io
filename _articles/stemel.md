@@ -77,7 +77,8 @@ all the freedom of polyphony I get from using step sequencers such as [Caustic](
 
 The result is the Step Sequencer Music Language, or SteMeL for short. I'm sure
 the name could use some work. The language spec and reference implementation are
-up at the SteMeL page: [https://github.com/reneghosh/stemel](https://github.com/reneghosh/stemel).
+up at the SteMeL page: 
+[https://github.com/satelliteray/stemel](https://github.com/satelliteray/stemel).
 
 Here's what the canonical "Mary had a Little Lamb" looks like in SteMeL:
 
