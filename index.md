@@ -14,7 +14,8 @@ author:
 
 I've written three novels and two short story collections. The short stories were written for stage performance, all falling neatly into the readable-aloud-in-five-minutes format, whereas the novels are sprawls. Reading either depends on where you are and how much mindspace you want to spare.
 
-{% for book in site.books | sort: 'book.release', last %}
+{% assign site-books = site.books | sort: 'date' | reverse %}
+{% for book in site-books %}
 {{book}}
 {% endfor %}
 
@@ -30,7 +31,7 @@ I've written three novels and two short story collections. The short stories wer
 
 My music is released under the name of my one-man-band, Satellite Ray.
 
-I'm currently working on an album of all-electronic music. I'm making all the music from a phone app and 
+I'm currently working on an album of all-electronic music. I'm making all the music from a phone app and
 recording vocals separately.
 
 
@@ -46,7 +47,8 @@ recording vocals separately.
 <h1><span class="fa fa-bookmark"> Other work</span></h1>
 <div style="float:left;margin-right: 40px"><img alt="me thinking about other stuff" src="images/selfie3.jpg" class="img-fluid" style="border-radius:75px" width="150"></div>
 
-{% for link in site.published | sort: 'date' %}
+{% assign site-published = site.published | sort: 'date' |reverse %}
+{% for link in site-published %}
 {{link}}
 {% endfor %}
 
@@ -62,10 +64,10 @@ on a novel, a short one, about collecting sperm samples from a fictitious badger
 </div>
 
 <script type="application/ld+json">
-{ 
-"@context": "http://schema.org", 
-"@type": "WebSite", 
-"url": "https://satelliteray.github.io/", 
+{
+"@context": "http://schema.org",
+"@type": "WebSite",
+"url": "{{project.url}}",
 "name": "René Ghosh, writer, musician",
  "author": {
     "@type": "Person",
@@ -75,4 +77,3 @@ on a novel, a short one, about collecting sperm samples from a fictitious badger
 "publisher": "René Ghosh"
 }
 </script>
-

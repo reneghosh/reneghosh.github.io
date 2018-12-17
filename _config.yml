@@ -2,9 +2,9 @@
 title: René Ghosh Homepage
 email: rene.ghosh@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  René Ghosh, writer and musician. Books, music, and links to articles.
+  René Ghosh, write, musician, coder. Books, music, code and links to articles.
 baseurl: "/" # the subpath of your site, e.g. /blog
-url: "https://satelliteray.github.io" 
+url: https://satelliteray.github.io
 twitter_username: reghosh
 github_username:  satelliteray
 facebook: https://www.facebook.com/rene.ghosh
