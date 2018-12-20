@@ -31,9 +31,8 @@ I've written three novels and two short story collections. The short stories wer
 
 My music is released under the name of my one-man-band, Satellite Ray.
 
-I'm currently working on an album of all-electronic music. I'm making all the music from a phone app and
-recording vocals separately.
-
+I'm currently working on an electronic music album. I started making the music from a phone app but
+have since switched to live-coding platforms.
 
 {% for track in site.music %}
 {{track}}
