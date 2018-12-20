@@ -40,9 +40,9 @@ Here's my version of arpy + wah, which I've tentatively named "warpy".
 Starting from the same code base, I stretched the envelope to the full
 sustain length, then modulated the oscillator with a low-pass filter that
 shifts in time from two functions:
-- LFNoise1, to add some filter randomness to each note played
+- LFNoise1, to add some randomness to each note played
 - XLine, to make the filter's frequency threshold move up exponentially as the note is played.
-This is what gives the characteristic "wah" sound.
+This is what produces the characteristic "wah" sound.
 
 I added some distortion to the signal to dirty it up a little.
 
