@@ -19,7 +19,7 @@ player function.
 
 What I want to do is to have a multi-voice sequencer that takes a score as a string,
 a list of synths on which to play each voice, a list of players to pipe them to, and
-the duration of each sequencer step.
+the duration of the sequencer step.
 
 So, what I want is to be able to write:
 
@@ -33,7 +33,7 @@ channel the sound will be players `b1`,`b2` and `b3`.
 
 In the score interpreter, I'll use the following conventions:
 - `0`,`1`,`2`,`3`,`4`,`5`,`6`,`7`,`8`,`9`,`A`,`B` are notes 0 to 11,
-- `>` and `<` mean up-octave and down-octave for all following notes,
+- `>` and `<` are the up-octave and down-octave operators that affect all following notes,
 - `*` is a rest,
 - `-` prolongs the preceding note by one step,
 - `/` ends the score for the current voice and starts a new voice.
