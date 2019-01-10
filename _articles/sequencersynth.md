@@ -1,12 +1,12 @@
 ---
 layout: article
-title:  "A sequencer synth in FoxDot"
+title:  "A sequencer synth in less than 50 lines of FoxDot"
 date:   2019-01-10 00:33:00 +0200
 categories: articles, music
 keywords: Music, René Ghosh, live coding
 ---
 
-# A sequencer synth in FoxDot
+# A sequencer synth in less than 50 lines of FoxDot
 
 _René Ghosh, 10/01/2019_
 
