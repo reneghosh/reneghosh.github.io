@@ -36,7 +36,7 @@ In the score interpreter, I'll use the following conventions:
 - `>` and `<` are the up-octave and down-octave operators that affect all following notes,
 - `*` is a rest,
 - `-` prolongs the preceding note by one step,
-- `/` ends the score for the current voice and starts a new voice.
+- `/` ends the current voice and starts a new voice.
 
 I need to translate the score into lists of pitch and duration. Here's the
 function to do so:
