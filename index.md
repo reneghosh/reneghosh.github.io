@@ -14,7 +14,7 @@ author:
 
 I've written three novels and three short story collections. The short stories were written for stage performance, all falling neatly into the readable-aloud-in-five-minutes format, whereas the novels are sprawls. Reading either depends on where you are and how much mindspace you want to spare.
 
-{% assign site-books = site.books | sort: 'date' | reverse %}
+{% assign site-books = site.books | sort: 'release' | reverse %}
 {% for book in site-books %}
 {{book}}
 {% endfor %}
@@ -46,7 +46,7 @@ have since switched to live-coding platforms.
 <h1><span class="fa fa-bookmark"> Other work</span></h1>
 <div style="float:left;margin-right: 40px"><img alt="me thinking about other stuff" src="images/selfie3.jpg" class="img-fluid" style="border-radius:75px" width="150"></div>
 
-{% assign site-published = site.published | sort: 'date' |reverse %}
+{% assign site-published = site.published | sort: 'date_published' | reverse %}
 {% for link in site-published %}
 {{link}}
 {% endfor %}
