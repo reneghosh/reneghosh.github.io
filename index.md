@@ -12,7 +12,7 @@ author:
 <div class="container">
 <div style="float:left;margin-right: 40px"><img alt="me thinking about other books" src="images/selfie.jpg" class="img-fluid" style="border-radius:75px" width="150"></div>
 
-I've written three novels and two short story collections. The short stories were written for stage performance, all falling neatly into the readable-aloud-in-five-minutes format, whereas the novels are sprawls. Reading either depends on where you are and how much mindspace you want to spare.
+I've written three novels and three short story collections. The short stories were written for stage performance, all falling neatly into the readable-aloud-in-five-minutes format, whereas the novels are sprawls. Reading either depends on where you are and how much mindspace you want to spare.
 
 {% assign site-books = site.books | sort: 'date' | reverse %}
 {% for book in site-books %}
