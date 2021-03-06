@@ -19,22 +19,24 @@ body {
 #main {
   /* display: flex;
   flex-direction: row;
-  flex-wrap: wrap; */
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: masonry;
+  flex-wrap: wrap; */  
 }
 
 .section-title {
   /* flex: 1 1 auto; */
   color: #9AB;
-  text-align: center;
+  text-align: left;
   padding: 0.2em;
   display: flex;
   flex-direction: row;
   background-color: var(--main-bg-color);
 }
 
+.field {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: masonry;
+}
 .section-title h1, .book-title {
   flex: 1 1 auto;
 }
@@ -42,6 +44,7 @@ body {
 .brand {
   padding: 0 1em 0 1em;
   margin-top: 0.5em;
+  display: flex;
 }
 
 .brand * {
@@ -74,7 +77,7 @@ body {
 
 .nav-link, .nav-link:visited {
   color: #CCC;
-  font-size: 50px;
+  font-size: 36px;
   margin-left: 0.4em;
   margin-right: 0.4em;
   text-align: center;
@@ -159,15 +162,13 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  font-size: 42px;
+  font-size: 38px;
   font-weight: bold;
 }
 
 h2 {
   font-size: 32px;
-  font-weight: bold;
-  margin-top: 1.4em;
-  margin-bottom: 0em;
+  font-weight: bold;  
   line-height: 1em;
   text-align: left;
 }
@@ -238,7 +239,7 @@ ul li {
     font-size: 30px;
   }
   h1 {
-    font-size: 210%;
+    font-size: 150%;
   }
   p {
     text-align: left;
