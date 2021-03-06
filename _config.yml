@@ -1,0 +1,44 @@
+# Site settings
+title: René Ghosh Homepage
+email: rene.ghosh@gmail.com
+description: >- # this means to ignore newlines until "baseurl:"
+  René Ghosh, write, musician, coder. Books, music, code and links to articles.
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: https://reneghosh.github.io
+  #twitter_username: reghosh
+github_username:  reneghosh
+facebook: https://www.facebook.com/rene.ghosh
+twitter: https://twitter.com/reghosh
+soundcloud: https://soundcloud.com/satelliteray/
+email: rene.ghosh@gmail.com
+keywords: René Ghosh, novel, fiction, music, magical punk, open mic, music, Satellite Ray
+# Build settings
+markdown: kramdown
+defaults:
+  - scope:
+      path:            "wip/**/*.*"
+    values:
+      sitemap:         false
+  - scope:
+      path:            "google9c54da3cbe073035.html"
+    values:
+      sitemap:         false
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+collections:
+  books:
+    output: false
+  code:
+    output: false
+  music:
+    output: true
+  published:
+    output: false
+  extracts:
+    output: true
+  articles:
+    output: true
+  running:
+    output: true

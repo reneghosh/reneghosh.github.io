@@ -1,0 +1,18 @@
+<div class="section">
+	<div class="section-body">
+		<img class="img-fluid img-book" src="{{ page.image }}" alt="{{ title }}">
+		<h2 class="book-title">{{ page.title }}</h2>
+		<div class="book">
+			<span class="badge badge-secondary">{{page.genre}}</span>
+			<span class="badge badge-secondary">{{page.release}}</span>
+			<p>{{ content }}</p>
+			<ul>
+				{% if page.extract %}
+				<li><a class="btn btn-dark" href="{{page.extract}}">extract</a></li>
+				{%endif%}
+				<li><a class="btn btn-dark" href="{{page.us_link}}">Print version (North America)</a></li>
+				<li><a class="btn btn-dark" href="{{page.eu_link}}">Print version (Europe)</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
