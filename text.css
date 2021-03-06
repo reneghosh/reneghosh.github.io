@@ -1,28 +1,41 @@
 @import url('https://fonts.googleapis.com/css?family=Vollkorn');
 
+:root {
+	--code-bg-color: #30353D;  
+}
 #main {
 	font-family: "Vollkorn", Georgia, serif;
 	font-size: 18px;
 	padding: 1em;
 	text-align: left;
 	text-rendering: optimizeLegibility;
+
 }
 
+a, a:visited {
+	text-decoration: none;
+	border-bottom: 2px solid var(--nav-color);
+	color: var(--nav-color);
+}
+
+pre {
+	margin-left: 0.5em;
+	margin-right: 0.5em;
+	background-color: var(--code-bg-color);
+}
+code {
+	font-family: monospace;
+	font-size: 14px;
+}
 .panel-nav {
-	list-style-type: none;
+	display: flex;
 	padding: 10px;
-	border-radius: 4px;
-	background-color:#dde;
-	border: 1px solid #ccd;
-	border-radius: 5px;
+	margin-bottom: 1em;
 }
 .panel-nav li {
 	display: inline;
 }
-.panel-nav li a, .panel-nav li a:visited {
-	color: #555;
-	margin-right: 1em;
-}
+
 .buttonlink {
 	border: 1px none #ccc;
 	margin: 3px;
@@ -46,9 +59,7 @@
 	font-size: 16pt;
 	text-decoration: none;
 }
-a, a:visited {
-	color: #05F;
-}
+
 p{
 	line-height: 1.3em;
 }

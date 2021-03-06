@@ -1,5 +1,6 @@
 :root {
   --nav-color: #ECA;
+  --main-bg-color: #20252D;    
 }
 body {
   font-size: large;
@@ -8,7 +9,6 @@ body {
   padding: 1em;
   margin: 0;
   text-align: left;
-  --main-bg-color: #20252D;  
   background-color: var(--main-bg-color);
   color: #ccc;
 }
