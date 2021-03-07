@@ -18,6 +18,11 @@ a, a:visited {
 	color: var(--nav-color);
 }
 
+.content {
+	margin-left: auto;
+	margin-right: auto;
+	/* width: 50em; */
+}
 pre {
 	margin-left: 0.5em;
 	margin-right: 0.5em;
@@ -60,8 +65,9 @@ code {
 	text-decoration: none;
 }
 
-p{
+p {
 	line-height: 1.3em;
+	max-width: 50em;
 }
 h1 {
 	font-size: 50px;
