@@ -1,6 +1,6 @@
 ---
 layout: home
-date: 2020-12-30
+date: 2021-03-07
 # author:
   # twitter: reghosh
 ---
@@ -8,7 +8,7 @@ date: 2020-12-30
 
 
 <div>
-  <div class="section-title"><h1>Code</h1></div>
+  <div class="section-title" id="code"><h1>Code</h1></div>
   <div class="field">
   {% assign site-code = site.code | sort: 'date' | reverse %}
   {% for code in site-code %}
@@ -25,7 +25,7 @@ date: 2020-12-30
 </div>
 
 <div>
-  <div class="section-title"><h1>Articles</h1></div>    
+  <div class="section-title" id="articles"><h1>Articles</h1></div>    
   <div class="field">
     {% assign site-published = site.published | sort: 'date_published' | reverse %}
     {% for link in site-published %}

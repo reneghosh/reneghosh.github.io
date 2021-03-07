@@ -13,7 +13,10 @@ body {
   color: #ccc;
 }
 
-#topbar {  
+#topbar { 
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
 }
 
 #main {
@@ -42,9 +45,9 @@ body {
 }
 
 .brand {
-  padding: 0 1em 0 1em;
   margin-top: 0.5em;
   display: flex;
+  overflow-x: auto;
 }
 
 .brand * {
@@ -82,14 +85,13 @@ body {
   margin-right: 0.4em;
   text-align: center;
   flex: 1 1 auto;
-  white-space: nowrap;
   line-height: 1.2em;
 }
 
 .topnav {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  /* flex-wrap: nowrap; */
   justify-content: flex-start;
   margin-top: 0.2em;
   margin-bottom: 0.5em;
