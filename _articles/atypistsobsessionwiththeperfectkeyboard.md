@@ -14,7 +14,7 @@ _March 09, 2021_
 
 I own 15 different keyboards.
 
-In this nnumber I don't count the ones I have that are connected to laptops. Nor all the ones I've thrown away  over the years. Among my collection are 5 mechanical keyboards, which I've revamped many times since purchasing them with specialty keycaps and o-ring sound dampeners. Like any hobby, this one can be more expensive than I'm comfortable trying to justify. I mean, I certainly don't use all of them, and some of them I've really only used once or twice.
+In this number I don't count the ones I have that are connected to laptops. Nor all the ones I've thrown away  over the years. Among my collection are 5 mechanical keyboards, which I've revamped many times since purchasing them with specialty keycaps and o-ring sound dampeners. Like any hobby, this one can be more expensive than I'm comfortable trying to justify. I mean, I certainly don't use all of them, and some of them I've really only used once or twice.
 
 Believe it or not: I am prone to worrying that I'll run out. That I'll have a great story or program or email to write and I'll find myself without the proper keyboard to do so. This is, of course, a baseless fear. There's always a computer or bloc of paper and pens lying around, there's always my phone. I've never found myself in a situation where I didn't have some material to jot down an idea or a draft, and the day I do, if whatever it is is important enough, I'll probably remember it later.
 
