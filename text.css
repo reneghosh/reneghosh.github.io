@@ -12,6 +12,11 @@
 
 }
 
+.nav-link, .nav-link:visited {
+	font-size: 24px;
+	display: inline-block;
+}
+
 a, a:visited {
 	text-decoration: none;
 	border-bottom: 2px solid var(--nav-color);
@@ -21,8 +26,12 @@ a, a:visited {
 .content {
 	margin-left: auto;
 	margin-right: auto;
-	/* width: 50em; */
+	margin-top: 2em;
+	/* border: 1px solid; */
+	text-align: center;
+	max-width: 45em;
 }
+
 pre {
 	margin-left: 0.5em;
 	margin-right: 0.5em;
@@ -67,7 +76,8 @@ code {
 
 p {
 	line-height: 1.3em;
-	max-width: 50em;
+	text-align: justify;
+	max-width: none;
 }
 h1 {
 	font-size: 50px;
