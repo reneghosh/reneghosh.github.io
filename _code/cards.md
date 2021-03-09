@@ -6,4 +6,4 @@ categories: js
 ---
 Cards is an ECMAScript library for building card-based user interfaces quickly, reliably, and simply. It uses a function-chaining mechanism that allows writing usable interfaces in a flow-friendly way, enabling progressive enhancement of websites with minimal code.
 
-[Check it out](https://github.com/reneghosh/cards) on github.
+[See code](https://github.com/reneghosh/cards) on github.
