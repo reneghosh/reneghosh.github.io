@@ -2,6 +2,7 @@
 layout: article
 title:  "A typist's obsession with the perfect keyboard"
 date:   2021-03-09 18:19:00 +0200
+updated:   2021-03-10 00:07:00 +0200
 categories: articles, keyboards
 keywords: articles, keyboards
 ---
