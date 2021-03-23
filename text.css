@@ -28,7 +28,7 @@ a, a:visited {
 	margin-right: auto;
 	margin-top: 2em;
 	/* border: 1px solid; */
-	text-align: center;
+	text-align: left;	
 	max-width: 45em;
 }
 
@@ -87,6 +87,5 @@ h1 {
 }
 h2 {
 	font-size: 36px;
-	margin-top: 0.5em;
-	display: inline;
+	margin-top: 0.7em;
 }
