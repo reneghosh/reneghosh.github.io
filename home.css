@@ -270,7 +270,10 @@ ul li {
     padding: 0.2em;
     background-color: var(--main-bg-color);
   }
-  
+ .field {
+  display: flex;
+  flex-direction: column;
+}
   
   #main {
     display: flex;
