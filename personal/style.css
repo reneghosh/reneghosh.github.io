@@ -1,0 +1,55 @@
+:root {
+    --bgcolor: #303030;
+}
+body {
+    background-color: var(--bgcolor);
+    color: #eee;
+    font-family: monospace;
+    font-size: large;
+}
+button, input {
+    font-family: monospace;
+    font-size: large;
+}
+h1 {
+    font-size: 140%;
+}
+button {
+    outline: none;
+    border: 2px #505050 solid;
+    padding: 0.5em;
+    color: #ccc;
+    border-radius: 0.4em;
+    background-color: #A07604;
+    display: block;
+}
+input {
+    background-color: #CCC;
+    color: #303030;
+    padding: 0.5em;
+    min-width: 10em;
+}
+th {
+    text-align: center;
+}
+#table {
+    margin-top: 2em;
+}
+td {
+    border-top: 1px solid #707070;
+}
+td, th {
+    padding: 0.3em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+#nav, #form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;    
+    overflow-x: auto;
+    min-width: 100%;
+}
+#nav *, #form * {
+    margin-left: 1em;
+}

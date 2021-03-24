@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Weight</title>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta charset="utf-8" />
+    </head>
+    <body>
+        <div id="nav">
+            <h1>Weight tracker</h1>
+            <!--Add buttons to initiate auth sequence and sign out-->
+            <button id="authorize_button" style="display: none;">Authorize</button>
+            <button id="signout_button" style="display: none;">Sign Out</button>
+        </div>
+        <div id="form" style="display: none;">
+            <div>Today's weight: </div>
+            <div><input type="text" id="weight"></div>
+            <button id="weight-button" onclick="javascript:addValue()">Add to sheet</button>
+        </div>
+        <div id="error"></div>
+        <table id="table">            
+        </table>
+
+        <script type="text/javascript">
+            // Client ID and API key from the Developer Console
+            var CLIENT_ID = '796866674815-qnii49gepitock0s1k5f605rh5q0gatu.apps.googleusercontent.com';
+            var API_KEY = 'AIzaSyD08CJROd2Dt-fxnKLSg1Z_F0zccpG_IqI';
+
+            // Array of API discovery doc URLs for APIs used by the quickstart
+            var DISCOVERY_DOCS = ["https://sheets.googleapis.com/$discovery/rest?version=v4"];
+
+            // Authorization scopes required by the API; multiple scopes can be
+            // included, separated by spaces.
+            var SCOPES = "https://www.googleapis.com/auth/spreadsheets";
+
+            var authorizeButton = document.getElementById('authorize_button');
+            var signoutButton = document.getElementById('signout_button');
+
+            /**
+             *  On load, called to load the auth2 library and API client library.
+             */
+            function handleClientLoad() {
+                gapi.load('client:auth2', initClient);
+            }
+
+            
+            /**
+             *  Initializes the API client library and sets up sign-in state
+             *  listeners.
+             */
+            function initClient() {
+                gapi.client.init({
+                    apiKey: API_KEY,
+                    clientId: CLIENT_ID,
+                    discoveryDocs: DISCOVERY_DOCS,
+                    scope: SCOPES
+                }).then(function () {
+                    // Listen for sign-in state changes.
+                    gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
+                    
+                    // Handle the initial sign-in state.
+                    updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
+                    authorizeButton.onclick = handleAuthClick;
+                    signoutButton.onclick = handleSignoutClick;
+                }, function (error) {
+                    showError(JSON.stringify(error, null, 2));
+                });
+            }
+            
+            function showError(error){
+                document.getElementById("error").innerText = error;
+            }
+            /**
+             *  Called when the signed in status changes, to update the UI
+             *  appropriately. After a sign-in, the API is called.
+             */
+            function updateSigninStatus(isSignedIn) {
+                if (isSignedIn) {
+                    authorizeButton.style.display = 'none';
+                    signoutButton.style.display = 'block';
+                    listLatestValues();
+                } else {
+                    authorizeButton.style.display = 'block';
+                    signoutButton.style.display = 'none';
+                }
+            }
+
+            /**
+             *  Sign in the user upon button click.
+             */
+            function handleAuthClick(event) {
+                gapi.auth2.getAuthInstance().signIn();
+            }
+            
+            /**
+             *  Sign out the user upon button click.
+             */
+            function handleSignoutClick(event) {
+                gapi.auth2.getAuthInstance().signOut();
+            }
+            
+            /**
+             * Append a pre element to the body containing the given message
+             * as its text node. Used to display the results of the API call.
+             *
+             * @param {string} message Text to be placed in pre element.
+             */
+            function appendData(messages) {
+                tr = document.createElement("tr");
+                table.appendChild(tr);                
+                for (var i = 0; i < messages.length; i++) {
+                    var td = document.createElement("td");
+                    tr.appendChild(td);
+                    td.innerText = messages[i];
+                }
+            }
+            
+            var spreadsheetId = "1OP3N34mfe1tkKNDhQeRtYonthTs_JEIR0JXTvv8VOaE";
+            var numResults = 0;
+            var inputRange;
+            
+            function initDocument(){
+                numResults = 0;
+                var table = document.getElementById('table');
+                table.innerHTML = "";
+                tr = document.createElement("tr");
+                table.appendChild(tr);
+                tr.innerHTML = "<th>Date</th><th>Weight</th>";
+            }
+            /**
+             * Print the names and majors of students in a sample spreadsheet:
+             * https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit
+             */
+            function listLatestValues() {
+                initDocument();
+                gapi.client.sheets.spreadsheets.values.get({
+                    spreadsheetId: spreadsheetId,
+                    range: 'Data!A2:B',
+                }).then(function (response) {
+                    var range = response.result;
+                    var inputRange = range;
+                    numResults = range.values.length;
+                    console.log(numResults, "results");
+                    var subRange = numResults - 10;
+                    var supRange = numResults;
+                    if (subRange < 0) subRange = 0;
+                    var values = range.values.slice(subRange, supRange);
+                    if (values.length > 0) {
+                        for (i = 0; i < values.length; i++) {
+                            var row = values[i];
+                            // Print columns A and E, which correspond to indices 0 and 4.
+                            appendData(row.slice(0, 2));
+                        }
+                    } else {
+                        showError("no data");
+                    }
+                    document.getElementById("form").style.display="flex";
+                }, function (response) {
+                    showError('Error: ' + response.result.error.message);
+                });
+            }
+
+            function addValue() {
+                // appendData();
+                console.log(document.getElementById("weight").value)
+
+                gapi.client.sheets.spreadsheets.values.append({
+                    spreadsheetId: spreadsheetId,
+                    range: ('Data!A:B'+(numResults+2)), 
+                    valueInputOption: "USER_ENTERED",
+                    resource: {
+                        majorDimension: "ROWS",
+                        values: [[new Date().toLocaleDateString("fr-FR"), document.getElementById("weight").value]]
+                    }
+                }).then((response) => {
+                    var result = response.result;
+                    showError(`${result.updates.updatedCells} cells appended.`);
+                    listLatestValues();
+                }).catch((err) => {
+                    showError(err.result.error.code+": "+err.result.error.message);
+                    console.log(err.result.error.code,err.result.error.message);
+                });                
+
+            }
+        </script>
+
+        <script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad()"
+            onreadystatechange="if (this.readyState === 'complete') this.onload()">
+            </script>
+    </body>
+</html>
