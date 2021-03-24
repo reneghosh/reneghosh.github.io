@@ -1,11 +1,17 @@
 ---
 layout: home
 date: 2021-03-07
-# author:
-  # twitter: reghosh
+
 ---
 
-
+<div>
+  <div class="section-title" id="articles"><h1>Articles</h1></div>    
+  <div class="field">
+    {% assign site-published = site.published | sort: 'date_published' | reverse %}
+    {% for link in site-published %}
+    {{link}}
+    {% endfor %}
+</div>
 
 <div>
   <div class="section-title" id="code"><h1>Code</h1></div>
@@ -19,18 +25,6 @@ date: 2021-03-07
     </div>
   </div>
   {% endfor %}
-</div>
-  
-
-</div>
-
-<div>
-  <div class="section-title" id="articles"><h1>Articles</h1></div>    
-  <div class="field">
-    {% assign site-published = site.published | sort: 'date_published' | reverse %}
-    {% for link in site-published %}
-    {{link}}
-    {% endfor %}
 </div>
 
 {% include about.html %}
