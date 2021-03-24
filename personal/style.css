@@ -10,16 +10,17 @@ body {
 button, input {
     font-family: monospace;
     font-size: large;
+    margin-top: 0.3em;
 }
 h1 {
     font-size: 140%;
 }
 button {
     outline: none;
-    border: 2px #505050 solid;
-    padding: 0.5em;
+    border: none;
+    padding: 1.0em;
     color: #ccc;
-    border-radius: 0.4em;
+    border-radius: 1.0em;
     background-color: #A07604;
     display: block;
 }
@@ -27,6 +28,8 @@ input {
     background-color: #CCC;
     color: #303030;
     padding: 0.5em;
+    outline: none;
+    border: 1px solid #ccc;
     min-width: 10em;
 }
 th {
