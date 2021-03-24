@@ -126,7 +126,7 @@
                 table.innerHTML = "";
                 tr = document.createElement("tr");
                 table.appendChild(tr);
-                tr.innerHTML = "<th>Date</th><th>Weight</th>";
+                tr.innerHTML = "<th>Date</th><th>Weight</th><th>BMI</th><th>Local average</th>";
             }
             /**
              * Print the names and majors of students in a sample spreadsheet:
@@ -136,11 +136,17 @@
                 initDocument();
                 gapi.client.sheets.spreadsheets.values.get({
                     spreadsheetId: spreadsheetId,
-                    range: 'Data!A2:B',
+                    range: 'Data!A2:E',
                 }).then(function (response) {
                     var range = response.result;
+                    var freeCell = 0;
+                    for (var j=0;j<range.values.length;j++){
+                        if (range.values[j][0] != 0) {
+                            freeCell = j+1;
+                        }
+                    }
                     var inputRange = range;
-                    numResults = range.values.length;
+                    numResults = freeCell;
                     console.log(numResults, "results");
                     var subRange = numResults - 10;
                     var supRange = numResults;
@@ -150,7 +156,7 @@
                         for (i = 0; i < values.length; i++) {
                             var row = values[i];
                             // Print columns A and E, which correspond to indices 0 and 4.
-                            appendData(row.slice(0, 2));
+                            appendData([row[0],row[1],row[3],row[4]]);
                         }
                     } else {
                         showError("no data");

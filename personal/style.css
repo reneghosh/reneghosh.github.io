@@ -50,6 +50,6 @@ td, th {
     overflow-x: auto;
     min-width: 100%;
 }
-#nav *, #form * {
+#nav * {
     margin-left: 1em;
 }
