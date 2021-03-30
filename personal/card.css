@@ -1,0 +1,53 @@
+.card {
+    --button-bg: #EC8;
+    --border-color: #ccc;
+    border-top: 1px dashed var(--border-color);
+    border-bottom: 1px dashed var(--border-color);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0.5em;
+    padding-top: 0.7em;
+    padding-bottom: 0.7em;
+    margin-top: 0.7em;
+    margin-bottom: 0.7em;
+}
+.error {
+    color: #F00;
+}
+.container {
+    border: 1px dashed #5555;
+    margin-bottom: 0.7em;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    /* background-color: aquamarine; */
+}
+.prompt{
+    
+}
+.actionlist {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;    ;
+    /* overflow-x: auto; */
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+}
+.action {    
+    margin-bottom: 0.5em;
+    padding: 0.8em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    background-color: var(--button-bg);
+    margin-right: 1em;
+    text-decoration: none;
+    border-radius: 0.5em;
+    color: #000;
+}
+.action:hover {
+    color: #777;
+}
+.hidden {
+    display: none;
+}

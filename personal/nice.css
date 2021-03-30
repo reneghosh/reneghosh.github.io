@@ -1,0 +1,54 @@
+:root {
+    --bgcolor: #303030;
+}
+body {
+    background-color: var(--bgcolor);
+    color: #eee;
+    font-family: monospace;
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#main {
+    max-width: 20em;
+}
+button, input {
+    font-family: monospace;
+    font-size: large;
+    margin: 0.3em;    
+}
+h1, .h1 {
+    font-size: 140%;
+    text-align: center;
+    margin-bottom: 0.3em;
+}
+button {
+    outline: none;
+    border: none;
+    padding: 1.0em;
+    color: #ccc;
+    border-radius: 1.0em;
+    background-color: #A07604;
+    display: block;
+}
+input, select {
+    background-color: #CCC;
+    color: #303030;
+    padding: 0.5em;
+    outline: none;
+    border: 1px solid #ccc;
+    min-width: 10em;
+}
+th {
+    text-align: center;
+}
+
+td {
+    border-top: 1px solid #707070;
+}
+td, th {
+    padding: 0.3em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
