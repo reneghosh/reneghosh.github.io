@@ -61,7 +61,7 @@ const listLatestValues = () => {
             for (let i = 0; i < values.length; i++) {
                 var row = values[i];
                 // print columns A and E, which correspond to indices 0 and 4.
-                appendData([row[0], row[1], row[3], row[4]]);
+                appendData([row[0], row[1].replace(".", ","), row[3], row[4]]);
             }
         } else {
             showScriptError("no data");
