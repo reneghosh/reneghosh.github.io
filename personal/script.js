@@ -71,16 +71,25 @@ const listLatestValues = () => {
     });
 }
 
+
 const makeCard = () => {    
-    const card = new Card("card");
-    const textInput = card.addTextInput("New weight:", {focused: true});
-    textInput.onenter(value => {
+    const sendValue = (value) => {
         if (isNaN(value)) {
             textInput.showError(`not a number: ${value}`);
         } else {
             addValue(value);
             textInput.clear();
         }
+    }
+    const card = new Card("card");
+    const textInput = card.addTextInput("New weight:", {focused: true});
+    const actionList = card.addActions();
+    const action = actionList.addAction("Add to sheet");
+    action.onclick(()=> {
+        sendValue(textInput.getValue());        
+    });
+    textInput.onenter(value => {
+        sendValue(value);
     });
 }
 

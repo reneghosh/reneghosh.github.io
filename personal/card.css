@@ -12,9 +12,11 @@
     margin-top: 0.7em;
     margin-bottom: 0.7em;
 }
+
 .error {
     color: #F00;
 }
+
 .container {
     border: 1px dashed #5555;
     margin-bottom: 0.7em;
@@ -23,18 +25,40 @@
     align-items: stretch;
     /* background-color: aquamarine; */
 }
-.prompt{
+
+.check {
+    display: flex;
+    flex-direction: row;
+    margin-right: 1.0em;
+}
+
+.prompt {
     
 }
+
+.checkLabel {
+    margin-left: 0.3em;
+}
+
 .actionlist {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;    ;
-    /* overflow-x: auto; */
+    flex-wrap: wrap;
+    ;
     padding-top: 0.3em;
     padding-bottom: 0.3em;
 }
-.action {    
+
+.checkList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    justify-content: flex-start;
+}
+
+.action {
     margin-bottom: 0.5em;
     padding: 0.8em;
     padding-top: 0.5em;
@@ -45,9 +69,11 @@
     border-radius: 0.5em;
     color: #000;
 }
+
 .action:hover {
     color: #777;
 }
+
 .hidden {
     display: none;
 }

@@ -2,33 +2,97 @@
 
 const log = console.log;
 
-export class ActionList {
-    constructor(actions) {
-        const containerElement = document.createElement("div");
-        containerElement.setAttribute("class", "actionlist");
-        this.buttons = [];
-        for (let action of actions) {
-            const buttonElement = document.createElement("a");
-            buttonElement.setAttribute("href", "#");            
-            buttonElement.classList.add("action");
-            buttonElement.innerText = action;
-            containerElement.appendChild(buttonElement);
-            this.buttons.push(buttonElement);
-        }
-        this.containerElement = containerElement;
+export class Action {
+    action;
+    buttonElement;
+    constructor(action) {
+        this.action = action;
+        const buttonElement = document.createElement("a");
+        buttonElement.setAttribute("href", "#");
+        buttonElement.classList.add("action");
+        buttonElement.innerText = action;
+        this.buttonElement = buttonElement;
     }
-    get element(){
-        return this.containerElement;
-    }
-    onclick(func){
-        for(let button of this.buttons){
-            button.onclick = ev => {
-                func(button.innerText);
-            }
+    onclick(func) {
+        this.buttonElement.onclick = ev => {
+            func(this.buttonElement.innerText);
         }
+    }
+    getElement(){
+        return this.buttonElement;
     }
 }
+
+export class ActionList {
+    containerElement;
+    constructor() {
+        const containerElement = document.createElement("div");
+        containerElement.setAttribute("class", "actionlist");
+        this.containerElement = containerElement;
+    }
+    addAction(actionLabel) {
+        const action = new Action(actionLabel);
+        this.containerElement.appendChild(action.getElement());
+        return action;
+    }
+    getElement() {
+        return this.containerElement;
+    }
+}
+
+export class Check {
+    checkLabel;
+    checkElement;
+    containerElement;
+    constructor(checkLabel, name) {
+        this.checkLabel = checkLabel;
+        const containerElement = document.createElement("div");
+        containerElement.classList.add("check");
+        const checkElement = document.createElement("input");
+        checkElement.setAttribute("type", "checkbox");
+        checkElement.setAttribute("name", name);
+        checkElement.setAttribute("id", name);
+        const labelElement = document.createElement("label")
+        labelElement.classList.add("checkLabel");
+        labelElement.setAttribute("for", name);
+        labelElement.innerHTML = checkLabel;
+        this.checkElement = checkElement;
+        containerElement.appendChild(checkElement);
+        containerElement.appendChild(labelElement);
+        this.containerElement = containerElement;
+    }
+
+    onclick(func) {
+        this.checkElement.onchange = ev => {
+            func(this.checkElement.checked);
+        }
+    }
+    getElement(){
+        return this.containerElement;
+    }
+}
+
+export class CheckList {
+
+    containerElement;
+
+    constructor() {
+        const containerElement = document.createElement("div");
+        containerElement.setAttribute("class", "checkList");
+        this.containerElement = containerElement;
+    }
+    addCheck(checkLabel, name) {
+        const check = new Check(checkLabel, name);
+        this.containerElement.appendChild(check.getElement());
+        return check;
+    }
+    getElement() {
+        return this.containerElement;
+    }
+}
+
 export class Text {
+    innerElement;
     constructor(text) {
         const element = document.createElement("div");
         element.innerHTML = text;
@@ -42,20 +106,24 @@ export class Text {
         this.element.classList.remove("hidden");
         return this;
     }
-    get element() {
+    getElement() {
         return this.innerElement;
-    }
+    }    
     setValue(value) {
         this.innerElement.innerHTML = value;
     }
-    set className(className) {
+    setClassName(className) {
         this.innerElement.classList.add(className);
         return this;
     }
 }
 
 export class TextInput {
-    constructor(prompt, value) {
+    containerElement;
+    errorElement;
+    promptElement;
+    inputElement;
+    constructor(prompt) {
         const containerElement = document.createElement("div");
         containerElement.classList.add("container")
         const errorElement = document.createElement("div");
@@ -68,9 +136,6 @@ export class TextInput {
         containerElement.appendChild(errorElement);
         containerElement.appendChild(promptElement);
         containerElement.appendChild(inputElement);
-        if (value) {
-            inputElement.setAttribute("value", value);
-        }
         this.containerElement = containerElement;
         this.errorElement = errorElement;
         this.promptElement = promptElement;
@@ -96,6 +161,9 @@ export class TextInput {
         this.inputElement.value = value;
         return this;
     }
+    getValue() {
+        return this.inputElement.value;
+    }
     focus() {
         this.inputElement.focus();
         return this;
@@ -109,7 +177,7 @@ export class TextInput {
             func(this.inputElement.value);
         }
     }
-    set inputType(inputType) {
+    setInputType(inputType) {
         this.inputElement.setAttribute("type", inputType);
         return this;
     }
@@ -124,7 +192,12 @@ export class TextInput {
 }
 
 export class SelectInput {
-    constructor(prompt, choices, value) {
+    containerElement;
+    errorElement;
+    promptElement;
+    selectElement;
+    choices;
+    constructor(prompt, choices) {
         const containerElement = document.createElement("div");
         containerElement.classList.add("container")
         const errorElement = document.createElement("div");
@@ -141,15 +214,15 @@ export class SelectInput {
         this.errorElement = errorElement;
         this.promptElement = promptElement;
         this.selectElement = selectElement;
-        this.setValues(choices);
+        this.setValues(choices, undefined);
     }
-    setValues(choices, selectedValue){
+    setValues(choices, selectedValue) {
         this.selectElement.innerHTML = "";
         for (let choice of choices) {
             const optionElement = document.createElement("option");
             optionElement.innerText = choice;
             if ((selectedValue) && (selectedValue == choice)) {
-                optionElement.setAttribute("selected", true);
+                optionElement.setAttribute("selected", "true");
             }
             this.selectElement.appendChild(optionElement);
         }
@@ -188,13 +261,17 @@ export class SelectInput {
         this.selectElement.selectedIndex = 0;
         return this;
     }
-    get element() {
+    getValue(){
+        return this.selectElement.value;
+    }
+    getElement() {
         return this.containerElement;
     }
 
 }
 
 export class Card {
+    containerElement;
     constructor(elementId) {
         const container = document.getElementById(elementId);
         container.classList.add("card");
@@ -216,7 +293,7 @@ export class Card {
                 text.hide();
             }
             if (className) {
-                text.className = className;
+                text.setClassName(className);
             }
         }
         this.containerElement.appendChild(text.element);
@@ -233,7 +310,7 @@ export class Card {
                 textInput.hideError();
             }
             if (inputType) {
-                textInput.inputType = inputType;
+                textInput.setInputType(inputType);
             }
         }
         this.containerElement.appendChild(textInput.element);
@@ -265,10 +342,15 @@ export class Card {
         }
         return selectInput;
     }
-    addActions(actions){
-        const actionsInput = new ActionList(actions);
-        this.containerElement.appendChild(actionsInput.element);
+    addActions() {
+        const actionsInput = new ActionList();
+        this.containerElement.appendChild(actionsInput.getElement());
         return actionsInput;
+    }
+    addCheckList() {
+        const checkList = new CheckList();
+        this.containerElement.appendChild(checkList.getElement());
+        return checkList;
     }
 }
 
