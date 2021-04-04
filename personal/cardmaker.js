@@ -173,9 +173,11 @@ export class TextInput {
         return this;
     }
     onenter(func) {
-        this.inputElement.onchange = ev => {
-            func(this.inputElement.value);
-        }
+        this.inputElement.addEventListener("keyup", ev => {
+            if (ev.key == "Enter"){                
+                func(this.inputElement.value);
+            }
+        });
     }
     setInputType(inputType) {
         this.inputElement.setAttribute("type", inputType);
