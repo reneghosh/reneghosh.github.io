@@ -41,7 +41,7 @@ The mechanical keyboard afficionados are all about the tactile and sonorous feed
 
 And of course the sound, the ecstatic, satisfying clack of a keypress on a mechanical keyboard, that echoes the weight of your input and imbues it with the gravitas you ascribe to the thought that gave rise to it. Though some people swear that they're faster on mechanical keyboards, many will admit that they are faster on their work laptops but that typing on a mechanical means typing with joy.
 
-I myself and partial to scissor-switches to the same degree as with my mechanicals: I enjoy the subdued insectlike sound of chiclet typing as much as the fuller twang of a mechanical switch resonating within thick plastic keycaps. Nothing matches the looks of a mechanical, of course: the scupted keys with their mix of strict and flowing lines, the pretty lights. All those pretty, multicolor, blinking, breathing lights. 
+I myself am partial to scissor-switches to the same degree as with my mechanicals: I enjoy the subdued insectlike sound of chiclet typing as much as the fuller twang of a mechanical switch resonating within thick plastic keycaps. Nothing matches the looks of a mechanical, of course: the scupted keys with their mix of strict and flowing lines, the pretty lights. All those pretty, multicolor, blinking, breathing lights. 
 
 I'd say one comes to the keyboard as a tool for implementing the transmission of one's thoughts, but thereafter comes to perceive the input as having its own finality. To me, every click serves a purpose, but also exists within a void, as an act of communication bolstered by its physical manifestation but never contained by it. If I enjoy a book or an article, I'd also like to see the keyboard it was written on.
 
