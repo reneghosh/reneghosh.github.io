@@ -61,7 +61,7 @@ const listLatestValues = () => {
             for (let i = 0; i < values.length; i++) {
                 var row = values[i];
                 // print columns A and E, which correspond to indices 0 and 4.
-                appendData([row[0], row[1], row[3], row[4]]);
+                appendData([row[1], row[2], row[4], row[5]]);
             }
         } else {
             showScriptError("no data");
@@ -96,7 +96,7 @@ const makeCard = () => {
 const addValue = (value) => {
     gapi.client.sheets.spreadsheets.values.append({
         spreadsheetId: spreadsheetId,
-        range: ('Data!A:B' + (numResults + 2)),
+        range: ('Data!B:C' + (numResults + 2)),
         valueInputOption: "USER_ENTERED",
         resource: {
             majorDimension: "ROWS",
