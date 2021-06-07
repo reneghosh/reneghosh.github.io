@@ -42,7 +42,7 @@ const listLatestValues = () => {
     initDocument();
     gapi.client.sheets.spreadsheets.values.get({
         spreadsheetId: spreadsheetId,
-        range: 'Data!A2:E',
+        range: 'Data!A2:F',
     }).then(function (response) {
         var range = response.result;
         var freeCell = 0;
