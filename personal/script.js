@@ -87,6 +87,7 @@ const addValue = async (value) => {
         "Weight": value
     });
     showMessage("1 row updated");    
+    listLatestValues();
 }
 
 
