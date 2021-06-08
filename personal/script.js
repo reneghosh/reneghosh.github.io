@@ -83,7 +83,7 @@ const makeCard = () => {
 
 const addValue = async (value) => {
     await add(spreadsheetId, "Data", {
-        "Date": new Date(),
+        "Date": new Date().toLocaleDateString("fr-FR"),
         "Weight": value
     });
     showMessage("1 row updated");
