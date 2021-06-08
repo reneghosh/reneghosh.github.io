@@ -106,7 +106,7 @@ export async function add(sheetId, sheetName, values) {
     // log(updateObject.length);
     let response = await gapi.client.sheets.spreadsheets.values.update({
         spreadsheetId: sheetId,
-        range: sheetName+"!A"+(range.length)+":"+numberToLetter(updateObject.length)+(range.length),
+        range: sheetName+"!A"+(range.length+1)+":"+numberToLetter(updateObject.length)+(range.length+1),
         valueInputOption: "USER_ENTERED",
         resource: {
             majorDimension: "ROWS",
