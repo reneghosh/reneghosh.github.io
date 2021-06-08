@@ -1,6 +1,7 @@
 "uses strict";
 
-import {Card} from "./cardmaker.js";
+import { Card } from "./cardmaker.js";
+import { add, getColumnNames, getDatabaseRange, makeUUID } from "./sheetserver.js";
 
 const spreadsheetId = "1OP3N34mfe1tkKNDhQeRtYonthTs_JEIR0JXTvv8VOaE";
 var numResults = 0;
@@ -38,25 +39,12 @@ const showMessage = (message) => {
     document.getElementById("message").innerText = message;
 }
 
-const listLatestValues = () => {
+const listLatestValues = async () => {
     initDocument();
-    gapi.client.sheets.spreadsheets.values.get({
-        spreadsheetId: spreadsheetId,
-        range: 'Data!A2:F',
-    }).then(function (response) {
-        var range = response.result;
-        var freeCell = 0;
-        for (var j = 0; j < range.values.length; j++) {
-            if (range.values[j][0] != 0) {
-                freeCell = j + 1;
-            }
-        }
-        numResults = freeCell;
-        console.log(numResults, "results");
-        var subRange = numResults - 10;
-        var supRange = numResults;
-        if (subRange < 0) subRange = 0;
-        var values = range.values.slice(subRange, supRange);
+    getDatabaseRange(spreadsheetId, "Data");
+    try {
+        let range = await getDatabaseRange(spreadsheetId, "Data");        
+        var values = range.slice(-10);        
         if (values.length > 0) {
             for (let i = 0; i < values.length; i++) {
                 var row = values[i];
@@ -65,14 +53,14 @@ const listLatestValues = () => {
             }
         } else {
             showScriptError("no data");
-        }      
-    }, function (response) {
-        showScriptError('Error: ' + response.result.error.message);
-    });
+        }
+    } catch (err) {
+        showScriptError('Error: ' + err);
+    };
 }
 
 
-const makeCard = () => {    
+const makeCard = () => {
     const sendValue = (value) => {
         if (isNaN(value)) {
             textInput.showError(`not a number: ${value}`);
@@ -82,40 +70,29 @@ const makeCard = () => {
         }
     }
     const card = new Card("card");
-    const textInput = card.addTextInput("New weight:", {focused: true});
+    const textInput = card.addTextInput("New weight:", { focused: true });
     const actionList = card.addActions();
     const action = actionList.addAction("Add to sheet");
-    action.onclick(()=> {
-        sendValue(textInput.getValue());        
+    action.onclick(() => {
+        sendValue(textInput.getValue());
     });
     textInput.onenter(value => {
         sendValue(value);
     });
 }
 
-const addValue = (value) => {
-    gapi.client.sheets.spreadsheets.values.append({
-        spreadsheetId: spreadsheetId,
-        range: ('Data!B:C' + (numResults + 2)),
-        valueInputOption: "USER_ENTERED",
-        resource: {
-            majorDimension: "ROWS",
-            values: [[new Date().toLocaleDateString("fr-FR"), value.replace(".", ",")]]
-        }
-    }).then((response) => {
-        var result = response.result;
-        showMessage(`${result.updates.updatedCells} cells appended.`);
-        listLatestValues();
-    }).catch((err) => {
-        showScriptError(err.result.error.code + ": " + err.result.error.message);
-        console.log(err.result.error.code, err.result.error.message);
+const addValue = async (value) => {
+    await add(spreadsheetId, "Data", {
+        "Date": new Date(),
+        "Weight": value
     });
+    showMessage("1 row updated");    
 }
 
 
 
-gapiInitialized.then(() => {    
-    listLatestValues();    
+gapiInitialized.then(() => {
+    listLatestValues();
     makeCard();
 });
 
