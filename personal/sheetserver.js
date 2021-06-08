@@ -114,7 +114,7 @@ export async function add(sheetId, sheetName, values) {
     return 1;
 }
 
-export function update(sheetId, sheetName, id, values) {
+export async function update(sheetId, sheetName, id, values) {
     let range = await getDatabaseRange(sheetId, sheetName);
     let columns = getColumnNames(range);
     let updateObject = new Array(Object.keys(values).length + 1);
@@ -142,7 +142,7 @@ export function update(sheetId, sheetName, id, values) {
 }
 
 //delete a row entry
-export function deleteEntry(databaseName, id) {
+export async function deleteEntry(databaseName, id) {
     let range = await getDatabaseRange(sheetId, sheetName);
 
     for (let [index, row] of Object.entries(range)) {
