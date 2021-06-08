@@ -43,8 +43,8 @@ const listLatestValues = async () => {
     initDocument();
     getDatabaseRange(spreadsheetId, "Data");
     try {
-        let range = await getDatabaseRange(spreadsheetId, "Data");        
-        var values = range.slice(-10);        
+        let range = await getDatabaseRange(spreadsheetId, "Data");
+        var values = range.slice(-10);
         if (values.length > 0) {
             for (let i = 0; i < values.length; i++) {
                 var row = values[i];
@@ -62,12 +62,12 @@ const listLatestValues = async () => {
 
 const makeCard = () => {
     const sendValue = (value) => {
-        if (isNaN(value)) {
-            textInput.showError(`not a number: ${value}`);
-        } else {
-            addValue(value);
-            textInput.clear();
-        }
+        // if (isNaN(value)) {
+        //     textInput.showError(`not a number: ${value}`);
+        // } else {
+        addValue(value);
+        textInput.clear();
+        // }
     }
     const card = new Card("card");
     const textInput = card.addTextInput("New weight:", { focused: true });
@@ -86,7 +86,7 @@ const addValue = async (value) => {
         "Date": new Date(),
         "Weight": value
     });
-    showMessage("1 row updated");    
+    showMessage("1 row updated");
     listLatestValues();
 }
 
