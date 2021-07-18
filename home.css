@@ -1,16 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Vollkorn');
+
 :root {
   --nav-color: #778;
   --main-bg-color: #FFF;
   --navlinks : #FFF;
   --top-nav-bg-color: #000;
-  --section-title-color: #555;
+  --section-title-color: #000;
   --meta-color: #ED0;
-  --main-color: #444;
+  --main-color: #000;
 }
+
 body {
-  font-size: large;
+  font-size: 18px;
   font-family: georgia, serif;
-  line-height: 1.3em;
   padding: 0em;
   margin: 0;
   text-align: left;
@@ -30,24 +32,32 @@ body {
 }
 
 #main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .section-title {
   color: var(--section-title-color);
   text-align: left;
-  padding: 0.2em;
   display: flex;
   flex-direction: row;
-  background-color: var(--main-bg-color);
 }
 
 .field {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: masonry;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  flex-wrap: wrap;
 }
-.section-title h1, .book-title {
-  flex: 1 1 auto;
+
+
+.section {
+  width: clamp(10em, 20em, 30em);
+}
+
+.large-section {
+  width: clamp(30em, 30em, 30em);
 }
 
 #header {
@@ -64,25 +74,13 @@ body {
   color: #eee;
 }
 
-.section {
-  flex: 1 1 36em;
-  display: flex;
-  flex-direction: column;
-  justify-content: baseline;
-  align-items: stretch;
-  margin: 1px;
-  border: 0px solid #CCD;
-}
 
 .full-card {
   column-span: all;
 }
 
 .section-body {
-  padding: 1em;
-  border: 0px solid;
-  background-color: var(--main-bg-color);
-  flex: 1 1 auto;
+  padding-right: 1.7em;
 }
 
 
@@ -92,7 +90,6 @@ body {
   margin-left: 0.4em;
   margin-right: 0.4em;
   text-align: center;
-  flex: 1 1 auto;
   line-height: 1.2em;
 }
 
@@ -152,7 +149,7 @@ p {
 }
 
 .card-title {
-  max-width: 15em;
+  /* max-width: 15em; */
 }
 
 a, a:visited {
@@ -252,49 +249,3 @@ ul li {
   margin: 2px;
 }
 
-@media only screen and (max-width: 600px) {
-  body {
-    padding: 0.2em;    
-  }
-  .nav-link, .nav-link:visited {
-    font-size: 30px;
-  }
-  h1 {
-    font-size: 150%;
-  }
-  p {
-    text-align: left;
-    font-weight: normal;    
-  }  
-  .full-card {
-    flex: 0 0 auto;
-  }
-  .section {   
-    flex: 0 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: baseline;
-    align-items: stretch;
-    margin: 1px;
-    background-color: var(--main-bg-color);
-    border: 0px solid #CCD;
-  }    
-
-  .topnav {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    margin-top: 0.2em;
-    padding: 0.2em;
-  }
- .field {
-  display: flex;
-  flex-direction: column;
-}
-  
-  #main {
-    display: flex;
-    flex-direction: column;
-  }
-}

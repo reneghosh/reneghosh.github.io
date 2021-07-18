@@ -1,7 +1,7 @@
 ---
 layout: home
 date: 2021-03-07
-
+title: René Ghosh - homepage
 ---
 
 <div>
