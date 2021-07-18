@@ -89,10 +89,20 @@ body {
   overflow-x: auto;
   background-color: var(--top-nav-bg-color);
   padding: 1em;
+  color: var(--header-color);
 }
 
-#header * {
-  color: var(--header-color);
+.inline-image {
+  text-align:center;
+  overflow-x: auto;
+  max-width: 90vw;
+}
+
+
+.language-plaintext, .language-python, .highlighter-rouge {
+  overflow-x: auto;
+  max-width: 90vw;
+  background-color: #eee;
 }
 
 

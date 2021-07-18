@@ -21,7 +21,7 @@ make your own.
 
 As a starting point, I used the arpy synth, which looks like this:
 
-```python
+```
 
 arpy = SynthDef("arpy")
 arpy.freq = arpy.freq / 2
@@ -46,7 +46,7 @@ This is what produces the characteristic "wah" sound.
 
 I added some distortion to the signal to dirty it up a little.
 
-```python
+```
 with SynthDef("warpy") as warpy:
   warpy.freq = warpy.freq / 2
   warpy.amp  = warpy.amp * 2
@@ -63,7 +63,7 @@ with SynthDef("warpy") as warpy:
 To demonstrate the effect, here is a short recording of a riff done
 with both arpy and warpy:
 
-```python
+```
 Scale.default = "chromatic"
 
 b1 >> arpy([12,7,12,7,10,10,7,10,7], dur=[1,1,1,1,0.5,.5,1,1,1], oct=4)

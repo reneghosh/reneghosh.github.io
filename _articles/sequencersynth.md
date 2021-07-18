@@ -23,7 +23,7 @@ the duration of the sequencer step.
 
 So, what I want is to be able to write:
 
-```python
+```
 play_sequencer("00000---/77*A5577/AA>>00<AA>00", [bass,sitar,feel], [b1,b2,b3], step=0.5)
 ```
 
@@ -41,7 +41,7 @@ In the score interpreter, I'll use the following conventions:
 I need to translate the score into lists of pitch and duration. Here's the
 function to do so:
 
-```python
+```
 def generate_sequencer(stream, step):
     notes = ['0','1','2','3','4','5','6','7','8','9','A','B'] #basic notes
     octave = 0 #starting octave
@@ -82,7 +82,7 @@ The next step is to send these musical patterns to synths. This is simply
 a question of taking the synths and players as parameters to a function that
 will apply a synth to each voice, on one player:
 
-```python
+```
 def play_sequencer(input, synths, players, step=1):
     patterns = generate_sequencer(input, step)
     for index, [pitches, durations] in enumerate(patterns):
@@ -95,7 +95,7 @@ In FoxDot, synths are functions, so to apply distinct effects to each synth,
 I have to partially evaluate it with the desired effects. In functional programming terms,
 this is known as currying. To do this I'll import the python library that enables partial evaluation:
 
-```python
+```
 from functools import partial
 msitar = partial(sitar, mix=0.3, room=0.4, echo=0.5)
 mbass = partial(bass, mix=0.1, room=0.4)
@@ -103,7 +103,7 @@ mfeel = partial(feel, tremolo=4)
 ```
 And now I can use my pythonic step sequencer:
 
-```python
+```
 Scale.default="chromatic"
 play_sequencer("00000---/77*A5577/AA>>00<AA>00", [mbass, msitar,mfeel], [b1,b2,b3], 0.5)
 ```

@@ -11,7 +11,7 @@ keywords: articles, keyboards
 
 _March 09, 2021_
 
-<center><img src="{{ 'images/keyboard1.jpg' | relative_url }}"></center>
+<div class="inline-image"><img src="{{ 'images/keyboard1.jpg' | relative_url }}"></div>
 
 I own 15 different keyboards.
 
