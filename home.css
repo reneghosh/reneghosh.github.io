@@ -1,28 +1,42 @@
-@import url('https://fonts.googleapis.com/css?family=Vollkorn');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Condensed&display=swap');
 
 :root {
-  --nav-color: #778;
+  --nav-color: #00F;
   --main-bg-color: #FFF;
   --navlinks : #FFF;
   --top-nav-bg-color: #000;
   --section-title-color: #000;
   --meta-color: #ED0;
   --main-color: #000;
+  --header-font: "Merriweather", serif;
+  --text-font: 'Cabin Condensed', Verdana, sans-serif;
+  --header-color: #fff;
 }
 
 body {
-  font-size: 18px;
-  font-family: georgia, serif;
+  font-size: 20px;
+  font-family: var(--text-font);
   padding: 0em;
   margin: 0;
   text-align: left;
   background-color: var(--main-bg-color);
   color: var(--main-color);
+  display: flex;
+  flex-direction: column;
+  line-height: 1.4em;
 }
 
+.section-title, h1, h2, h3, h4 {
+  font-family: var(--header-font);
+  line-height: 1.2em;
+}
 
-#main {
-  padding: 3em;
+#main-content {
+  max-width: 70em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.7em;
 }
 
 #topbar { 
@@ -33,31 +47,38 @@ body {
 
 #main {
   display: flex;
+  margin-left: auto;
+  margin-right: auto;
   flex-direction: column;
-  align-items: center;
 }
 
 .section-title {
   color: var(--section-title-color);
-  text-align: left;
+  margin-top: 0.3em;
+  border-top: 1px #ccc solid;
   display: flex;
   flex-direction: row;
+  justify-content: center;
+}
+
+.category:first-of-type .section-title  {
+  border-top: none;
 }
 
 .field {
   display: flex;
   flex-direction: row;
-  justify-content: start;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
 
 .section {
-  width: clamp(10em, 20em, 30em);
+  max-width: 20em;
 }
 
 .large-section {
-  width: clamp(30em, 30em, 30em);
+  max-width: 40em;
 }
 
 #header {
@@ -71,7 +92,7 @@ body {
 }
 
 #header * {
-  color: #eee;
+  color: var(--header-color);
 }
 
 
@@ -96,7 +117,6 @@ body {
 .topnav {
   display: flex;
   flex-direction: row;
-  /* flex-wrap: nowrap; */
   justify-content: flex-start;
   margin-top: 0.2em;
   margin-bottom: 0.5em;
@@ -104,8 +124,8 @@ body {
 }
 
 .text-content {
-  width: clamp(10em, 50em, 50em);
-  /* border: 1px solid #000; */
+  max-width: 40em;
+  padding: 0.7em;
 }
 .content {
 	text-align: left;
@@ -145,12 +165,8 @@ body {
 p {
   text-align: justify;
   font-weight: normal;
-  /* max-width: 30em; */
 }
 
-.card-title {
-  /* max-width: 15em; */
-}
 
 a, a:visited {
   text-decoration: none;
