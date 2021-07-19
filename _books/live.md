@@ -2,7 +2,7 @@
 layout: book
 title: "Live!"
 release: 2016
-date:   2018-08-31 22:50:46 +0200
+date:   2016-01-01 00:00:00 +0200
 us_link: https://www.amazon.com/Live-collected-open-mic-readings/dp/1530924413/
 eu_link: https://www.amazon.fr/Live-collected-open-mic-readings/dp/1530924413/
 genre: short story collection

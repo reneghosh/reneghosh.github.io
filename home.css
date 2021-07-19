@@ -79,6 +79,7 @@ body {
 
 .large-section {
   max-width: 40em;
+  min-width: 30em;
 }
 
 #header {
@@ -227,6 +228,7 @@ ul li {
 
 .book {
   padding: 1em;
+  min-width: 25em;
 }
 
 .book-title {

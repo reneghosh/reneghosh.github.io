@@ -34,7 +34,7 @@ title: René Ghosh - homepage
   <div class="field">
   {% assign site-books = site.books | sort: 'date' | reverse %}
   {% for book in site-books %}
-    <div class="section">  
+    <div class="large-section">  
       <div class="section-body">
         <h2>{{book.title}}</h2>  
               {{book}}

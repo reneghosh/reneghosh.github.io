@@ -2,7 +2,7 @@
 layout: book
 title: "Puppet Dancers"
 release: 2014
-date:   2018-08-31 22:50:46 +0200
+date:   2014-01-01 00:00:00 +0200
 us_link: http://www.amazon.com/dp/2953100415
 eu_link: https://www.amazon.fr/Puppet-Dancers-M-Ren%C3%A9-Ghosh/dp/2953100415
 genre: novel

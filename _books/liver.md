@@ -2,7 +2,7 @@
 layout: book
 title: "Liver!"
 release: 2017
-date:   2018-08-31 22:50:46 +0200
+date:   2017-01-01 00:00:00 +0200
 us_link: https://www.amazon.com/Liver-collected-open-writings-vol/dp/2953100466
 eu_link: https://www.amazon.fr/Liver-collected-open-writings-vol/dp/2953100466
 genre: short story collection
