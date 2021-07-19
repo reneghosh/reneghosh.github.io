@@ -29,4 +29,19 @@ title: René Ghosh - homepage
   </div>
 </div>
 
+<div class="category">
+  <div class="section-title" id="books"><h1>Books</h1></div>
+  <div class="field">
+  {% assign site-books = site.books | sort: 'date' | reverse %}
+  {% for book in site-books %}
+    <div class="section">  
+      <div class="section-body">
+        <h2>{{book.title}}</h2>  
+              {{book}}
+      </div>
+    </div>
+  {% endfor %}
+  </div>
+</div>
+
 {% include about.html %}
