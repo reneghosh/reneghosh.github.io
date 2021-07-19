@@ -232,10 +232,10 @@ ul li {
 }
 
 .book-title {
-
+  display: block;
+  text-align: center;
 }
 
-.img-icon {}
 
 .img-circular {
   border-radius: 100px;
@@ -246,6 +246,7 @@ ul li {
 .img-book {
   height: 250px;
   border-radius: 200px;
+  margin-right: 1em;
 }
 
 .title-link {

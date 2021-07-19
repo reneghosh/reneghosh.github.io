@@ -36,8 +36,7 @@ title: René Ghosh - homepage
   {% for book in site-books %}
     <div class="large-section">  
       <div class="section-body">
-        <h2>{{book.title}}</h2>  
-              {{book}}
+        {{book}}
       </div>
     </div>
   {% endfor %}
