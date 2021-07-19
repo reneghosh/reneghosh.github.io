@@ -74,12 +74,13 @@ body {
 
 
 .section {
-  max-width: 20em;
+  flex: 0 1 20em;
+  /* max-width: 20em; */
 }
 
 .large-section {
-  max-width: 40em;
-  min-width: 30em;
+  flex: 0 1 40em;
+  /* max-width: 40em; */
 }
 
 #header {
@@ -88,6 +89,7 @@ body {
   justify-content: space-between;
   align-items: center;
   overflow-x: auto;
+  width: 100vw;
   background-color: var(--top-nav-bg-color);
   padding: 1em;
   color: var(--header-color);
@@ -112,7 +114,7 @@ body {
 }
 
 .section-body {
-  padding-right: 1.7em;
+  margin-right: 1.7em;
 }
 
 
@@ -173,10 +175,10 @@ body {
   font-size: 27px;
 }
 
-p {
+/* p {
   text-align: justify;
   font-weight: normal;
-}
+} */
 
 
 a, a:visited {
@@ -224,15 +226,12 @@ ul li {
   align-items: center;
 }
 
-.card {}
-
 .book {
+  min-width: 40vw;
   padding: 1em;
-  min-width: 25em;
 }
 
 .book-title {
-  display: block;
   text-align: center;
 }
 
