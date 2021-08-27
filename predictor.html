@@ -8,29 +8,33 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="text.css">
 	<style>
+          .line {
+            display; flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            padding: 0.4em;
+          }
 	  .prompt {
-		float: left;
-		text-align: right;
-		margin: 0 1em 0 0;
-		width: 30%;
-		clear:both;
+		font-weight: bold;
 	  }
 	  .calcresult {
-	  	width: 100%;
-	  	clear: both;
 	  }
 	  .input {
-		float: left;
-		width: 60%;			   
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            display: inline-block;
 	  }
-	  .input *{
-		float: left;
-	  }
+          .input {
+            margin-right: 0.8em;
+          }
+          .input span {
+            margin-left: 0.3em;
+            margin-right: 0.3em;
+          }
 	  #answer {
-		float: left;		
 		/*border: 1pt solid #ccc;*/
 		margin: 1em 0 0 0;
-		width: 80%;
 		padding: 0.5em 2em 0.5em 2em;
 		border: 1px #667 dashed;
 	  }
@@ -119,11 +123,15 @@
 	  <p>Enter your time on a distance between 17 and 25km. The calculator will predict your marathon time and pace for you.</p>
 	  <form onsubmit="javascript:calculate();return false">
 		<div class="line">
-		  <div class="prompt">Distance: 
-		  </div>
-		  <div class="input"><input type="text" size="3" id="distance">
-			<input type="radio" name="unit" value="km" checked="true" id="km">
+		  <div class="prompt">Distance: </div>
+		  <div class="input">
+                    <input type="text" size="3" id="distance">
+                  </div>
+                  <div class="input">
+                    <input type="radio" name="unit" value="km" checked="true" id="km">
 			<label for="km">km</label>
+                  </div>
+                  <div class="input">
 			<input type="radio" name="unit" value="miles" id="miles">
 			<label for="miles">miles</label>
 		  </div>
@@ -142,7 +150,6 @@
 		<div class="line">
 		  <div id="answer">&nbsp;</div>
 		</div>
-		<div style="clear:both"></div>
 		<h2>What's this?</h2>
 		<p>There are a good number of marathon time calculators on the internet. Unfortunately, most of them are targeted toward elite runners, or at least runners who log crazy hours in training. What's been lacking is a calculator that will work for the average runner.
 		</p>
@@ -185,8 +192,6 @@
 		<p>
 		<i>Note: </i>To "clean" the data somewhat, data was rejected if the ratio of marathon to half-marathon time was above 3 or below 1.7.
 		</p>
-		<h2>Can I see the data?</h2>
-		<p>Yes. But not the names of the runners, as I feel it wouldn't be ethical to make their identies available without their consent (even if the names and times of all runners are available on the marathon and half-marathon websites) : <a href="data.csv">The data</a>.</p>
 		<p>René Ghosh, December 2010</p>
 		<hr>
 	</div>
