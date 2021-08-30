@@ -5,39 +5,46 @@
 	<meta name="description" content="Marathon time prediction calculator based on paris marathion and half marathon time stats.">
 	<meta name="author" content="René Ghosh">
 	<meta name="keywords" content="René Ghosh running, prediction, marathon">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="text.css">
 	<style>
-          .line {
-            display; flex;
-            flex-direction: row;
-            justify-content: flex-start;
-            padding: 0.4em;
-          }
-	  .prompt {
-		font-weight: bold;
-	  }
-	  .calcresult {
-	  }
-	  .input {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            display: inline-block;
-	  }
-          .input {
-            margin-right: 0.8em;
-          }
-          .input span {
-            margin-left: 0.3em;
-            margin-right: 0.3em;
-          }
-	  #answer {
+		body {
+			font-size: large;
+		}
+		input {
+			font-size: large;
+		}
+		.line {
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-start;
+			padding: 0.4em;
+			width: 90vw;
+			overflow-x: scroll;
+		}
+		.prompt {
+			font-weight: bold;
+			min-width: 20em;
+		}
+		.calcresult {
+		}
+		.input {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			display: inline-block;
+		}
+		.input {
+			margin-right: 0.8em;
+		}
+		.input span {
+			margin-left: 0.3em;
+			margin-right: 0.3em;
+		}
+	  	#answer {
 		/*border: 1pt solid #ccc;*/
-		margin: 1em 0 0 0;
-		padding: 0.5em 2em 0.5em 2em;
-		border: 1px #667 dashed;
-	  }
+			margin: 1em 0 0 0;
+			padding: 0.5em 2em 0.5em 2em;
+			border: 1px #667 dashed;
+	  	}
 	</style>
 	<script>
 	function foc(){
@@ -115,7 +122,6 @@
 	</script>
   </head>
   <body onload="javascript:foc()">
-    <a class="floatinglink" href="index.html">main</a>
 
 	<div id="main" class="container">
       <div class="page">
