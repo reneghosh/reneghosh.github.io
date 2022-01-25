@@ -28,7 +28,7 @@ const initDocument = () => {
     table.innerHTML = "";
     const tr = document.createElement("tr");
     table.appendChild(tr);
-    tr.innerHTML = "<th>Date</th><th>Weight</th><th>BMI</th><th>Local average</th>";
+    tr.innerHTML = "<th>Date</th><th>Heart rate</th><th>Local average</th>";
 }
 
 
@@ -49,7 +49,7 @@ const listLatestValues = async () => {
             for (let i = 0; i < values.length; i++) {
                 var row = values[i];
                 // print columns A and E, which correspond to indices 0 and 4.
-                appendData([row[1], row[2], row[4], row[5]]);
+                appendData([row[1], row[2], row[4]]);
             }
         } else {
             showScriptError("no data");
