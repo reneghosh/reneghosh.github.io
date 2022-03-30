@@ -4,15 +4,17 @@ date: 2021-03-07
 title: René Ghosh - homepage
 ---
 
+
 <div class="category">
-  <div class="section-title" id="articles"><h1>Articles</h1></div>    
+  <div class="section-title" id="books"><h1>Books</h1></div>
   <div class="field">
-    {% assign site-published = site.published | sort: 'date_published' | reverse %}
-    {% for link in site-published %}
-    {{link}}
-    {% endfor %}
+  {% assign site-books = site.books | sort: 'date' | reverse %}
+  {% for book in site-books %}
+        {{book}}
+  {% endfor %}
   </div>
 </div>
+
 
 <div class="category">
   <div class="section-title" id="code"><h1>Code</h1></div>
@@ -29,14 +31,16 @@ title: René Ghosh - homepage
   </div>
 </div>
 
+
 <div class="category">
-  <div class="section-title" id="books"><h1>Books</h1></div>
+  <div class="section-title" id="articles"><h1>Articles</h1></div>    
   <div class="field">
-  {% assign site-books = site.books | sort: 'date' | reverse %}
-  {% for book in site-books %}
-        {{book}}
-  {% endfor %}
+    {% assign site-published = site.published | sort: 'date_published' | reverse %}
+    {% for link in site-published %}
+    {{link}}
+    {% endfor %}
   </div>
 </div>
+
 
 {% include about.html %}
