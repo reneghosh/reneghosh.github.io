@@ -2,16 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin+Condensed&display=swap');
 
 :root {
-  --nav-color: #00F;
+  --nav-color: rgb(73, 73, 73);
   --main-bg-color: #FFF;
-  --navlinks : #FFF;
-  --top-nav-bg-color: #000;
+  --navlinks :  rgb(73, 73, 73);
+  --top-nav-bg-color: rgb(240, 240, 240);
   --section-title-color: #000;
   --meta-color: #ED0;
   --main-color: #000;
   --header-font: "Merriweather", serif;
   --text-font: 'Cabin Condensed', Verdana, sans-serif;
-  --header-color: #fff;
+  --header-color: rgb(53, 53, 53);
 }
 
 body {
@@ -84,14 +84,14 @@ body {
 }
 
 #header {
-  margin-top: 0.5em;
+  margin-top: 0em;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   overflow-x: auto;
   width: 100vw;
   background-color: var(--top-nav-bg-color);
-  padding: 1em;
+  padding: 0.1em;
   color: var(--header-color);
 }
 
