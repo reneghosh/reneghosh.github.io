@@ -1,10 +1,12 @@
 :root {
-    --bgcolor: #303030;
+    --bgcolor: #092c4d;
+    --textcolor: #d1c0d1;
+    --buttoncolor: #854a28;
 }
 body {
     background-color: var(--bgcolor);
-    color: #eee;
-    font-family: monospace;
+    color: var(--textcolor);
+    font-family: "Roboto Mono", monospace;
     font-size: large;
     display: flex;
     flex-direction: column;
@@ -29,7 +31,7 @@ button {
     padding: 1.0em;
     color: #ccc;
     border-radius: 1.0em;
-    background-color: #A07604;
+    background-color: var(--buttoncolor);
     display: block;
 }
 input, select {
