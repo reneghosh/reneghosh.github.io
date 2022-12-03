@@ -3,16 +3,16 @@
 		<div class="book">
 			<h2 class="book-title">{{ page.title }}</h2>
 			<img class="img-fluid img-book" src="{{ page.image }}" alt="{{ title }}">
-			<span class="badge badge-secondary">{{page.genre}}</span>
-			<span class="badge badge-secondary">{{page.release}}</span>
-			<p>{{ content }}</p>
-			<ul>
+			<!-- <span class="badge badge-secondary">{{page.genre}}</span>
+			<span class="badge badge-secondary">{{page.release}}</span> -->
+			<p class="book-description">{{ content }}</p>
+			<div class="metas">
 				{% if page.extract %}
-				<li><a class="btn btn-dark" href="{{page.extract}}">extract</a></li>
+				<div><a class="btn btn-dark" href="{{page.extract}}">extract</a></div>
 				{%endif%}
-				<li><a class="btn btn-dark" href="{{page.us_link}}">Print version (North America)</a></li>
-				<li><a class="btn btn-dark" href="{{page.eu_link}}">Print version (Europe)</a></li>
-			</ul>
+				<div><a class="btn btn-dark" href="{{page.us_link}}">Print version (North America)</a></div>
+				<div><a class="btn btn-dark" href="{{page.eu_link}}">Print version (Europe)</a></div>
+			</div>
 		</div>
 	</div>
 </div>
