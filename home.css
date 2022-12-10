@@ -29,7 +29,7 @@ body {
 
 .section-title, h1, h2, h3, h4 {
   font-family: var(--header-font);
-  line-height: 1.2em;
+  line-height: 1.3em;
 }
 
 #main-content {
