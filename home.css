@@ -91,7 +91,7 @@ body {
   overflow-x: auto;
   width: 100vw;
 /*   background-color: var(--top-nav-bg-color); */
-  background: repeating-linear-gradient(30deg, rgb(10,10,10) 0%, rgb(56 57 175) 30%, #8e4695 60%, #3b3e46 100% );
+  background: repeating-linear-gradient(30deg, rgb(10,10,10) 0%, rgb(56 57 175) 30%, #3b3e46 100%;
   padding: 0.1em;
   color: var(--header-color);
 }
@@ -126,6 +126,8 @@ body {
   margin-right: 0.4em;
   text-align: center;
   line-height: 1.2em;
+   border: none;
+  text-shadow: 0 0 10px #FFF;
 }
 
 .topnav {
@@ -181,12 +183,6 @@ a, a:visited {
   text-decoration: none;
   border-bottom: 2px solid var(--nav-color);
   color: var(--nav-color);
-}
-
-
-# header a, #header a:visited {
-  border: none;
-  text-shadow: 0 0 10px #c767a5bd;
 }
 
 a.title-link,a.title-link:visited {
