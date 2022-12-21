@@ -55,7 +55,7 @@ body {
 .section-title {
   color: var(--section-title-color);
   margin-top: 0.3em;
-  border-top: 1px #ccc solid;
+  /* border-top: 1px #ccc solid; */
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -66,21 +66,17 @@ body {
 }
 
 .field {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 
 .section {
-  flex: 0 1 20em;
-  /* max-width: 20em; */
+  /* border: 1px red solid; */
 }
 
 .large-section {
   flex: 0 1 40em;
-  /* max-width: 40em; */
 }
 
 #header {
@@ -89,9 +85,8 @@ body {
   justify-content: space-around;
   align-items: center;
   overflow-x: auto;
-  width: 100vw;
-/*   background-color: var(--top-nav-bg-color); */
-  background: repeating-linear-gradient(30deg, rgb(10,10,10) 0%, rgb(56 57 175) 30%, #3b3e46 100%;
+  width: 100%;
+  background-color: var(--top-nav-bg-color);
   padding: 0.1em;
   color: var(--header-color);
 }
@@ -109,13 +104,13 @@ body {
   background-color: #eee;
 }
 
-
-.full-card {
-  column-span: all;
+.card-title {
+  line-height: 1.3em;
 }
 
+
 .section-body {
-  margin-right: 1.7em;
+  /* margin-right: 1.7em; */
 }
 
 
@@ -126,7 +121,7 @@ body {
   margin-right: 0.4em;
   text-align: center;
   line-height: 1.2em;
-   border: none;
+  border: none;
   text-shadow: 0 0 10px #FFF;
 }
 
@@ -231,8 +226,8 @@ ul li {
   flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
-  border-bottom: 0.5px solid black;
   margin: 1rem;
+  border-bottom: 0.5px solid #ccc;
 }
 
 .book-description{
@@ -288,6 +283,9 @@ ul li {
   font-weight: normal;
   margin: 2px;
 }
+p {
+  width: 100%;
+}
 
 /* On screens that are 992px or less, set the background color to blue */
 @media screen and (max-width: 500px) {
@@ -302,5 +300,8 @@ ul li {
   .img-fluid {
     float: none;
     align-self: center;
+  }
+  .field {
+    grid-template-columns: auto;
   }
 }
