@@ -287,12 +287,15 @@ p {
   width: 100%;
 }
 
-/* On screens that are 992px or less, set the background color to blue */
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
+  
   #header  {
     display: flex;
     flex-direction: column;
     align-items: stretch;
+  }
+  .book {
+    margin: 0;
   }
   #header h1 {
     text-align: center;
@@ -303,5 +306,8 @@ p {
   }
   .field {
     grid-template-columns: auto;
+  }
+  #main-content {
+    max-width: calc(100vw - 2em);
   }
 }
