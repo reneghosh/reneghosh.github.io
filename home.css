@@ -311,6 +311,8 @@ p {
     max-width: calc(100vw - 2em);
     margin-left: 0;
     margin-right: 0;
-    padding: 0.3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
