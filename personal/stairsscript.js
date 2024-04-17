@@ -1,15 +1,11 @@
 import { Card } from "./cardmaker.js";
 import { add, getColumnNames, getDatabaseRange, makeUUID } from "./sheetserver.js";
 
-const spreadsheetId = "1Miv0K9o9YHYr9X-OBUqI2Sq5b5riDNgUchiMs5ZQyug";
+const spreadsheetId = "1y07XiaPGH6ihyTo7yfmFXISCt3g1H2zrBMaOTMdjCW0";
 var numResults = 0;
 var inputRange;
 
 const log = console.log;
-
-// for (let i=0;i<10;i++){
-//     console.log(makeUUID())
-// }
 
 const appendData = (messages) => {
     const tr = document.createElement("tr");
@@ -28,7 +24,7 @@ const initDocument = () => {
     table.innerHTML = "";
     const tr = document.createElement("tr");
     table.appendChild(tr);
-    tr.innerHTML = "<th>Date</th><th>Stairs</th><th>Time</th><th>Stairs/Second</th>";
+    tr.innerHTML = "<th>Date</th><th>Distance</th><th>Time</th>";
 }
 
 
@@ -62,12 +58,8 @@ const listLatestValues = async () => {
 
 const makeCard = () => {
     const sendValue = (value) => {
-        // if (isNaN(value)) {
-        //     textInput.showError(`not a number: ${value}`);
-        // } else {
         addValue(value);
         textInput.clear();
-        // }
     }
     const card = new Card("card");
     const numberStairsInput = card.addTextInput("Stairs:", { focused: true, inputType: "number" });
@@ -90,8 +82,8 @@ const addValue = async (value) => {
     await add(spreadsheetId, "Data", {
         "ID": makeUUID(),
         "date": new Date().toLocaleDateString("fr-FR"),
-        "stairs": value.stairs,
-        "time": value.time
+        "distance": value.Distance,
+        "time": value.Temps
     });
     showMessage("1 row updated");
     listLatestValues();
