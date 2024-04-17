@@ -28,7 +28,7 @@ const initDocument = () => {
     table.innerHTML = "";
     const tr = document.createElement("tr");
     table.appendChild(tr);
-    tr.innerHTML = "<th>Date</th><th>Stairs</th><th>Time</th><th>Stairs/Second</th>";
+    tr.innerHTML = "<th>Date</th><th>Distance</th><th>Temps</th>";
 }
 
 
@@ -62,12 +62,8 @@ const listLatestValues = async () => {
 
 const makeCard = () => {
     const sendValue = (value) => {
-        // if (isNaN(value)) {
-        //     textInput.showError(`not a number: ${value}`);
-        // } else {
         addValue(value);
         textInput.clear();
-        // }
     }
     const card = new Card("card");
     const numberStairsInput = card.addTextInput("Stairs:", { focused: true, inputType: "number" });
@@ -79,10 +75,10 @@ const makeCard = () => {
     const actionList = card.addActions();
     const action = actionList.addAction("Add to sheet");
     action.onclick(() => {
-        sendValue({stairs: numberStairsInput.getValue(), time: `00:${minutesInput.getValue()}:${secondsInput.getValue()}`});
+        sendValue({Distance: numberStairsInput.getValue(), Temps: `00:${minutesInput.getValue()}:${secondsInput.getValue()}`});
     });
     textInput.onenter(value => {
-        sendValue({stairs: numberStairsInput.getValue(), time: `00:${minutesInput.getValue()}:${secondsInput.getValue()}`});
+        sendValue({Distance: numberStairsInput.getValue(), Temps: `00:${minutesInput.getValue()}:${secondsInput.getValue()}`});
     });
 }
 
@@ -90,8 +86,8 @@ const addValue = async (value) => {
     await add(spreadsheetId, "Data", {
         "ID": makeUUID(),
         "date": new Date().toLocaleDateString("fr-FR"),
-        "stairs": value.stairs,
-        "time": value.time
+        "Distance": value.Distance,
+        "Temps": value.Temps
     });
     showMessage("1 row updated");
     listLatestValues();
