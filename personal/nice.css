@@ -1,18 +1,37 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap'); */
 :root {
-    --bgcolor: #092c4d;
+    --bgcolor1: #092c4d;
+    --bgcolor2: #775e70;
     --textcolor: #d1c0d1;
     --buttoncolor: #854a28;
 }
+
 body {
-    background-color: var(--bgcolor);
+    /* background-color: var(--bgcolor); */
+    background: linear-gradient(70deg, var(--bgcolor1), var(--bgcolor2));
+    background-size: 100vw 200vh;
     color: var(--textcolor);
-    font-family: "Roboto Mono", monospace;
+    font-family: monospace;
     font-variant-numeric: tabular-nums;
     font-size: large;
     display: flex;
     flex-direction: column;
     align-items: center;    
+    /* animation: gradient 10s infinite ease-in-out; */
 }
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
 #main {
     max-width: 20em;
 }

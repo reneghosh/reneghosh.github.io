@@ -1,7 +1,7 @@
 import { Card } from "./cardmaker.js";
 import { add, getColumnNames, getDatabaseRange, makeUUID } from "./sheetserver.js";
 
-const spreadsheetId = "1Miv0K9o9YHYr9X-OBUqI2Sq5b5riDNgUchiMs5ZQyug";
+const spreadsheetId = "1y07XiaPGH6ihyTo7yfmFXISCt3g1H2zrBMaOTMdjCW0";
 var numResults = 0;
 var inputRange;
 
@@ -53,9 +53,11 @@ const listLatestValues = async () => {
             }
         } else {
             showScriptError("no data");
+            console.log("no data")
         }
     } catch (err) {
         showScriptError('Error: ' + err);
+        console.log("error ",e)
     };
 }
 
@@ -63,32 +65,32 @@ const listLatestValues = async () => {
 const makeCard = () => {
     const sendValue = (value) => {
         addValue(value);
-        textInput.clear();
     }
     const card = new Card("card");
-    const numberStairsInput = card.addTextInput("Stairs:", { focused: true, inputType: "number" });
-    numberStairsInput.setValue(546);
+    const distanceInput = card.addTextInput("Distance:", { focused: true, inputType: "number" });
+    distanceInput.setValue(4.00);
+    const hoursInput = card.addTextInput("Hours:", { inputType: "number" });
+    hoursInput.setValue(0);
     const minutesInput = card.addTextInput("Minutes:", { inputType: "number" });
-    minutesInput.setValue(10);
+    minutesInput.setValue(24);
     const secondsInput = card.addTextInput("Seconds:", { inputType: "number" });
     secondsInput.setValue(0);
     const actionList = card.addActions();
     const action = actionList.addAction("Add to sheet");
     action.onclick(() => {
-        sendValue({Distance: numberStairsInput.getValue(), Temps: `00:${minutesInput.getValue()}:${secondsInput.getValue()}`});
-    });
-    textInput.onenter(value => {
-        sendValue({Distance: numberStairsInput.getValue(), Temps: `00:${minutesInput.getValue()}:${secondsInput.getValue()}`});
+        sendValue({Distance: distanceInput.getValue(), Temps: `${hoursInput.getValue()}:${minutesInput.getValue()}:${secondsInput.getValue()}`});
     });
 }
 
 const addValue = async (value) => {
-    await add(spreadsheetId, "Data", {
+    let record = {
         "ID": makeUUID(),
         "date": new Date().toLocaleDateString("fr-FR"),
         "Distance": value.Distance,
         "Temps": value.Temps
-    });
+    };
+    // console.log(record)
+    await add(spreadsheetId, "Data", record);
     showMessage("1 row updated");
     listLatestValues();
 }
