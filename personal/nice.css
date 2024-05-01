@@ -35,6 +35,11 @@ body {
 #main {
     max-width: 20em;
 }
+.container {
+  max-width: 100%;
+  overflow-x: scroll;
+  border: 1px solid black;
+}
 button, input {
     font-family: monospace;
     font-size: large;

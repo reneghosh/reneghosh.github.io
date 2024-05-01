@@ -28,7 +28,7 @@ const initDocument = () => {
     table.innerHTML = "";
     const tr = document.createElement("tr");
     table.appendChild(tr);
-    tr.innerHTML = "<th>Date</th><th>Distance</th><th>Temps</th>";
+    tr.innerHTML = "<th>Date</th><th>Distance</th><th>Time</th><th>Place</th><th>Speed</th><th>Equiv 10k</th>";
 }
 
 
@@ -49,7 +49,7 @@ const listLatestValues = async () => {
             for (let i = 0; i < values.length; i++) {
                 var row = values[i];
                 // print columns A and E, which correspond to indices 0 and 4.
-                appendData([row[1], row[2], row[3], row[4]]);
+                appendData([row[1], row[2], row[3], row[4], row[5], row[7]]);
             }
         } else {
             showScriptError("no data");
@@ -75,19 +75,22 @@ const makeCard = () => {
     minutesInput.setValue(24);
     const secondsInput = card.addTextInput("Seconds:", { inputType: "number" });
     secondsInput.setValue(0);
+    const placeInput = card.addTextInput("Place:", { inputType: "string" });
+    placeInput.setValue("");
     const actionList = card.addActions();
     const action = actionList.addAction("Add to sheet");
     action.onclick(() => {
-        sendValue({Distance: distanceInput.getValue(), Temps: `${hoursInput.getValue()}:${minutesInput.getValue()}:${secondsInput.getValue()}`});
+        sendValue({Date:new Date().toLocaleString("fr"), Distance: distanceInput.getValue(), Temps: `${hoursInput.getValue()}:${minutesInput.getValue()}:${secondsInput.getValue()}`, Description:placeInput.getValue()});
     });
 }
 
 const addValue = async (value) => {
     let record = {
         "ID": makeUUID(),
-        "date": new Date().toLocaleDateString("fr-FR"),
+        "Date": new Date().toLocaleDateString("fr-FR"),
         "Distance": value.Distance,
-        "Temps": value.Temps
+        "Temps": value.Temps,
+        "Description": value.Description
     };
     // console.log(record)
     await add(spreadsheetId, "Data", record);
