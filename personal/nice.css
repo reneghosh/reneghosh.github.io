@@ -37,7 +37,7 @@ body {
 }
 .container {
   max-width: 100%;
-  overflow-x: scroll;
+  overflow-x: auto;
   border: 1px solid black;
 }
 button, input {
