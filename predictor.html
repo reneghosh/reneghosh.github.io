@@ -1,18 +1,23 @@
 <html>
+
 <head>
-	<title>The Paris Marathon Predictor</title>	
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta name="description" content="Marathon time prediction calculator based on paris marathion and half marathon time stats.">
+	<title>The Paris Marathon Predictor</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="description"
+		content="Marathon time prediction calculator based on paris marathion and half marathon time stats.">
 	<meta name="author" content="René Ghosh">
 	<meta name="keywords" content="René Ghosh running, prediction, marathon">
 	<style>
-		body, * {
+		body,
+		* {
 			font-size: large;
 		}
+
 		input {
 			font-size: large;
 		}
+
 		.line {
 			display: flex;
 			flex-direction: row;
@@ -21,188 +26,208 @@
 			width: 90vw;
 			overflow-x: scroll;
 		}
+
 		.prompt {
 			font-weight: bold;
 			min-width: 20em;
 		}
-		.calcresult {
-		}
+
+		.calcresult {}
+
 		.input {
 			display: flex;
 			flex-direction: row;
 			align-items: center;
 			display: inline-block;
 		}
+
 		.input {
 			margin-right: 0.8em;
 		}
+
 		.input span {
 			margin-left: 0.3em;
 			margin-right: 0.3em;
 		}
-	  	#answer {
-		/*border: 1pt solid #ccc;*/
+
+		#answer {
 			margin: 1em 0 0 0;
 			padding: 0.5em 2em 0.5em 2em;
 			border: 1px #667 dashed;
-	  	}
+		}
 	</style>
 	<script>
-	function foc(){
-	  document.getElementById("distance").focus();
-	}
+		function foc() {
+			document.getElementById("distance").focus();
+		}
 
-	function over(num, numDigits) {
-	  num = num + "";
-	  while (num.length < numDigits) {
-	  num = 0+""+num;
-	   }
-	   return num
-	}
-
-	function riegel(time,distance1,distance2){
-	  var val = time * (Math.pow((distance2*1.0)/(distance1*1.0),1.06));
-	  return val;
-	}
-	function timeToS(time){
-	  var hours = Math.floor(time);
-	  var timeLeft = time - hours;
-	  timeLeft *= 60.0;
-	  var minutes = Math.floor(timeLeft);
-	  timeLeft = timeLeft - minutes;
-	  timeLeft *= 60.0;
-	  var seconds = Math.round(timeLeft);	  
-	  return (hours>0?hours + ":":"") + over(minutes,2) + ":" + over(seconds,2);
-	}
-	function predict(time) {
-	  /*time /= 24.0;*/
-	  var c1 = -0.419041667;
-	  var c2 = 3.5535;
-	  var c3 = -0.984;
-	  var pred = (c1*Math.pow(time, 2.0)) + (c2*time) + (c3);
-	  /*pred *= 24.0;*/
-	  return pred;
-	}
-	function calculate(){
-	  var distance = document.getElementById("distance").value;
-	  var miles2km = 1.609344;
-	  var in_miles = document.getElementById("miles").checked;
-	  if (in_miles){
-		distance *= miles2km;
-	  }
-	  var answer = "";
-	  if (!((distance>=17) && (distance <= 25))) {
-		answer = "distance must lie between 17 and 25";
-	  } else {
-		  var hours = document.getElementById("hours").value;
-		  var minutes = document.getElementById("minutes").value;
-		  var seconds = document.getElementById("seconds").value;
-		  var time = (hours*1.0) + (minutes/60.0) + (seconds/3600.0);
-		  if (!(time > 0)) {
-			answer = "Time cannot be null";
-		  } else {
-			var riegel_time = riegel(time, distance, 42.195/2.0);
-			var predicted_time = predict(riegel_time);
-			var predicted_speed = (42.195/predicted_time);
-			if (in_miles) {
-			  predicted_speed /= miles2km;
+		function over(num, numDigits) {
+			num = num + "";
+			while (num.length < numDigits) {
+				num = 0 + "" + num;
 			}
-			predicted_speed = predicted_speed.toFixed(2)
-			var speed_unit = in_miles? "mph":"km/h";
-			var pace_unit = in_miles? "min/mile":"min/km";
-			var pace = predicted_time/42.195;
-			if (in_miles) pace *= miles2km;
-			answer = "<div class=\"calcresult\"><b>Half marathon time</b>: " + timeToS(riegel_time) + "</div><div class=\"calcresult\"><b>Marathon time</b>: "+ timeToS(predicted_time)+
-			  "</div><div class=\"calcresult\"><b>Marathon speed</b>: "+predicted_speed+" "+speed_unit+
-			  "</div><div class=\"calcresult\"><b>Marathon pace</b>: "+timeToS(pace)+" "+pace_unit+"</div>";
-		  }
-	  }
-	  document.getElementById("answer").innerHTML=answer;
-	  return false;
-	}
+			return num
+		}
+
+		function riegel(time, distance1, distance2) {
+			var val = time * (Math.pow((distance2 * 1.0) / (distance1 * 1.0), 1.06));
+			return val;
+		}
+		function timeToS(time) {
+			var hours = Math.floor(time);
+			var timeLeft = time - hours;
+			timeLeft *= 60.0;
+			var minutes = Math.floor(timeLeft);
+			timeLeft = timeLeft - minutes;
+			timeLeft *= 60.0;
+			var seconds = Math.round(timeLeft);
+			return (hours > 0 ? hours + ":" : "") + over(minutes, 2) + ":" + over(seconds, 2);
+		}
+		function predict(time) {
+			/*time /= 24.0;*/
+			var c1 = -0.419041667;
+			var c2 = 3.5535;
+			var c3 = -0.984;
+			var pred = (c1 * Math.pow(time, 2.0)) + (c2 * time) + (c3);
+			/*pred *= 24.0;*/
+			return pred;
+		}
+		function calculate() {
+			var distance = document.getElementById("distance").value;
+			var miles2km = 1.609344;
+			var in_miles = document.getElementById("miles").checked;
+			if (in_miles) {
+				distance *= miles2km;
+			}
+			var answer = "";
+			if (!((distance >= 17) && (distance <= 25))) {
+				answer = "distance must lie between 17 and 25";
+			} else {
+				var hours = document.getElementById("hours").value;
+				var minutes = document.getElementById("minutes").value;
+				var seconds = document.getElementById("seconds").value;
+				var time = (hours * 1.0) + (minutes / 60.0) + (seconds / 3600.0);
+				if (!(time > 0)) {
+					answer = "Time cannot be null";
+				} else {
+					var riegel_time = riegel(time, distance, 42.195 / 2.0);
+					var predicted_time = predict(riegel_time);
+					var predicted_speed = (42.195 / predicted_time);
+					if (in_miles) {
+						predicted_speed /= miles2km;
+					}
+					predicted_speed = predicted_speed.toFixed(2)
+					var speed_unit = in_miles ? "mph" : "km/h";
+					var pace_unit = in_miles ? "min/mile" : "min/km";
+					var pace = predicted_time / 42.195;
+					if (in_miles) pace *= miles2km;
+					answer = "<div class=\"calcresult\"><b>Half marathon time</b>: " + timeToS(riegel_time) + "</div><div class=\"calcresult\"><b>Marathon time</b>: " + timeToS(predicted_time) +
+						"</div><div class=\"calcresult\"><b>Marathon speed</b>: " + predicted_speed + " " + speed_unit +
+						"</div><div class=\"calcresult\"><b>Marathon pace</b>: " + timeToS(pace) + " " + pace_unit + "</div>";
+				}
+			}
+			document.getElementById("answer").innerHTML = answer;
+			return false;
+		}
 	</script>
-  </head>
-  <body onload="javascript:foc()">
+</head>
+
+<body onload="javascript:foc()">
 
 	<div id="main" class="container">
-      <div class="page">
-	  <h1>The Paris Marathon Predictor</h1>
-	  <p>Enter your time on a distance between 17 and 25km. The calculator will predict your marathon time and pace for you.</p>
-	  <form onsubmit="javascript:calculate();return false">
-		<div class="line">
-		  <div class="prompt">Distance: </div>
-		  <div class="input">
-                    <input type="text" size="3" id="distance">
-                  </div>
-                  <div class="input">
-                    <input type="radio" name="unit" value="km" checked="true" id="km">
-			<label for="km">km</label>
-                  </div>
-                  <div class="input">
-			<input type="radio" name="unit" value="miles" id="miles">
-			<label for="miles">miles</label>
-		  </div>
+		<div class="page">
+			<h1>The Paris Marathon Predictor</h1>
+			<p>Enter your time on a distance between 17 and 25km. The calculator will predict your marathon time and pace for
+				you.</p>
+			<form onsubmit="javascript:calculate();return false">
+				<div class="line">
+					<div class="prompt">Distance: </div>
+					<div class="input">
+						<input type="text" size="3" id="distance">
+					</div>
+					<div class="input">
+						<input type="radio" name="unit" value="km" checked="true" id="km">
+						<label for="km">km</label>
+					</div>
+					<div class="input">
+						<input type="radio" name="unit" value="miles" id="miles">
+						<label for="miles">miles</label>
+					</div>
+				</div>
+				<div class="line">
+					<div class="prompt">Time:
+					</div>
+					<div class="input">
+						<input type="text" size="2" id="hours"><span>:</span><input type="text" size="2"
+							id="minutes"><span>:</span><input type="text" size="2" id="seconds">
+					</div>
+				</div>
+				<div class="line">
+					<div class="prompt"><input type="submit" value="calculate!"></div>
+				</div>
+			</form>
+			<div class="line">
+				<div id="answer">&nbsp;</div>
+			</div>
+			<h2>What's this?</h2>
+			<p>There are a good number of marathon time calculators on the internet. Unfortunately, most of them are targeted
+				toward elite runners, or at least runners who log crazy hours in training. What's been lacking is a calculator
+				that will work for the average runner.
+			</p>
+			<p>
+				Imagine you could interview a great number of runners of all speed levels, who had run a half-marathon a few
+				weeks before a marathon, and then ask them:
+			<ol>
+				<li>What was their half-marathon time?</li>
+				<li>What was their subsequent marathon time?</li>
+			</ol>
+			</p>
+			<p>From their (numerous) answers, you could apply some statistics and get an average marathon time as a function
+				of one's best half-marathon effort. That's how this calculator was designed. Use it to predict your marathon
+				time from a time on a distance close to that of a half-marathon, run a few weeks before your marathon, at best
+				effort.
+			</p>
+			<p>
+				I must thank Joseph Hanan whose work in comparing half-marathon and marathon results (see <a
+					href="https://www.hillrunner.com/jim2/id209.html">article</a>) inspired this work.
+			</p>
+			<h2>How does it work?</h2>
+			<p>
+				Data was retrieved from the Paris half-marathon and marathon for the years 2008, 2009 and 2010. I found the
+				names of the runners who had run both the (March) half-marathon and the (April) marathon and linked the two.
+				Applying a polynomial fit to the data, I came up with the following equation:
+			</p>
+			<p>
+				<code>
+					marathon time = -0.419041667*(half-marathon time)^2 + 3.5535 * (half-marathon time) - 0.984
+				</code>
+			</p>
+			<p>
+				...where all times are expressed in hours.
+			</p>
+			<p>
+				To get the equivalent half-marathon time from the time and distance entered in the above form, I use a Riegel
+				predictor:
+			</p>
+			<p>
+				<code>
+					half-marathon time = entered time * (21.0975 / entered distance)^1.06
+				</code>
+			</p>
+			<h2>How accurate is this?</h2>
+			<p>
+				This is a model established from the statistics of almost 10 000 runners having run both the half-marathon and
+				marathon in Paris in the 2008-2010 period. It will not reflect the capabilities of all runners but will instead
+				reflect an average marathon time for an amateur runner based on his half-marathon time.
+			</p>
+			<p>
+				<i>Note: </i>To "clean" the data somewhat, data was rejected if the ratio of marathon to half-marathon time was
+				above 3 or below 1.7.
+			</p>
+			<p>René Ghosh, December 2010</p>
+			<hr>
 		</div>
-		<div class="line">
-		  <div class="prompt">Time: 
-		  </div>
-		  <div class="input">
-			<input type="text" size="2" id="hours"><span>:</span><input type="text" size="2" id="minutes"><span>:</span><input type="text" size="2" id="seconds">
-		  </div>
-		</div>
-		<div class="line">
-		  <div class="prompt"><input type="submit" value="calculate!"></div>
-		</div>
-		</form>
-		<div class="line">
-		  <div id="answer">&nbsp;</div>
-		</div>
-		<h2>What's this?</h2>
-		<p>There are a good number of marathon time calculators on the internet. Unfortunately, most of them are targeted toward elite runners, or at least runners who log crazy hours in training. What's been lacking is a calculator that will work for the average runner.
-		</p>
-		<p>
-		Imagine you could interview a great number of runners of all speed levels, who had run a half-marathon a few weeks before a marathon, and then ask them:
-		<ol>
-		  <li>What was their half-marathon time?</li>
-		  <li>What was their subsequent marathon time?</li>
-		</ol>
-		</p>
-		<p>From their (numerous) answers, you could apply some statistics and get an average marathon time as a function of one's best half-marathon effort. That's how this calculator was designed. Use it to predict your marathon time from a time on a distance close to that of a half-marathon, run a few weeks before your marathon, at best effort. 
-		</p>
-		<p>
-		I must thank Joseph Hanan whose work in comparing half-marathon and marathon results (see <a href="https://www.hillrunner.com/jim2/id209.html">article</a>) inspired this work.
-		</p>
-		<h2>How does it work?</h2>
-		<p>
-		Data was retrieved from the Paris half-marathon and marathon for the years 2008, 2009 and 2010. I found the names of the runners who had run both the (March) half-marathon and the (April) marathon and linked the two. Applying a polynomial fit to the data, I came up with the following equation:
-		</p>
-		<p>
-		<code>
-		  marathon time = -0.419041667*(half-marathon time)^2 + 3.5535 * (half-marathon time) - 0.984
-		</code>
-		</p>
-		<p>
-		...where all times are expressed in hours.
-		</p>
-		<p>
-		To get the equivalent half-marathon time from the time and distance entered in the above form, I use a Riegel predictor:
-		</p>
-		<p>
-		<code>
-		  half-marathon time = entered time * (21.0975 / entered distance)^1.06
-		</code>
-		</p>
-		<h2>How accurate is this?</h2>
-		<p>
-		This is a model established from the statistics of almost 10 000 runners having run both the half-marathon and marathon in Paris in the 2008-2010 period. It will not reflect the capabilities of all runners but will instead reflect an average marathon time for an amateur runner based on his half-marathon time.	
-		</p>
-		<p>
-		<i>Note: </i>To "clean" the data somewhat, data was rejected if the ratio of marathon to half-marathon time was above 3 or below 1.7.
-		</p>
-		<p>René Ghosh, December 2010</p>
-		<hr>
 	</div>
-	</div>
-  </body>
-</html>
+</body>
 
+</html>
