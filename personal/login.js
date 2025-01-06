@@ -1,7 +1,7 @@
 "uses strict";
 
-var CLIENT_ID = '796866674815-60t23fc134e02v2qkougg4kb7hjdffj9.apps.googleusercontent.com';
-var API_KEY = 'AIzaSyD08CJROd2Dt-fxnKLSg1Z_F0zccpG_IqI';
+var CLIENT_ID = '796866674815-2hjnahq8rdvenusoqgf5cqpr1ojprlfn.apps.googleusercontent.com';
+var API_KEY = 'AIzaSyBi1QeaBfEfIDqsNafzEsesWbsqcWqefIE';
 var DISCOVERY_DOCS = ["https://sheets.googleapis.com/$discovery/rest?version=v4"];
 var SCOPES = "https://www.googleapis.com/auth/spreadsheets";
 
