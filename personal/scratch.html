@@ -1,0 +1,31 @@
+<html>
+
+<body>
+    <script src="https://accounts.google.com/gsi/client" onload="console.log('TODO: add onload function')">
+    </script>
+    <script src="https://apis.google.com/js/api.js" defer></script>
+    <script src="login2.js"></script>
+    <script>
+        function handleCredentialResponse(response) {
+            console.log(response);
+            console.log("Encoded JWT ID token: " + response.credential);
+            initClient()
+        }
+        let client;
+        window.onload = function () {
+            console.log("initializing")
+            client = google.accounts.oauth2.initCodeClient({
+            client_id: '796866674815-2hjnahq8rdvenusoqgf5cqpr1ojprlfn.apps.googleusercontent.com',
+            scope: 'https://www.googleapis.com/auth/spreadsheets',
+            ux_mode: 'redirect',
+            redirect_uri: "http://localhost:9000/test.html",
+            // state: "YOUR_BINDING_VALUE"
+            });
+            console.log(client)
+        }
+    </script>
+    <button onclick="client.requestCode();">Authorize with Google</button>
+
+</body>
+
+</html>
