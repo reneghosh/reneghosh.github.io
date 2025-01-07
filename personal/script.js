@@ -1,7 +1,5 @@
-"uses strict";
-
 import { Card } from "./cardmaker.js";
-import { add, getColumnNames, getDatabaseRange, makeUUID } from "./sheetserver.js";
+import { add, getDatabaseRange } from "./sheetserver.js";
 
 const spreadsheetId = "1OP3N34mfe1tkKNDhQeRtYonthTs_JEIR0JXTvv8VOaE";
 var numResults = 0;
@@ -39,7 +37,7 @@ const showMessage = (message) => {
     document.getElementById("message").innerText = message;
 }
 
-const listLatestValues = async () => {
+export const listLatestValues = async () => {
     initDocument();
     getDatabaseRange(spreadsheetId, "Data");
     try {
@@ -60,7 +58,8 @@ const listLatestValues = async () => {
 }
 
 
-const makeCard = () => {
+export const makeCard = () => {
+    console.log("making card")
     const sendValue = (value) => {
         // if (isNaN(value)) {
         //     textInput.showError(`not a number: ${value}`);
@@ -91,9 +90,4 @@ const addValue = async (value) => {
 }
 
 
-
-gapiInitialized.then(() => {
-    listLatestValues();
-    makeCard();
-});
 

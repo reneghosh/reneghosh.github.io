@@ -1,41 +1,94 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Weight</title>
-        <link rel="stylesheet" href="nice.css">
-        <link rel="stylesheet" href="card.css">
-        <link rel="stylesheet" href="style.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <!-- <meta name="google-signin-client_id" content="796866674815-2hjnahq8rdvenusoqgf5cqpr1ojprlfn.apps.googleusercontent.com"> -->
-        <meta charset="utf-8" />
-    </head>
-    <body>
-     <script src="https://accounts.google.com/gsi/client" async defer></script>
-    <div id="g_id_onload"
-         data-client_id="796866674815-2hjnahq8rdvenusoqgf5cqpr1ojprlfn.apps.googleusercontent.com"
-         data-ux_mode="redirect"
-         data-login_uri="https://reneghosh.github.io/personal/weight.html">
-          <div id="main">
 
-            <div id="nav">
-                <h1>Weight tracker</h1>
-                <div id="loggingPane">
-                    <button id="authorize_button" style="display: none;">Authorize</button>
-                    <button id="signout_button" style="display: none;">Sign Out</button>
-                </div>
-            </div>
-            <div id="error"></div>
-            <div id="card">
+<head>
+    <title>Weight</title>
+    <link rel="stylesheet" href="nice.css">
+    <link rel="stylesheet" href="card.css">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+</head>
 
-            </div>
-            <div id="scripterror"></div>
-            <div id="message"></div>
-            <div class="container">
-            <table id="table">
-            </table>
+<body>
+    <div id="main">
+
+        <div id="nav">
+            <h1>Weight tracker</h1>
+            <div id="loggingPane">
+                <button id="authorize_button" style="display: none;">Authorize</button>
+                <button id="signout_button" style="display: none;">Sign Out</button>
             </div>
         </div>
+        <div id="error"></div>
+        <div id="card">
 
-</div>
-    </body>
+        </div>
+        <div id="scripterror"></div>
+        <div id="message"></div>
+        <div class="container">
+            <table id="table">
+            </table>
+        </div>
+    </div>
+    <script type="module" defer src="script.js"></script>
+    <!-- <script type="module" defer src="login2.js"></script> -->
+    <script type="module">
+        import { makeCard, listLatestValues } from "./script.js";
+        const CLIENT_ID = '796866674815-2hjnahq8rdvenusoqgf5cqpr1ojprlfn.apps.googleusercontent.com';
+        const API_KEY = 'AIzaSyBi1QeaBfEfIDqsNafzEsesWbsqcWqefIE';
+
+        // Discovery doc URL for APIs used by the quickstart
+        const DISCOVERY_DOC = 'https://www.googleapis.com/discovery/v1/apis/drive/v3/rest';
+
+        // Authorization scopes required by the API; multiple scopes can be
+        // included, separated by spaces.
+        const SCOPES = 'https://www.googleapis.com/auth/drive.metadata.readonly';
+
+        let tokenClient;
+        let gapiInited = false;
+        let gisInited = false;
+        function loadGapi() {
+            gapi.load('client', initializeGapiClient);
+            console.log("gapi loaded");
+        }
+        async function initializeGapiClient() {
+            await gapi.client.init({
+                apiKey: API_KEY,
+                discoveryDocs: [DISCOVERY_DOC],
+                use_fedcm: true
+            }).then(() => {
+                gapiInited = true;
+                tryPageInit();
+            });
+        }
+        function initializeGisClient() {
+            tokenClient = google.accounts.oauth2.initTokenClient({
+                client_id: CLIENT_ID,
+                scope: SCOPES,
+                callback: (response) => {
+                    console.log(response);
+                    gisInited = true;
+                    tryPageInit();
+                }
+            }).requestAccessToken({ prompt: '' });
+
+        }
+        function tryPageInit() {
+            console.log(gisInited, gapiInited)
+            if (gisInited && gapiInited) {
+                listLatestValues();
+                makeCard();
+
+            }
+        }
+        window.onload = () => {
+            loadGapi()
+            initializeGisClient()
+        }
+    </script>
+    <script async defer src="https://apis.google.com/js/api.js"></script>
+    <script async defer src="https://accounts.google.com/gsi/client"></script>
+</body>
+
 </html>

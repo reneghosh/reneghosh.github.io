@@ -1,5 +1,3 @@
-"uses strict";
-
 const log = console.log;
 
 export function makeUUID() {
