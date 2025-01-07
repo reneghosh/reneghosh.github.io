@@ -66,12 +66,12 @@
             tokenClient = google.accounts.oauth2.initTokenClient({
                 client_id: CLIENT_ID,
                 scope: SCOPES,
+                login_hint: "rene.ghosh@gmail.com",
                 callback: (response) => {
-                    console.log(response);
                     gisInited = true;
                     tryPageInit();
                 }
-            }).requestAccessToken({ prompt: '' });
+            }).requestAccessToken({ prompt: '', login_hint: "rene.ghosh@gmail.com" });
 
         }
         function tryPageInit() {
@@ -79,7 +79,6 @@
             if (gisInited && gapiInited) {
                 listLatestValues();
                 makeCard();
-
             }
         }
         window.onload = () => {
