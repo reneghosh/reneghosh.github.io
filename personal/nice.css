@@ -33,7 +33,7 @@ body {
 }
 
 #main {
-    max-width: 20em;
+    max-width: 30em;
 }
 .container {
   max-width: 100%;
@@ -78,4 +78,9 @@ td, th {
     padding: 0.3em;
     padding-left: 1em;
     padding-right: 1em;
+}
+@media only screen and (max-width: 600px) {
+  #main {
+    max-width: 25em;
+  }
 }
