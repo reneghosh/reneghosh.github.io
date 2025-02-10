@@ -6,7 +6,7 @@ date:   2025-02-10 22:55:00 +0200
 us_link: https://www.amazon.com/
 eu_link: https://www.amazon.fr/
 genre: short story collection
-image: images/liverester-medium.jpg
+image: images/liverester-medium.png
 categories: book
 ---
 Lyrical riffs, thoughts-under-microscope, true and made-up stories, imagined, triggered, sometimes pulled from unsuspected locations, other times from the humdrum of the common daily.
