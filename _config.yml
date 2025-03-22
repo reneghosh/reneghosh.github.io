@@ -20,6 +20,10 @@ defaults:
     values:
       sitemap:         false
   - scope:
+      path:            "personal/**/*.*"
+    values:
+      sitemap:         false
+  - scope:
       path:            "google9c54da3cbe073035.html"
     values:
       sitemap:         false
