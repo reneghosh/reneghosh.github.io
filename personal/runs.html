@@ -31,10 +31,62 @@
             </table>
         </div>
 
-        <script src="login.js"></script>
-        <script src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad()"
-            onreadystatechange="if (this.readyState === 'complete') this.onload()">
-            </script>
-        <script type="module" src="runscript.js"></script>
+        <script defer  type="module" src="runscript.js"></script>
+            <script type="module">
+        import { makeCard, listLatestValues } from "./runscript.js";
+        const CLIENT_ID = '796866674815-2hjnahq8rdvenusoqgf5cqpr1ojprlfn.apps.googleusercontent.com';
+        const API_KEY = 'AIzaSyBi1QeaBfEfIDqsNafzEsesWbsqcWqefIE';
+
+        // Discovery doc URL for APIs used by the quickstart
+        const DISCOVERY_DOC = 'https://sheets.googleapis.com/$discovery/rest?version=v4';
+
+        // Authorization scopes required by the API; multiple scopes can be
+        // included, separated by spaces.
+        const SCOPES = "https://www.googleapis.com/auth/spreadsheets";
+
+        let tokenClient;
+        let gapiInited = false;
+        let gisInited = false;
+        function loadGapi() {
+            gapi.load('client', initializeGapiClient);
+            console.log("gapi loaded");
+        }
+        async function initializeGapiClient() {
+            await gapi.client.init({
+                apiKey: API_KEY,
+                discoveryDocs: [DISCOVERY_DOC],
+                use_fedcm: true
+            }).then(() => {
+                gapiInited = true;
+                tryPageInit();
+            });
+        }
+        function initializeGisClient() {
+            tokenClient = google.accounts.oauth2.initTokenClient({
+                client_id: CLIENT_ID,
+                scope: SCOPES,
+                login_hint: "rene.ghosh@gmail.com",
+                callback: (response) => {
+                    gisInited = true;
+                    tryPageInit();
+                }
+            }).requestAccessToken({ prompt: '', login_hint: "rene.ghosh@gmail.com" });
+
+        }
+        function tryPageInit() {
+            console.log(gisInited, gapiInited)
+            if (gisInited && gapiInited) {
+                listLatestValues();
+                makeCard();
+            }
+        }
+        window.onload = () => {
+            loadGapi()
+            initializeGisClient()
+        }
+    </script>
+    <script async defer src="https://apis.google.com/js/api.js"></script>
+    <script async defer src="https://accounts.google.com/gsi/client"></script>
+
     </body>
 </html>
