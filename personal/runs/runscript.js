@@ -1,20 +1,7 @@
-import { Card } from "./cardmaker.js";
-import {
-  add,
-  getColumnNames,
-  getDatabaseRange,
-  makeUUID,
-} from "./sheetserver.js";
+import { Card } from "../cardmaker.js";
+import { add, getDatabaseRange, makeUUID } from "../sheetserver.js";
 
 const spreadsheetId = "1y07XiaPGH6ihyTo7yfmFXISCt3g1H2zrBMaOTMdjCW0";
-var numResults = 0;
-var inputRange;
-
-const log = console.log;
-
-// for (let i=0;i<10;i++){
-//     console.log(makeUUID())
-// }
 
 const appendData = (messages) => {
   const tr = document.createElement("tr");
