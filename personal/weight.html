@@ -1,93 +1,99 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <title>Weight</title>
-    <link rel="stylesheet" href="nice.css">
-    <link rel="stylesheet" href="card.css">
-    <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="nice.css" />
+    <link rel="stylesheet" href="card.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="manifest" href="./manifest-weight.json" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <meta charset="utf-8" />
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="main">
-
-        <div id="nav">
-            <h1>Weight tracker</h1>
-            <div id="loggingPane">
-                <button id="authorize_button" style="display: none;">Authorize</button>
-                <button id="signout_button" style="display: none;">Sign Out</button>
-            </div>
+      <div id="nav">
+        <h1>Weight tracker</h1>
+        <div id="loggingPane">
+          <button id="authorize_button" style="display: none">Authorize</button>
+          <button id="signout_button" style="display: none">Sign Out</button>
         </div>
-        <div id="error"></div>
-        <div id="card">
-
-        </div>
-        <div id="scripterror"></div>
-        <div id="message"></div>
-        <div class="container">
-            <table id="table">
-            </table>
-        </div>
+      </div>
+      <div id="error"></div>
+      <div id="card"></div>
+      <div id="scripterror"></div>
+      <div id="message"></div>
+      <div class="container">
+        <table id="table"></table>
+      </div>
     </div>
     <script type="module" defer src="script.js"></script>
     <!-- <script type="module" defer src="login2.js"></script> -->
     <script type="module">
-        import { makeCard, listLatestValues } from "./script.js";
-        const CLIENT_ID = '796866674815-2hjnahq8rdvenusoqgf5cqpr1ojprlfn.apps.googleusercontent.com';
-        const API_KEY = 'AIzaSyBi1QeaBfEfIDqsNafzEsesWbsqcWqefIE';
+      import { makeCard, listLatestValues } from "./script.js";
+      const CLIENT_ID =
+        "796866674815-2hjnahq8rdvenusoqgf5cqpr1ojprlfn.apps.googleusercontent.com";
+      const API_KEY = "AIzaSyBi1QeaBfEfIDqsNafzEsesWbsqcWqefIE";
 
-        // Discovery doc URL for APIs used by the quickstart
-        const DISCOVERY_DOC = 'https://sheets.googleapis.com/$discovery/rest?version=v4';
+      // Discovery doc URL for APIs used by the quickstart
+      const DISCOVERY_DOC =
+        "https://sheets.googleapis.com/$discovery/rest?version=v4";
 
-        // Authorization scopes required by the API; multiple scopes can be
-        // included, separated by spaces.
-        const SCOPES = "https://www.googleapis.com/auth/spreadsheets";
+      // Authorization scopes required by the API; multiple scopes can be
+      // included, separated by spaces.
+      const SCOPES = "https://www.googleapis.com/auth/spreadsheets";
 
-        let tokenClient;
-        let gapiInited = false;
-        let gisInited = false;
-        function loadGapi() {
-            gapi.load('client', initializeGapiClient);
-            console.log("gapi loaded");
+      let tokenClient;
+      let gapiInited = false;
+      let gisInited = false;
+      function loadGapi() {
+        gapi.load("client", initializeGapiClient);
+        console.log("gapi loaded");
+      }
+      async function initializeGapiClient() {
+        await gapi.client
+          .init({
+            apiKey: API_KEY,
+            discoveryDocs: [DISCOVERY_DOC],
+            use_fedcm: true,
+          })
+          .then(() => {
+            gapiInited = true;
+            tryPageInit();
+          });
+      }
+      function initializeGisClient() {
+        tokenClient = google.accounts.oauth2
+          .initTokenClient({
+            client_id: CLIENT_ID,
+            scope: SCOPES,
+            login_hint: "rene.ghosh@gmail.com",
+            callback: (response) => {
+              gisInited = true;
+              tryPageInit();
+            },
+          })
+          .requestAccessToken({
+            prompt: "",
+            login_hint: "rene.ghosh@gmail.com",
+          });
+      }
+      function tryPageInit() {
+        console.log(gisInited, gapiInited);
+        if (gisInited && gapiInited) {
+          listLatestValues();
+          makeCard();
         }
-        async function initializeGapiClient() {
-            await gapi.client.init({
-                apiKey: API_KEY,
-                discoveryDocs: [DISCOVERY_DOC],
-                use_fedcm: true
-            }).then(() => {
-                gapiInited = true;
-                tryPageInit();
-            });
-        }
-        function initializeGisClient() {
-            tokenClient = google.accounts.oauth2.initTokenClient({
-                client_id: CLIENT_ID,
-                scope: SCOPES,
-                login_hint: "rene.ghosh@gmail.com",
-                callback: (response) => {
-                    gisInited = true;
-                    tryPageInit();
-                }
-            }).requestAccessToken({ prompt: '', login_hint: "rene.ghosh@gmail.com" });
-
-        }
-        function tryPageInit() {
-            console.log(gisInited, gapiInited)
-            if (gisInited && gapiInited) {
-                listLatestValues();
-                makeCard();
-            }
-        }
-        window.onload = () => {
-            loadGapi()
-            initializeGisClient()
-        }
+      }
+      window.onload = () => {
+        loadGapi();
+        initializeGisClient();
+      };
     </script>
     <script async defer src="https://apis.google.com/js/api.js"></script>
     <script async defer src="https://accounts.google.com/gsi/client"></script>
-</body>
-
+  </body>
 </html>
