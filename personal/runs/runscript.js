@@ -2,6 +2,7 @@ import { Card } from "../cardmaker.js";
 import { add, getDatabaseRange, makeUUID } from "../sheetserver.js";
 
 const spreadsheetId = "1y07XiaPGH6ihyTo7yfmFXISCt3g1H2zrBMaOTMdjCW0";
+let numResults = 0;
 
 const appendData = (messages) => {
   const tr = document.createElement("tr");
